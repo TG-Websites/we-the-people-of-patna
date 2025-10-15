@@ -86,100 +86,64 @@
 
 
 
-  <!-- Hero Section -->
-  <section class="relative min-h-screen w-screen bg-slate-900 overflow-hidden">
-    <!-- Background Glows -->
-    <div class="absolute inset-0 pointer-events-none w-screen h-full">
-      <div
-        class="absolute top-0 left-0 w-20 h-20 sm:top-6 sm:left-10 sm:w-48 sm:h-48 bg-blue-400 opacity-10 rounded-full blur-3xl">
+  <!-- Hero Section with centered content below fixed header -->
+<section class="relative w-screen bg-slate-900 overflow-hidden"
+  style="height: calc(100vh - 40px);"> <!-- Adjust 64px to your header height -->
+
+  <!-- Background Glows -->
+  <div class="absolute inset-0 pointer-events-none w-screen h-full">
+    <div class="absolute top-0 left-0 w-20 h-20 sm:top-6 sm:left-10 sm:w-48 sm:h-48 bg-blue-400 opacity-10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-24 h-24 sm:bottom-10 sm:right-10 sm:w-72 sm:h-72 bg-cyan-500 opacity-10 rounded-full blur-3xl"></div>
+    <div class="absolute inset-0 w-screen h-full bg-gradient-to-br from-blue-400/5 via-transparent to-cyan-500/5"></div>
+  </div>
+
+  <!-- Content Wrapper (Flex for Vertical Centering) -->
+  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 h-full flex items-center">
+    <!-- Grid for Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+
+      <!-- Left Content -->
+      <div class="space-y-8 text-center lg:text-left">
+        <div class="space-y-4">
+          <p class="text-blue-400 font-medium text-lg">Unity • Self-Governance • Hope</p>
+          <h1 class="font-extrabold leading-tight tracking-tight text-left mt-6">
+            <span class="text-white block text-2xl sm:text-4xl lg:text-5xl">
+              A Common Man’s Call
+            </span>
+            <span class="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent block text-3xl sm:text-5xl lg:text-6xl">
+              To Rebuild Patna
+            </span>
+          </h1>
+          <p class="text-base sm:text-xl text-gray-300 leading-relaxed max-w-full">
+            <em class="text-blue-300 font-semibold">“Common Man Uprising”</em> is a response of ordinary citizens against corruption, injustice, and decades of apathy. This movement awakens conscience, demands accountability, and rebuilds Bihar through unity, self-governance, and hope.
+          </p>
+        </div>
+        <!-- Buttons -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+          <a href="#about" class="bg-gradient-to-r from-blue-400 to-cyan-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-400/25 transition-all duration-300 transform hover:scale-105">
+            Learn More
+          </a>
+          <a href="#contact" class="border border-blue-400 text-blue-400 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300">
+            Join the Movement
+          </a>
+        </div>
       </div>
-      <div
-        class="absolute bottom-0 right-0 w-24 h-24 sm:bottom-10 sm:right-10 sm:w-72 sm:h-72 bg-cyan-500 opacity-10 rounded-full blur-3xl">
-      </div>
-      <div class="absolute inset-0 w-screen h-full bg-gradient-to-br from-blue-400/5 via-transparent to-cyan-500/5">
+
+      <!-- Right Image Container with Proper Alignment -->
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full blur-2xl opacity-20"></div>
+          <img src="./generated-image.png" alt="Rebuild Bihar"
+            class="relative z-10 w-full h-full rounded-full object-cover border-4 border-blue-400/30" />
+        </div>
+        <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-blue-400 rounded-full opacity-20 floating"></div>
+        <div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-cyan-500 rounded-full opacity-10 floating"
+          style="animation-delay: -2s"></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Content Wrapper -->
-    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-36 pb-20 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-        <!-- Left Content -->
-        <div class="space-y-8 text-center lg:text-left">
-          <div class="space-y-4">
-            <p class="text-blue-400 font-medium text-lg">
-              Unity • Self-Governance • Hope
-            </p>
-            <h1 class="font-extrabold leading-tight tracking-tight text-left mt-6">
-              <span class="text-white block text-2xl sm:text-4xl lg:text-5xl">
-                A Common Man’s Call
-              </span>
-              <span
-                class="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent block text-3xl sm:text-5xl lg:text-6xl">
-                To Rebuild Patna
-              </span>
-            </h1>
-
-            <p class="text-base sm:text-xl text-gray-300 leading-relaxed max-w-full">
-              <em class="text-blue-300 font-semibold">“Common Man Uprising”</em> is a response of ordinary citizens
-              against corruption,
-              injustice, and decades of apathy. This movement awakens conscience,
-              demands accountability, and rebuilds Bihar through unity, self-governance, and hope.
-            </p>
-          </div>
-
-          <!-- Buttons -->
-          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-            <a href="#about"
-              class="bg-gradient-to-r from-blue-400 to-cyan-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-400/25 transition-all duration-300 transform hover:scale-105">
-              Learn More
-            </a>
-            <a href="#contact"
-              class="border border-blue-400 text-blue-400 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300">
-              Join the Movement
-            </a>
-          </div>
-
-          <!-- Stats -->
-          <div class="grid grid-cols-3 gap-6 pt-8">
-            <div class="text-center">
-              <div
-                class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                10K+</div>
-              <div class="text-gray-400 text-xs sm:text-sm">Supporters</div>
-            </div>
-            <div class="text-center">
-              <div
-                class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                50+</div>
-              <div class="text-gray-400 text-xs sm:text-sm">District Movements</div>
-            </div>
-            <div class="text-center">
-              <div
-                class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
-                1 Vision</div>
-              <div class="text-gray-400 text-xs sm:text-sm">Rebuild Bihar</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Side Image -->
-        <div class="relative flex justify-center lg:justify-end">
-          <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full blur-2xl opacity-20">
-            </div>
-            <img src="./image.png" alt="Rebuild Bihar"
-              class="relative z-10 w-full h-full rounded-full object-cover border-4 border-blue-400/30" />
-          </div>
-          <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-blue-400 rounded-full opacity-20 floating">
-          </div>
-          <div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-cyan-500 rounded-full opacity-10 floating"
-            style="animation-delay: -2s"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
 
  <!-- 🌍 About Section -->
