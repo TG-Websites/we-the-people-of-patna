@@ -87,8 +87,10 @@
 
 
   <!-- Hero Section with centered content below fixed header -->
-<!-- Hero Section -->
-<section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary" style="height: calc(100vh - 40px);">
+<<!-- Hero Section -->
+<section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary
+  lg:h-[calc(100vh-40px)] h-auto pt-32 sm:pt-36 pb-16 sm:pb-24">
+
   <!-- Background Glows -->
   <div class="absolute inset-0 pointer-events-none w-screen h-full">
     <div class="absolute top-0 left-0 w-20 h-20 sm:top-6 sm:left-10 sm:w-48 sm:h-48 bg-primary/30 rounded-full blur-3xl"></div>
@@ -97,11 +99,12 @@
   </div>
 
   <!-- Content Wrapper -->
-  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 h-full flex items-center">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+  <div class="w-full max-w-6xl mx-auto px-6 sm:px-6 h-full flex flex-col lg:flex-row items-center lg:items-center">
+
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-20 items-center w-full">
 
       <!-- Left Content -->
-      <div class="space-y-8 text-center lg:text-left">
+      <div class="space-y-8 text-center lg:text-left max-w-lg order-2 lg:order-1">
         <div class="space-y-4">
           <p class="text-white font-semibold text-lg">Unity • Self-Governance • Hope</p>
           <h1 class="font-extrabold leading-tight tracking-tight mt-6">
@@ -120,29 +123,27 @@
         <!-- Buttons -->
         <div class="flex flex-wrap justify-center lg:justify-start gap-4">
           <a href="#about"
-            class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
+             class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
             Learn More
           </a>
           <a href="#contact"
-            class="border border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-white/20 hover:text-white transition-all duration-300">
+             class="border border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-white/20 hover:text-white transition-all duration-300">
             Join the Movement
           </a>
         </div>
       </div>
 
       <!-- Right Image with Floating Circles -->
-      <div class="relative flex justify-center lg:justify-end">
+      <div class="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0 w-full lg:w-auto">
         <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
           <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-2xl opacity-20"></div>
-          <img src="./Logo.png" alt="Rebuild Bihar"
-            class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white/30" />
+          <img src="./generated-image (7).png" alt="Rebuild Bihar"
+               class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white/30" />
         </div>
         <!-- Floating Circles -->
-       <!-- Floating Circles with lighter/white shades -->
-<div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-white/20 rounded-full opacity-50 floating"></div>
-<div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-white/10 rounded-full opacity-40 floating"
-  style="animation-delay: -2s"></div>
-
+        <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-white/20 rounded-full opacity-50 floating"></div>
+        <div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-white/10 rounded-full opacity-40 floating"
+             style="animation-delay: -2s"></div>
       </div>
 
     </div>
