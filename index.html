@@ -29,50 +29,51 @@
 <body class="text-gray-100 overflow-x-hidden font-inter">
   <!-- Navbar -->
   <nav class="fixed w-full z-50 bg-white border-b border-light">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="Logo.png" alt="We The People of Patna"
-          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
-        <div class="text-2xl font-bold">
-          <span class="text-primary">We The People</span>
-          <span class="text-primary">of Patna</span>
-        </div>
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="Logo.png" alt="We The People of Patna"
+        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+      <div class="text-2xl font-bold hidden md:block">
+        <span class="text-primary">We The People</span>
+        <span class="text-primary">of Patna</span>
       </div>
-      <div class="hidden md:flex space-x-8">
-        <a href="#home"
-          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
-        <a href="#about"
-          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
-        <a href="#vision"
-          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
-          Vision</a>
-        <a href="#initiatives"
-          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
-        <a href="#contact"
-          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
-          Us</a>
-      </div>
-      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-        </svg>
-      </button>
     </div>
-    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
+    <div class="hidden md:flex space-x-8">
       <a href="#home"
-        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
       <a href="#about"
-        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
       <a href="#vision"
-        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
         Vision</a>
       <a href="#initiatives"
-        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
       <a href="#contact"
-        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
         Us</a>
     </div>
-  </nav>
+    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
+    <a href="#home"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
+    <a href="#about"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
+    <a href="#vision"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
+      Vision</a>
+    <a href="#initiatives"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
+    <a href="#contact"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
+      Us</a>
+  </div>
+</nav>
+
 
 
   <script>
@@ -87,7 +88,7 @@
 
 
   <!-- Hero Section with centered content below fixed header -->
-<<!-- Hero Section -->
+<!-- Hero Section -->
 <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary
   lg:h-[calc(100vh-40px)] h-auto pt-32 sm:pt-36 pb-16 sm:pb-24">
 
