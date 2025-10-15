@@ -1,329 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>We The People of Patna | A Bihari’s Call to Rebuild Bihar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: { inter: ["Inter", "sans-serif"] },
-            colors: {
-              primary: "#195a9c", // Custom teal-blue
-              accent: "#ffffff", // Lighter variant
-              secondary: "#144A7F", // Darker variant
-              light: "#E6F2FF", // Light teal-blue
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We The People of Patna | A Bihari’s Call to Rebuild Bihar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ["Inter", "sans-serif"] },
+          colors: {
+            primary: "#195a9c", // Custom teal-blue
+            accent: "#ffffff", // Lighter variant
+            secondary: "#144A7F", // Darker variant
+            light: "#E6F2FF", // Light teal-blue
           },
         },
-      };
-    </script>
-  </head>
+      },
+    };
+  </script>
+</head>
 
-  <body class="text-gray-100 overflow-x-hidden font-inter">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-3">
-          <img src="Logo.png" alt="We The People of Patna" class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow-lg">
-          <div class="text-2xl font-bold">
-            <span class="text-primary">We The People</span> <span class="text-primary">of Patna</span>
+<body class="text-gray-100 overflow-x-hidden font-inter">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white border-b border-light">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="Logo.png" alt="We The People of Patna"
+          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+        <div class="text-2xl font-bold">
+          <span class="text-primary">We The People</span>
+          <span class="text-primary">of Patna</span>
+        </div>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
+        <a href="#about"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
+        <a href="#vision"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
+          Vision</a>
+        <a href="#initiatives"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
+        <a href="#contact"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
+          Us</a>
+      </div>
+      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
+      <a href="#home"
+        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
+      <a href="#about"
+        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
+      <a href="#vision"
+        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
+        Vision</a>
+      <a href="#initiatives"
+        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
+      <a href="#contact"
+        class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
+        Us</a>
+    </div>
+  </nav>
+
+
+  <script>
+    // Mobile menu open/close
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen w-screen bg-slate-900 overflow-hidden">
+    <!-- Background Glows -->
+    <div class="absolute inset-0 pointer-events-none w-screen h-full">
+      <div
+        class="absolute top-0 left-0 w-20 h-20 sm:top-6 sm:left-10 sm:w-48 sm:h-48 bg-blue-400 opacity-10 rounded-full blur-3xl">
+      </div>
+      <div
+        class="absolute bottom-0 right-0 w-24 h-24 sm:bottom-10 sm:right-10 sm:w-72 sm:h-72 bg-cyan-500 opacity-10 rounded-full blur-3xl">
+      </div>
+      <div class="absolute inset-0 w-screen h-full bg-gradient-to-br from-blue-400/5 via-transparent to-cyan-500/5">
+      </div>
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 lg:pt-36 pb-20 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Left Content -->
+        <div class="space-y-8 text-center lg:text-left">
+          <div class="space-y-4">
+            <p class="text-blue-400 font-medium text-lg">
+              Unity • Self-Governance • Hope
+            </p>
+            <h1 class="font-extrabold leading-tight tracking-tight text-left mt-6">
+              <span class="text-white block text-2xl sm:text-4xl lg:text-5xl">
+                A Common Man’s Call
+              </span>
+              <span
+                class="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent block text-3xl sm:text-5xl lg:text-6xl">
+                To Rebuild Patna
+              </span>
+            </h1>
+
+            <p class="text-base sm:text-xl text-gray-300 leading-relaxed max-w-full">
+              <em class="text-blue-300 font-semibold">“Common Man Uprising”</em> is a response of ordinary citizens
+              against corruption,
+              injustice, and decades of apathy. This movement awakens conscience,
+              demands accountability, and rebuilds Bihar through unity, self-governance, and hope.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#about"
+              class="bg-gradient-to-r from-blue-400 to-cyan-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-400/25 transition-all duration-300 transform hover:scale-105">
+              Learn More
+            </a>
+            <a href="#contact"
+              class="border border-blue-400 text-blue-400 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300">
+              Join the Movement
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-8">
+            <div class="text-center">
+              <div
+                class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                10K+</div>
+              <div class="text-gray-400 text-xs sm:text-sm">Supporters</div>
+            </div>
+            <div class="text-center">
+              <div
+                class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                50+</div>
+              <div class="text-gray-400 text-xs sm:text-sm">District Movements</div>
+            </div>
+            <div class="text-center">
+              <div
+                class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                1 Vision</div>
+              <div class="text-gray-400 text-xs sm:text-sm">Rebuild Bihar</div>
+            </div>
           </div>
         </div>
-        <div class="hidden md:flex space-x-8">
-          <a href="#home" class="text-gray-600 hover:text-blue-400 transition-colors">Home</a>
-          <a href="#about" class="text-gray-600 hover:text-blue-400 transition-colors">About</a>
-          <a href="#vision" class="text-gray-600 hover:text-blue-400 transition-colors">Our Vision</a>
-          <a href="#initiatives" class="text-gray-600 hover:text-blue-400 transition-colors">Initiatives</a>
-          <a href="#contact" class="text-gray-600 hover:text-blue-400 transition-colors">Join Us</a>
+
+        <!-- Right Side Image -->
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full blur-2xl opacity-20">
+            </div>
+            <img src="./image.png" alt="Rebuild Bihar"
+              class="relative z-10 w-full h-full rounded-full object-cover border-4 border-blue-400/30" />
+          </div>
+          <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-blue-400 rounded-full opacity-20 floating">
+          </div>
+          <div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-cyan-500 rounded-full opacity-10 floating"
+            style="animation-delay: -2s"></div>
         </div>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen hero-bg flex items-center justify-center relative overflow-hidden">
-      <div class="absolute inset-0">
-        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400 opacity-10 rounded-full blur-3xl floating"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-600 opacity-10 rounded-full blur-3xl floating" style="animation-delay:-3s"></div>
       </div>
+    </div>
+  </section>
 
-      <div class="max-w-6xl mx-auto px-6 py-20 relative z-10 text-center space-y-8">
-        <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight">
-          <span class="text-white block">A Bihari’s Call to Rebuild Bihar</span>
-        </h1>
-        <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
-          <em class="text-blue-300">"Common Man Uprising"</em> is a response of ordinary citizens against corruption,
-          injustice, and decades of apathy. This is a movement to awaken conscience,
-          demand accountability, and rebuild Bihar through unity, self-governance, and hope.
+
+ <!-- 🌍 About Section -->
+<section id="about" class="py-24 bg-light relative overflow-hidden">
+  <!-- Decorative Gradient Circle -->
+  <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70 -z-10"></div>
+
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <!-- Section Heading -->
+    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+      About the Movement
+    </p>
+
+    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+      The <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Common Man Uprising</span>
+    </h2>
+
+    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+
+    <!-- 3 Info Cards -->
+    <div class="grid md:grid-cols-3 gap-8 text-left">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 p-8">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-secondary">Grassroots Revolution</h3>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          <span class="font-semibold text-primary">“We The People of Patna”</span> isn’t a slogan — it’s a civic awakening.
+          Together, citizens rise to rebuild Bihar from the ground up, starting with our own city.
         </p>
-        <div class="flex flex-wrap gap-4 justify-center pt-4">
-          <a href="#about"
-             class="bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-transform hover:scale-105">
-             Learn More
-          </a>
-          <a href="#contact"
-             class="btn-outline px-8 py-4 rounded-full font-semibold">
-             Join the Movement
-          </a>
-        </div>
       </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 section-dark">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <p class="text-blue-400 font-medium mb-4">About the Movement</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-700">
-          The <span class="gradient-text">Common Man Uprising</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-12"></div>
-
-        <div class="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto space-y-6">
-          <p>
-            Bihar has endured decades of neglect, corruption, and divisive politics.
-            <span class="text-blue-500 font-semibold">"We The People of Patna"</span> rises as a collective effort of citizens determined
-            to bring change from the ground up — starting with our city, Patna.
-          </p>
-          <p>
-            Our goal is to unite citizens beyond caste, religion, and class — to rebuild
-            a Bihar that is just, self-reliant, and governed by people who care.
-            We challenge the system's complacency and push for governance reforms
-            that prioritize <span class="text-blue-500">dignity, transparency, and equality</span>.
-          </p>
-          <p>
-            As a movement, we begin by addressing the issues closest to us —
-            reforming local governance, ensuring fair taxation, and
-            building a civic culture of responsibility and participation.
-          </p>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 p-8">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-secondary">Equality & Transparency</h3>
         </div>
-      </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision" class="py-20 section-darker">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <p class="text-blue-400 font-medium mb-4">Our Vision</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">
-          Rebuilding Bihar <span class="gradient-text">Through People's Power</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-12"></div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-white">Abolish Challan Exploitation</h3>
-            <p class="text-gray-300">
-              Reforming the challan system of Patna Traffic Police to end misuse and restore fairness. 
-              Our first pilot towards a citizen-accountable governance model.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-white">One Nation, One Tax</h3>
-            <p class="text-gray-300">
-              Introducing a 1% Banking Transaction Tax to replace multiple taxes,
-              ensuring simplicity, transparency, and equitable revenue growth.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-white">Strengthen Local Governance</h3>
-            <p class="text-gray-300">
-              Promoting Urban Local Self-Governance — empowering municipalities,
-              taxpayers, and citizens to make Patna a model of participatory democracy.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-white">Citizen Awareness Drives</h3>
-            <p class="text-gray-300">
-              Consistent mass awareness campaigns encouraging civic participation,
-              accountability, and responsible citizenship.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-white">Grassroots Empowerment</h3>
-            <p class="text-gray-300">
-              Mobilizing youth, women, and community groups to lead reforms
-              at the neighborhood and ward levels for sustainable change.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-white">Justice Through Unity</h3>
-            <p class="text-gray-300">
-              Ensuring that people reclaim their voice and collectively question authorities
-              to demand fair, humane, and people-driven governance.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Initiatives Section -->
-    <section id="initiatives" class="py-20 section-dark">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <p class="text-blue-400 font-medium mb-4">Our Ongoing Work</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">
-          <span class="gradient-text">Initiatives & Campaigns</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-12"></div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-gray-700">Patna Traffic Reform</h3>
-            <p class="text-gray-700">
-              Citizen-led petition and dialogue with authorities to
-              replace punitive challan practices with transparent,
-              community-centered enforcement.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-gray-700">Urban Self-Governance Pilot</h3>
-            <p class="text-gray-700">
-              Testing decentralized decision-making through ward-level
-              committees involving local taxpayers and citizens.
-            </p>
-          </div>
-
-          <div class="card-light p-8 rounded-3xl">
-            <h3 class="text-2xl font-bold mb-4 text-gray-700">Youth for Bihar</h3>
-            <p class="text-gray-700">
-              Mobilizing students and young professionals to participate in civic audits,
-              data collection, and advocacy for better public service delivery.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Join Section --> 
-    <section id="contact" class="py-20 section-darker">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <p class="text-blue-400 font-medium mb-4">Join the Movement</p>
-        <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-white">
-          Together We Can <span class="gradient-text">Rebuild Bihar</span>
-        </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-12"></div>
-
-        <p class="text-gray-300 max-w-3xl mx-auto mb-10">
-          Change begins when we, the citizens, act together. 
-          Join hands with us — share ideas, volunteer for campaigns, 
-          and help make Patna a model of people-powered reform.
+        <p class="text-gray-600 leading-relaxed">
+          The movement challenges corruption and complacency — demanding systems that ensure
+          <span class="text-primary font-medium">fairness, dignity, and transparency</span> for every citizen.
         </p>
-
-        <form class="glass-effect rounded-3xl p-8 shadow-lg space-y-6 max-w-2xl mx-auto" onsubmit="sendToWhatsApp(event)">
-          <div class="grid md:grid-cols-2 gap-6">
-            <input type="text" placeholder="Full Name" class="w-full px-4 py-3 rounded-xl bg-blue-50/10 border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 backdrop-blur-sm" required />
-            <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-xl bg-blue-50/10 border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 backdrop-blur-sm" required />
-          </div>
-          <textarea placeholder="Your Message or Interest Area..." rows="6" class="w-full px-4 py-3 rounded-xl bg-blue-50/10 border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 resize-none backdrop-blur-sm" required></textarea>
-          <button type="submit" class="bg-gradient-to-r from-primary to-accent text-white px-10 py-4 rounded-full font-semibold hover:shadow-xl transition-transform hover:scale-105">
-            Submit
-          </button>
-        </form>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="section-dark border-t border-white/10 py-12 mt-20">
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 p-8">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-secondary">Rebuilding Patna</h3>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Patna becomes the symbol of a new Bihar — where civic pride, smart governance,
+          and citizen-led participation drive real transformation.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Closing Statement -->
+    <div class="max-w-3xl mx-auto mt-16 text-gray-700 text-lg leading-relaxed">
+      <p>
+        Our journey begins with unity, grows with responsibility, and succeeds through collective action.
+        This is not a political movement — it’s a <span class="text-primary font-semibold">people’s revolution</span>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+ <!-- 🌟 Vision Section -->
+<section id="vision" class="py-24 bg-gradient-to-b from-[#0a1224] via-[#0d1733] to-[#122347] relative overflow-hidden">
+  <!-- Decorative Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-10 left-10 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+    <!-- Section Header -->
+    <p class="text-blue-300 font-semibold uppercase tracking-wide mb-3">
+      Our Vision
+    </p>
+
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+      Rebuilding Bihar
+      <span class="bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent">
+        Through People's Power
+      </span>
+    </h2>
+
+    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-14 rounded-full"></div>
+
+    <!-- Vision Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
+      
+      <!-- Card 1 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 hover:border-blue-400/30 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Abolish Challan Exploitation</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Reforming the challan system of Patna Traffic Police to end misuse and restore fairness — 
+          our first pilot towards a citizen-accountable governance model.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 hover:border-blue-400/30 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">One Nation, One Tax</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Introducing a 1% Banking Transaction Tax to replace multiple taxes — 
+          ensuring simplicity, transparency, and equitable growth.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 hover:border-blue-400/30 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa-solid fa-city"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Strengthen Local Governance</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Empowering municipalities, taxpayers, and citizens to make Patna a model of participatory democracy.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 hover:border-blue-400/30 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Citizen Awareness Drives</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Mass awareness campaigns encouraging civic participation, accountability, 
+          and responsible citizenship across Bihar.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 hover:border-blue-400/30 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Grassroots Empowerment</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Mobilizing youth, women, and community groups to lead reforms 
+          at neighborhood and ward levels for sustainable change.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white/10 backdrop-blur-md border border-white/10 hover:border-blue-400/30 rounded-3xl p-8 hover:shadow-xl transition-all duration-300">
+        <div class="text-blue-300 text-4xl mb-4">
+          <i class="fa-solid fa-handshake-angle"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 text-white">Justice Through Unity</h3>
+        <p class="text-gray-300 leading-relaxed">
+          Empowering people to collectively question authority and demand 
+          humane, fair, and transparent governance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- Initiatives Section -->
+<section id="initiatives" class="py-24 section-dark relative overflow-hidden">
+  <!-- Decorative Floating Circles -->
+  <div class="absolute top-10 left-10 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-10 right-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+    <!-- Section Header -->
+    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+      Our Ongoing Work
+    </p>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+      <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Initiatives & Campaigns</span>
+    </h2>
+    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+
+    <!-- Initiatives Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+      
+      <!-- Card 1 -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white text-2xl">
+            <i class="fa-solid fa-road"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Patna Traffic Reform</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          Citizen-led petition and dialogue with authorities to replace punitive challan practices with transparent, community-centered enforcement.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white text-2xl">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Urban Self-Governance Pilot</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          Testing decentralized decision-making through ward-level committees involving local taxpayers and citizens.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-white text-2xl">
+            <i class="fa-solid fa-user-group"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Youth for Bihar</h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          Mobilizing students and young professionals to participate in civic audits, data collection, and advocacy for better public service delivery.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- 🌟 Contact / Join Section -->
+<!-- 🌟 Contact / Join Section -->
+<section id="contact" class="py-24 bg-gradient-to-b from-[#0a1224] via-[#0d1733] to-[#122347] relative overflow-hidden">
+  <!-- Decorative Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-10 left-10 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+    <!-- Section Header -->
+    <p class="text-blue-300 font-semibold uppercase tracking-wide mb-3">Join the Movement</p>
+
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+      Together We Can
+      <span class="bg-gradient-to-r from-blue-300 to-cyan-400 bg-clip-text text-transparent">
+        Rebuild Bihar
+      </span>
+    </h2>
+
+    <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-12 rounded-full"></div>
+
+    <!-- Description -->
+    <p class="text-gray-300 max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
+      Change begins when we, the citizens, act together. Join hands with us — share ideas, volunteer for campaigns, and help make Patna a model of people-powered reform.
+    </p>
+
+    <!-- Form Card -->
+    <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:px-12 shadow-lg max-w-2xl mx-auto space-y-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Full Name" required
+          class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition"/>
+        <input type="email" placeholder="Email Address" required
+          class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition"/>
+      </div>
+      <textarea placeholder="Your Message or Interest Area..." rows="6" required
+        class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition resize-none"></textarea>
+      <button type="submit"
+        class="bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-10 py-4 rounded-full font-semibold hover:shadow-xl transition-transform hover:scale-105">
+        Submit
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🌟 Footer -->
+<footer class="section-dark border-t border-white/10 py-12 ">
   <div class="max-w-6xl mx-auto px-6 text-center space-y-6">
     <div class="flex justify-center space-x-6">
       <!-- Facebook -->
       <a href="https://www.facebook.com/profile.php?id=61580770327109" target="_blank"
-         class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43
-            c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.516
-            c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532
-            3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-        </svg>
+        class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+        <i class="fa-brands fa-facebook-f text-white"></i>
       </a>
 
       <!-- Instagram -->
       <a href="https://www.instagram.com/wethepeopleofpatna" target="_blank"
-         class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25
-            22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0
-            017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25
-            4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25
-            4.25 0 0016.25 3.5h-8.5zm4.25 3.75a5 5 0 110
-            10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100
-            7 3.5 3.5 0 000-7zm4.75-.875a1.125 1.125 0
-            110 2.25 1.125 1.125 0 010-2.25z" />
-        </svg>
+        class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+        <i class="fa-brands fa-instagram text-white"></i>
       </a>
 
       <!-- WhatsApp -->
       <a href="https://wa.me/919229551125" target="_blank"
-         class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0
-            5.37 0 12c0 2.12.55 4.15 1.6 5.96L0
-            24l6.26-1.64A11.95 11.95 0 0012
-            24c6.63 0 12-5.37 12-12 0-3.19-1.25-6.19-3.48-8.52zM12
-            22c-1.93 0-3.83-.5-5.5-1.45l-.39-.22-3.72.98.99-3.63-.25-.38A9.9
-            9.9 0 012 12C2 6.49 6.49 2 12 2c2.67 0 5.18
-            1.04 7.07 2.93A9.91 9.91 0 0122 12c0 5.51-4.49
-            10-10 10zm5.01-7.49l-1.43-.41a.79.79 0 00-.75.2l-.46.47a.79.79
-            0 01-.83.18 8.26 8.26 0 01-4.3-4.3.79.79 0
-            01.18-.83l.47-.46a.79.79 0 00.2-.75l-.41-1.43a.79.79
-            0 00-.75-.56h-.64c-.42 0-.79.17-1.06.44a2.8 2.8
-            0 00-.86 2.01c0 3.24 2.64 5.88 5.88
-            5.88a2.8 2.8 0 002.01-.86c.27-.27.44-.64.44-1.06v-.64a.79.79
-            0 00-.56-.75z" />
-        </svg>
+        class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+        <i class="fa-brands fa-whatsapp text-white"></i>
       </a>
     </div>
 
-    <p class="text-gray-700 text-sm">
-      © 2025 We The People of Patna. All Rights Reserved.
-    </p>
+    <p class="text-gray-700 text-sm">© 2025 We The People of Patna. All Rights Reserved.</p>
   </div>
 </footer>
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/919229551125" target="_blank"
-   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg z-50 transition-transform hover:scale-110">
-  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-    <path
-      d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0
-      12c0 2.12.55 4.15 1.6 5.96L0 24l6.26-1.64A11.95
-      11.95 0 0012 24c6.63 0 12-5.37 12-12
-      0-3.19-1.25-6.19-3.48-8.52zM12 22c-1.93
-      0-3.83-.5-5.5-1.45l-.39-.22-3.72.98.99-3.63-.25-.38A9.9
-      9.9 0 012 12C2 6.49 6.49 2 12 2c2.67
-      0 5.18 1.04 7.07 2.93A9.91 9.91 0 0122
-      12c0 5.51-4.49 10-10 10z" />
-  </svg>
+  class="fixed bottom-6 right-6 bg-gradient-to-r from-blue-400 to-cyan-400 text-white rounded-full p-5 shadow-lg z-50 flex items-center justify-center transition-transform hover:scale-110 hover:shadow-xl">
+  <i class="fa-brands fa-whatsapp text-2xl"></i>
 </a>
 
 
-    <script src="app.js"></script>
-    <script>
-  function sendToWhatsApp(e) {
-    e.preventDefault();
-    const name = e.target.querySelector('input[placeholder="Full Name"]').value;
-    const email = e.target.querySelector('input[placeholder="Email Address"]').value;
-    const message = e.target.querySelector('textarea').value;
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    const text = `*New Message from We The People of Patna*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
-    const url = `https://wa.me/919229551125?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
-  }
-</script>
 
-  </body>
+  <script src="app.js"></script>
+  <script>
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const name = e.target.querySelector('input[placeholder="Full Name"]').value;
+      const email = e.target.querySelector('input[placeholder="Email Address"]').value;
+      const message = e.target.querySelector('textarea').value;
+
+      const text = `*New Message from We The People of Patna*\n\n*Name:* ${name}\n*Email:* ${email}\n*Message:* ${message}`;
+      const url = `https://wa.me/919229551125?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+
 </html>
