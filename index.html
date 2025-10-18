@@ -469,21 +469,61 @@
       Change begins when we, the citizens, act together. Join hands with us — share ideas, volunteer for campaigns, and help make Patna a model of people-powered reform.
     </p>
 
-    <!-- Form Card -->
-    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:px-12 shadow-lg max-w-2xl mx-auto space-y-6">
-      <div class="grid md:grid-cols-2 gap-6">
-        <input type="text" placeholder="Full Name" required
-          class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition"/>
-        <input type="email" placeholder="Email Address" required
-          class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition"/>
-      </div>
-      <textarea placeholder="Your Message or Interest Area..." rows="6" required
-        class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
-      <button type="submit"
-        class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
-        Submit
-      </button>
+  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+  <!-- Required Web3Forms Hidden Fields -->
+  <input type="hidden" name="access_key" value="edc9d2e9-4bdb-4fbb-b9c0-8868e294ca5c">
+  <input type="hidden" name="subject" value="New Enquiry from Website - WeThePeopleOfPatna">
+  <input type="checkbox" name="botcheck" style="display:none;">
+
+  <!-- Form Card -->
+  <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:px-12 shadow-lg max-w-2xl mx-auto space-y-6">
+    <div class="grid md:grid-cols-2 gap-6">
+      <input type="text" name="name" placeholder="Full Name" required
+        class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition" />
+      <input type="email" name="email" placeholder="Email Address" required
+        class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition" />
     </div>
+
+    <textarea name="message" placeholder="Your Message or Interest Area..." rows="6" required
+      class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+
+    <button type="submit"
+      class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
+      Submit
+    </button>
+
+    <!-- Success Message -->
+    <p id="result" class="text-green-400 text-center hidden">✅ Thank you! Your message has been sent.</p>
+  </div>
+</form>
+
+<!-- Web3Forms AJAX Script -->
+<script>
+  const form = document.getElementById('contactForm');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      result.classList.remove('hidden');
+      result.textContent = "✅ Thank you! Your message has been sent.";
+      form.reset();
+    } else {
+      result.classList.remove('hidden');
+      result.textContent = "❌ Oops! Something went wrong. Please try again.";
+    }
+  });
+</script>
+
   </div>
 </section>
 
