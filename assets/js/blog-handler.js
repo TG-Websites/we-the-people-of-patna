@@ -487,16 +487,16 @@ class BlogHandler {
           </div>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-3 mb-3 text-sm text-primary/70">
+          <div class="flex items-center gap-3 mb-4 text-sm text-primary/70">
             <i class="fa-solid fa-calendar-days"></i>
             <span>${this.formatDate(blog.publishedAt || blog.createdAt)}</span>
             <span>•</span>
             <span>${blog.readTime}</span>
           </div>
-          <h3 class="text-xl font-semibold text-secondary mb-3 group-hover:text-primary transition-colors">
+          <h3 class="text-xl font-semibold text-secondary mb-4 group-hover:text-primary transition-colors line-clamp-2">
             ${blog.title}
           </h3>
-          <p class="text-primary leading-relaxed mb-4">
+          <p class="text-primary leading-relaxed mb-6 line-clamp-3">
             ${blog.excerpt}
           </p>
           <div class="flex items-center justify-between pt-4 border-t border-light">
