@@ -75,7 +75,7 @@ const CONFIG = {
 
   // Default images
   DEFAULTS: {
-    BLOG_IMAGE: 'https://images.unsplash.com/photo-1668149941577-7473eb4ac060?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+    BLOG_IMAGE: 'https://imgs.search.brave.com/ZyIJRwx6nch-SewSp7ofPTBBj3cIvSrkt8v6i5Rm78Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi92aWV3/LXBhdG5hLXJhaWx3/YXktc3RhdGlvbi1i/aWhhci1pbmRpYS1j/YXBpdGFsLXdpbnRl/ci1kYXktcGFzc2Vu/Z2Vycy13YWl0aW5n/LXRyYWluLTM4ODY2/OTQyMy5qcGc',
     AUTHOR_IMAGE: 'assets/images/neta g.jpg' // Will be encoded by getImageUrl
   },
 
