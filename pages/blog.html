@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs - We The People of Patna | Insights on Bihar Reform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Quill Rich Text Editor -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ["Inter", "sans-serif"] },
+          colors: {
+            primary: "#195a9c",
+            accent: "#ffffff",
+            secondary: "#144A7F",
+            light: "#E6F2FF",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="text-gray-100 overflow-x-hidden font-inter">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white border-b border-light">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="../assets/images/Logo.png" alt="We The People of Patna"
+        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+      <div class="text-2xl font-bold hidden md:block">
+        <span class="text-primary">We The People</span>
+        <span class="text-primary">of Patna</span>
+      </div>
+    </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="../index.html"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
+      <a href="../index.html#about"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
+      <a href="../index.html#vision"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
+        Vision</a>
+      <a href="../index.html#initiatives"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
+      <a href="blog.html"
+        class="text-primary font-semibold underline decoration-primary">Blogs</a>
+      <a href="../index.html#contact"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
+        Us</a>
+    </div>
+    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
+    <a href="../index.html"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
+    <a href="../index.html#about"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
+    <a href="../index.html#vision"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
+      Vision</a>
+    <a href="../index.html#initiatives"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
+    <a href="blog.html"
+      class="block text-primary font-semibold py-2">Blogs</a>
+    <a href="../index.html#contact"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
+      Us</a>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary pt-32 pb-16">
+    <div class="absolute inset-0 pointer-events-none w-screen h-full">
+      <div class="absolute top-6 left-10 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="w-full max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <div class="space-y-8">
+        <p class="text-white font-semibold text-lg">Insights & Updates</p>
+        <h1 class="font-extrabold leading-tight tracking-tight">
+          <span class="text-white block text-4xl lg:text-6xl">Our Blogs</span>
+          <span class="text-white block text-2xl lg:text-4xl mt-2">Stories of Change & Reform</span>
+        </h1>
+        <p class="text-white/80 leading-relaxed max-w-3xl mx-auto text-lg">
+          Read about our journey, initiatives, and the ongoing fight for transparency, accountability, and citizen empowerment in Bihar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Blog Section -->
+  <section class="py-24 bg-light relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70"></div>
+
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Featured Article</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Latest Insights</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Featured Blog Loading Placeholder -->
+      <div id="featuredBlogPlaceholder" class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative h-64 lg:h-auto bg-gray-300"></div>
+          <div class="p-8 lg:p-12 flex flex-col justify-center space-y-4">
+            <div class="h-4 bg-gray-300 rounded w-1/3"></div>
+            <div class="h-8 bg-gray-300 rounded w-3/4"></div>
+            <div class="h-4 bg-gray-300 rounded w-full"></div>
+            <div class="h-4 bg-gray-300 rounded w-5/6"></div>
+            <div class="flex items-center justify-between pt-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div class="space-y-2">
+                  <div class="h-4 bg-gray-300 rounded w-20"></div>
+                  <div class="h-3 bg-gray-300 rounded w-16"></div>
+                </div>
+              </div>
+              <div class="h-10 bg-gray-300 rounded-full w-32"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Blog Content (hidden initially) -->
+      <article id="featuredBlogContent" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative h-64 lg:h-auto">
+            <img id="featuredBlogImage" src="" alt=""
+              class="w-full h-full object-cover" />
+            <div class="absolute top-4 left-4">
+              <span id="featuredBlogCategory" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
+            </div>
+          </div>
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-primary/70 text-sm">
+                <i class="fa-solid fa-calendar-days mr-2"></i><span id="featuredBlogDate"></span>
+              </span>
+              <span class="text-primary/70 text-sm" id="featuredBlogReadTime"></span>
+            </div>
+            <h3 id="featuredBlogTitle" class="text-3xl font-bold mb-4 text-secondary"></h3>
+            <p id="featuredBlogExcerpt" class="text-primary leading-relaxed text-lg mb-6"></p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img id="featuredBlogAuthorImage" src="" alt=""
+                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30" />
+                <div>
+                  <div id="featuredBlogAuthorName" class="text-secondary font-semibold"></div>
+                  <div id="featuredBlogAuthorBio" class="text-primary/70 text-sm"></div>
+                </div>
+              </div>
+              <a id="featuredBlogLink" href=""
+                class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+                Read Full Article
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fallback Featured Article (if no blogs available) -->
+      <article id="featuredBlogFallback" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative h-64 lg:h-auto">
+            <img src="https://images.unsplash.com/photo-1668149941577-7473eb4ac060?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="We The People of Patna Movement"
+              class="w-full h-full object-cover" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Movement</span>
+            </div>
+          </div>
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-primary/70 text-sm">
+                <i class="fa-solid fa-calendar-days mr-2"></i>Welcome to Our Blog
+              </span>
+            </div>
+            <h3 class="text-3xl font-bold mb-4 text-secondary">
+              Join Our Movement for Change
+            </h3>
+            <p class="text-primary leading-relaxed text-lg mb-6">
+              Welcome to our blog! Here we share stories of reform, citizen empowerment, and the ongoing fight for transparency and accountability in Bihar. Check back soon for our latest articles.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="../assets/images/neta g.jpg" alt="Admin User"
+                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30" />
+                <div>
+                  <div class="text-secondary font-semibold">Admin User</div>
+                  <div class="text-primary/70 text-sm">Movement Leader</div>
+                </div>
+              </div>
+              <a href="../index.html#about"
+                class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+    <!-- Fallback timeout script for featured blog -->
+    <script>
+      // Hide loading placeholder after 5 seconds if featured blog hasn't loaded
+      setTimeout(() => {
+        const placeholder = document.getElementById('featuredBlogPlaceholder');
+        const content = document.getElementById('featuredBlogContent');
+        const fallback = document.getElementById('featuredBlogFallback');
+        
+        if (placeholder && placeholder.style.display !== 'none') {
+          placeholder.style.display = 'none';
+          if (content && content.classList.contains('hidden') && fallback) {
+            fallback.classList.remove('hidden');
+          }
+        }
+      }, 5000);
+    </script>
+  </section>
+
+  <!-- Blog Grid Section -->
+  <section class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">All Articles</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Recent Posts</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="mb-12">
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <div class="relative">
+            <input type="text" placeholder="Search blogs..." 
+                   class="blog-search w-full md:w-80 px-4 py-3 pl-10 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50">
+            <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-primary/50"></i>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="category-filter bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors" data-category="">All</button>
+            <button class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Reform Victory">Reform</button>
+            <button class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Youth Power">Youth</button>
+            <button class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Governance">Governance</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="blogLoadingSpinner" class="flex justify-center items-center py-12 hidden">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+
+      <div class="blog-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Blog posts will be dynamically loaded here -->
+
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-16">
+        <button
+          class="load-more-btn bg-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
+          Load More Articles
+        </button>
+      </div>
+    </div>
+  </section>
+
+    <!-- Add Blog Form Section -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-12">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Contribute</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Share Your Story</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6"></div>
+        <p class="text-primary/70 text-lg max-w-2xl mx-auto">
+          Have a story of change, reform, or civic engagement? Share it with our community and inspire others to take action.
+        </p>
+      </div>
+
+      <div class="bg-accent rounded-3xl shadow-xl border border-light p-8 md:p-12">
+        <form id="blogSubmissionForm" class="space-y-8">
+          <!-- Author Information -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="authorName" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Author Name *
+              </label>
+              <input type="text" id="authorName" name="authorName" required
+                class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50"
+                placeholder="Enter your full name">
+            </div>
+            <div class="space-y-2">
+              <label for="authorEmail" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Email Address *
+              </label>
+              <input type="email" id="authorEmail" name="authorEmail" required
+                class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50"
+                placeholder="your.email@example.com">
+            </div>
+          </div>
+
+          <!-- Blog Details -->
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <label for="blogTitle" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Blog Title *
+              </label>
+              <input type="text" id="blogTitle" name="blogTitle" required
+                class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50"
+                placeholder="Enter a compelling title for your blog post">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label for="blogCategory" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                  Category *
+                </label>
+                <select id="blogCategory" name="blogCategory" required
+                  class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary">
+                  <option value="">Select a category</option>
+                  <option value="reform-victory">Reform Victory</option>
+                  <option value="youth-power">Youth Power</option>
+                  <option value="governance">Governance</option>
+                  <option value="tax-reform">Tax Reform</option>
+                  <option value="awareness">Awareness</option>
+                  <option value="empowerment">Empowerment</option>
+                  <option value="justice">Justice</option>
+                  <option value="civic-engagement">Civic Engagement</option>
+                </select>
+              </div>
+              <div class="space-y-2">
+                <label for="readTime" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                  Estimated Read Time *
+                </label>
+                <select id="readTime" name="readTime" required
+                  class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary">
+                  <option value="">Select read time</option>
+                  <option value="3 min read">3 min read</option>
+                  <option value="5 min read">5 min read</option>
+                  <option value="7 min read">7 min read</option>
+                  <option value="10 min read">10 min read</option>
+                  <option value="15 min read">15 min read</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label for="blogSummary" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Blog Summary *
+              </label>
+              <textarea id="blogSummary" name="blogSummary" required rows="3"
+                class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50 resize-none"
+                placeholder="Write a brief summary of your blog post (2-3 sentences)"></textarea>
+            </div>
+
+            <div class="space-y-2">
+              <label for="blogContent" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Blog Content *
+              </label>
+              <div id="blogContentEditor" class="bg-white rounded-xl border border-light focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all duration-200" style="min-height: 300px;">
+                <div id="quill-editor" style="height: 280px;"></div>
+              </div>
+              <input type="hidden" id="blogContent" name="blogContent" required>
+              <p class="text-primary/60 text-sm mt-2">Use the rich text editor to format your blog content with headings, bold text, lists, and more.</p>
+            </div>
+
+            <div class="space-y-2">
+              <label for="blogImage" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Featured Image
+              </label>
+              <input type="file" id="blogImage" name="blogImage" accept="image/*"
+                class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-semibold hover:file:bg-secondary">
+              <p class="text-primary/60 text-sm mt-2">Upload an image that represents your blog post (optional)</p>
+            </div>
+
+            <div class="space-y-2">
+              <label for="tags" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+                Tags
+              </label>
+              <input type="text" id="tags" name="tags"
+                class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50"
+                placeholder="Enter tags separated by commas (e.g., reform, youth, governance)">
+            </div>
+          </div>
+
+          <!-- Author Bio -->
+          <div class="space-y-2">
+            <label for="authorBio" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
+              Author Bio
+            </label>
+            <textarea id="authorBio" name="authorBio" rows="3"
+              class="w-full px-4 py-3 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50 resize-none"
+              placeholder="Tell us about yourself (optional)"></textarea>
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="flex items-start space-x-3">
+            <input type="checkbox" id="agreeTerms" name="agreeTerms" required
+              class="mt-1 w-5 h-5 text-primary bg-white border-light rounded focus:ring-primary focus:ring-2">
+            <label for="agreeTerms" class="text-primary/80 text-sm leading-relaxed">
+              I agree that my content may be reviewed before publication and I give permission to "We The People of Patna" to publish this blog post. I confirm that this content is original and does not violate any copyright laws.
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center pt-6">
+            <button type="submit"
+              class="bg-gradient-to-r from-primary to-secondary text-white px-12 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30">
+              <i class="fa-solid fa-paper-plane mr-2"></i>
+              Submit Blog Post
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-24 bg-gradient-to-b from-primary via-secondary to-primary relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div class="space-y-8">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+          Stay Updated with Our
+          <span class="bg-white bg-clip-text text-transparent">Movement</span>
+        </h2>
+        <p class="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          Get the latest updates on our initiatives, reform victories, and opportunities to participate in rebuilding Bihar. Join thousands who are part of this change.
+        </p>
+        
+        <form class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 max-w-md mx-auto">
+          <div class="space-y-4">
+            <input type="email" placeholder="Enter your email address" required
+              class="w-full px-6 py-4 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-white focus:border-white transition" />
+            <button type="submit"
+              class="w-full bg-light text-primary px-6 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-white/25 transition-all duration-300">
+              Subscribe to Updates
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-b from-light to-white py-16 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 text-center space-y-8">
+      <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
+          <img src="../assets/images/Logo.png" alt="Vishal Singh"
+            class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
+        </div>
+      </div>
+
+      <div class="flex justify-center space-x-6 mt-6">
+        <a href="https://www.facebook.com/profile.php?id=61580770327109" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-facebook-f text-white"></i>
+        </a>
+        <a href="https://www.instagram.com/wethepeopleofpatna" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-instagram text-white"></i>
+        </a>
+        <a href="https://wa.me/919229551125" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-whatsapp text-white"></i>
+        </a>
+      </div>
+
+      <p class="text-primary/70 text-sm">© 2025 We The People of Patna. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <script>
+    // Initialize Quill Rich Text Editor
+    let quill;
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Quill editor
+      quill = new Quill('#quill-editor', {
+        theme: 'snow',
+        placeholder: 'Write your full blog content here. Share your story, insights, and experiences...',
+        modules: {
+          toolbar: [
+            [{ 'header': [1, 2, 3, false] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'align': [] }],
+            ['blockquote', 'code-block'],
+            ['link', 'image'],
+            ['clean']
+          ]
+        }
+      });
+
+      // Custom styles for Quill editor to match the theme
+      const quillContainer = document.querySelector('.ql-container');
+      if (quillContainer) {
+        quillContainer.style.fontSize = '16px';
+        quillContainer.style.fontFamily = 'Inter, sans-serif';
+      }
+
+      // Update hidden input when content changes
+      quill.on('text-change', function() {
+        const content = quill.root.innerHTML;
+        document.getElementById('blogContent').value = content;
+      });
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Newsletter form submission
+    document.querySelector('section:last-of-type form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for subscribing! You will receive updates about our movement.');
+      this.reset();
+    });
+
+    // Blog submission form handling
+    document.getElementById('blogSubmissionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Update hidden input with Quill content before getting form data
+      if (quill) {
+        const content = quill.root.innerHTML;
+        document.getElementById('blogContent').value = content;
+      }
+      
+      // Get form data
+      const formData = new FormData(this);
+      const blogData = {
+        authorName: formData.get('authorName'),
+        authorEmail: formData.get('authorEmail'),
+        blogTitle: formData.get('blogTitle'),
+        blogCategory: formData.get('blogCategory'),
+        readTime: formData.get('readTime'),
+        blogSummary: formData.get('blogSummary'),
+        blogContent: formData.get('blogContent'),
+        tags: formData.get('tags'),
+        authorBio: formData.get('authorBio'),
+        blogImage: formData.get('blogImage'),
+        submissionDate: new Date().toISOString()
+      };
+
+      // Basic validation
+      if (!blogData.authorName || !blogData.authorEmail || !blogData.blogTitle || 
+          !blogData.blogCategory || !blogData.readTime || !blogData.blogSummary || 
+          !blogData.blogContent) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(blogData.authorEmail)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      // Content length validation
+      if (blogData.blogSummary.length < 50) {
+        alert('Blog summary should be at least 50 characters long.');
+        return;
+      }
+
+      // Validate rich text content (strip HTML tags for length check)
+      const contentText = blogData.blogContent.replace(/<[^>]*>/g, '').trim();
+      if (contentText.length < 200) {
+        alert('Blog content should be at least 200 characters long.');
+        return;
+      }
+
+      // Show loading state
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Submitting...';
+      submitBtn.disabled = true;
+
+      // Simulate form submission (replace with actual API call)
+      setTimeout(() => {
+        alert('Thank you for your submission! Your blog post has been received and will be reviewed before publication. We will contact you at ' + blogData.authorEmail + ' with updates.');
+        this.reset();
+        
+        // Reset Quill editor
+        if (quill) {
+          quill.setContents([]);
+        }
+        
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        // Scroll to top of form
+        document.getElementById('blogSubmissionForm').scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }, 2000);
+    });
+
+    // Character counter for textareas
+    function addCharacterCounter(textareaId, maxLength = null) {
+      const textarea = document.getElementById(textareaId);
+      if (!textarea) return;
+
+      const counter = document.createElement('div');
+      counter.className = 'text-primary/60 text-sm mt-1 text-right';
+      textarea.parentNode.appendChild(counter);
+
+      function updateCounter() {
+        const length = textarea.value.length;
+        if (maxLength) {
+          counter.textContent = `${length}/${maxLength} characters`;
+          if (length > maxLength) {
+            counter.className = 'text-red-500 text-sm mt-1 text-right';
+          } else {
+            counter.className = 'text-primary/60 text-sm mt-1 text-right';
+          }
+        } else {
+          counter.textContent = `${length} characters`;
+        }
+      }
+
+      textarea.addEventListener('input', updateCounter);
+      updateCounter();
+    }
+
+    // Add character counters
+    addCharacterCounter('blogSummary');
+    addCharacterCounter('authorBio');
+    
+    // Add character counter for Quill editor
+    function addQuillCharacterCounter() {
+      if (!quill) return;
+      
+      const counter = document.createElement('div');
+      counter.className = 'text-primary/60 text-sm mt-1 text-right';
+      counter.id = 'quill-counter';
+      document.getElementById('blogContentEditor').parentNode.appendChild(counter);
+
+      function updateQuillCounter() {
+        const text = quill.getText().trim();
+        const length = text.length;
+        counter.textContent = `${length} characters`;
+        
+        if (length < 200) {
+          counter.className = 'text-orange-500 text-sm mt-1 text-right';
+        } else {
+          counter.className = 'text-primary/60 text-sm mt-1 text-right';
+        }
+      }
+
+      quill.on('text-change', updateQuillCounter);
+      updateQuillCounter();
+    }
+    
+    // Initialize Quill counter after editor is ready
+    setTimeout(addQuillCharacterCounter, 100);
+  </script>
+  
+  <!-- Configuration and Blog Handler Scripts -->
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/api-service.js"></script>
+  <script src="../assets/js/blog-handler.js"></script>
+</body>
+
+</html>

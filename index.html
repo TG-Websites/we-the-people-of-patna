@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>We The People of Patna | A Bihari’s Call to Rebuild Bihar</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <script>
@@ -31,7 +31,7 @@
   <nav class="fixed w-full z-50 bg-white border-b border-light">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <div class="flex items-center space-x-3">
-      <img src="Logo.png" alt="We The People of Patna"
+      <img src="assets/images/Logo.png" alt="We The People of Patna"
         class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
       <div class="text-2xl font-bold hidden md:block">
         <span class="text-primary">We The People</span>
@@ -48,6 +48,8 @@
         Vision</a>
       <a href="#initiatives"
         class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
+      <a href="pages/blog.html"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Blogs</a>
       <a href="#contact"
         class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
         Us</a>
@@ -68,6 +70,8 @@
       Vision</a>
     <a href="#initiatives"
       class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
+    <a href="pages/blog.html"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Blogs</a>
     <a href="#contact"
       class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
       Us</a>
@@ -138,7 +142,7 @@
       <div class="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0 w-full lg:w-auto">
         <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
           <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-2xl opacity-20"></div>
-          <img src="./generated-image (9).png" alt="Rebuild Bihar" class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white/30">
+          <img src="assets/images/generated-image (9).png" alt="Rebuild Bihar" class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white/30">
         </div>
         <!-- Floating Circles -->
         <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-white/20 rounded-full opacity-50 floating"></div>
@@ -438,6 +442,59 @@
 </section>
 
 
+<!-- 📝 Recent Blogs Section -->
+<section id="blogs" class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
+  <!-- Decorative Background Elements -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+    <!-- Section Header -->
+    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+      Stay Informed
+    </p>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+      <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Recent Blogs & Updates</span>
+    </h2>
+    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+
+    <!-- Loading Spinner for Blogs -->
+    <div id="recentBlogsLoading" class="flex justify-center items-center py-12">
+      <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+      <!-- Recent blogs will be dynamically loaded here -->
+    </div>
+    
+    <!-- Fallback timeout script -->
+    <script>
+      // Hide loading spinner after 10 seconds if blogs haven't loaded
+      setTimeout(() => {
+        const loadingSpinner = document.getElementById('recentBlogsLoading');
+        const blogContainer = document.querySelector('#blogs .grid');
+        
+        if (loadingSpinner && loadingSpinner.style.display !== 'none') {
+          loadingSpinner.style.display = 'none';
+          if (blogContainer && blogContainer.innerHTML.trim() === '') {
+            blogContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">Unable to load recent blogs. Please check if the backend server is running.</p>';
+          }
+        }
+      }, 10000);
+    </script>
+
+    <!-- View All Blogs Button -->
+    <div class="mt-12">
+    <a href="pages/blog.html"
+         class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3">
+        View All Blogs
+      </a>
+    </div>
+  </div>
+</section>
+
+
 <!-- Font Awesome for Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -540,7 +597,7 @@
     <div class="flex justify-center">
       <div class="relative">
         <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
-        <img src="https://tg-websites.github.io/Common-Man-Uprising-Website/neta%20g.jpg" alt="Vishal Singh"
+        <img src="assets/images/neta g.jpg" alt="Vishal Singh"
              class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
       </div>
     </div>
@@ -572,18 +629,235 @@
 </footer>
 
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/919229551125" target="_blank"
-  class="fixed bottom-6 right-6 bg-gradient-to-r from-primary to-secondary text-white rounded-full p-5 shadow-lg z-50 flex items-center justify-center transition-transform hover:scale-110 hover:shadow-xl">
-  <i class="fa-brands fa-whatsapp text-2xl"></i>
-</a>
+<!-- Floating Buttons -->
+<div class="floating-buttons fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+  <!-- Problem Report Button -->
+  <button id="problemReportBtn"
+    class="floating-btn bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full p-5 shadow-lg flex items-center justify-center group">
+    <i class="fa-solid fa-exclamation-triangle text-2xl"></i>
+    <span class="absolute right-full mr-3 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+      Report Problem
+    </span>
+  </button>
+  
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919229551125" target="_blank"
+    class="floating-btn bg-gradient-to-r from-primary to-secondary text-white rounded-full p-5 shadow-lg flex items-center justify-center group">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="absolute right-full mr-3 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+      WhatsApp
+    </span>
+  </a>
+</div>
 
+
+<!-- Problem Report Modal -->
+<div id="problemModal" class="problem-modal fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+  <div class="problem-modal-content bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+    <!-- Modal Header -->
+    <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
+      <div class="flex justify-between items-center">
+        <h2 class="text-2xl font-bold">Report a Problem</h2>
+        <button id="closeModal" class="text-white hover:text-gray-200 text-2xl">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <p class="text-white/80 mt-2">Help us make Bihar better by reporting issues in your community</p>
+    </div>
+
+    <!-- Modal Content -->
+    <form action="https://api.web3forms.com/submit" method="POST" id="problemForm" class="p-6 space-y-8">
+      <!-- Required Web3Forms Hidden Fields -->
+  <input type="hidden" name="access_key" value="8e975247-eaa1-455a-ae04-3082988e4484">
+  <input type="hidden" name="subject" value="New Problem from Website - WeThePeopleOfPatna">
+  <input type="checkbox" name="botcheck" style="display:none;">
+
+      
+      <!-- Section 1: Personal Information -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+          <i class="fa-solid fa-user mr-2"></i>Personal Information
+        </h3>
+        
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+            <input type="text" name="fullName" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+            <input type="email" name="email"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+            <input type="tel" name="phone" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">City / District *</label>
+            <input type="text" name="city" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">State / Region *</label>
+            <select name="state" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+              <option value="">Select State</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Age Group</label>
+            <select name="ageGroup"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+              <option value="">Select Age Group</option>
+              <option value="18-25">18-25</option>
+              <option value="26-35">26-35</option>
+              <option value="36-45">36-45</option>
+              <option value="46-55">46-55</option>
+              <option value="56-65">56-65</option>
+              <option value="65+">65+</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Issue Details -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+          <i class="fa-solid fa-exclamation-circle mr-2"></i>Issue Details
+        </h3>
+        
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Category of Problem *</label>
+            <select name="category" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+              <option value="">Select Category</option>
+              <option value="Corruption / Misconduct">Corruption / Misconduct</option>
+              <option value="Public Services">Public Services (Water, Electricity, Roads, etc.)</option>
+              <option value="Law & Order / Police">Law & Order / Police</option>
+              <option value="Health / Hospitals">Health / Hospitals</option>
+              <option value="Education">Education</option>
+              <option value="Environment / Cleanliness">Environment / Cleanliness</option>
+              <option value="Employment / Labor Rights">Employment / Labor Rights</option>
+              <option value="Women / Child Safety">Women / Child Safety</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Date of Incident</label>
+            <input type="date" name="incidentDate"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+        </div>
+        
+        <div id="otherCategoryDiv" class="hidden">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Please specify other category</label>
+          <input type="text" name="otherCategory"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Subject / Title of Complaint *</label>
+          <input type="text" name="subject" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Detailed Description of the Issue *</label>
+          <textarea name="description" required rows="5"
+            class="w-full px-4 py-3 border text-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Location of Incident</label>
+          <input type="text" name="location"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+        </div>
+      </div>
+
+      <!-- Section 3: Evidence / Attachments -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+          <i class="fa-solid fa-paperclip mr-2"></i>Evidence / Attachments
+        </h3>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Upload Documents or Photos</label>
+          <input type="file" name="attachments" multiple accept="image/*,.pdf,.doc,.docx"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          <p class="text-sm text-gray-500 mt-1">Supported formats: Images, PDF, DOC, DOCX (Max 5MB each)</p>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Link to Supporting Information</label>
+          <input type="url" name="supportingLink"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+        </div>
+      </div>
+
+      <!-- Section 4: Privacy & Consent -->
+      <div class="space-y-6">
+        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+          <i class="fa-solid fa-shield-alt mr-2"></i>Privacy & Consent
+        </h3>
+        
+        <div class="flex items-center space-x-3">
+          <input type="checkbox" name="anonymous" id="anonymous"
+            class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+          <label for="anonymous" class="text-sm font-medium text-gray-700">
+            I wish to remain anonymous
+          </label>
+        </div>
+        
+        <div class="flex items-start space-x-3">
+          <input type="checkbox" name="consent" id="consent" required
+            class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-1">
+          <label for="consent" class="text-sm text-gray-700">
+            I agree that my information may be used to address this issue and for awareness purposes in accordance with the privacy policy. *
+          </label>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-end space-x-4 pt-6 border-t border-gray-200">
+        <button type="button" id="cancelBtn"
+          class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+          Cancel
+        </button>
+        <button type="submit"
+          class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition transform hover:scale-105">
+          <i class="fa-solid fa-paper-plane mr-2"></i>Submit Complaint
+        </button>
+      </div>
+      <!-- Success Message -->
+    <p id="result" class="text-green-400 text-center hidden">✅ Thank you! Your message has been sent.</p>
+    </form>
+  </div>
+</div>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-  <script src="app.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- Configuration and Blog Handler Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api-service.js"></script>
+  <script src="assets/js/blog-handler.js"></script>
   <script>
     function sendToWhatsApp(e) {
       e.preventDefault();
@@ -595,6 +869,157 @@
       const url = `https://wa.me/919229551125?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     }
+
+    // Problem Modal Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const problemReportBtn = document.getElementById('problemReportBtn');
+      const problemModal = document.getElementById('problemModal');
+      const closeModal = document.getElementById('closeModal');
+      const cancelBtn = document.getElementById('cancelBtn');
+      const problemForm = document.getElementById('problemForm');
+      const categorySelect = document.querySelector('select[name="category"]');
+      const otherCategoryDiv = document.getElementById('otherCategoryDiv');
+
+      // Open modal
+      problemReportBtn.addEventListener('click', function() {
+        problemModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Close modal functions
+      function closeModalFunc() {
+        problemModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        problemForm.reset();
+        otherCategoryDiv.classList.add('hidden');
+      }
+
+      closeModal.addEventListener('click', closeModalFunc);
+      cancelBtn.addEventListener('click', closeModalFunc);
+
+      // Close modal when clicking outside
+      problemModal.addEventListener('click', function(e) {
+        if (e.target === problemModal) {
+          closeModalFunc();
+        }
+      });
+
+      // Show/hide other category field
+      categorySelect.addEventListener('change', function() {
+        if (this.value === 'Other') {
+          otherCategoryDiv.classList.remove('hidden');
+          document.querySelector('input[name="otherCategory"]').required = true;
+        } else {
+          otherCategoryDiv.classList.add('hidden');
+          document.querySelector('input[name="otherCategory"]').required = false;
+        }
+      });
+
+      // Form submission
+      problemForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Submitting...';
+        submitBtn.disabled = true;
+
+        try {
+          const formData = new FormData(problemForm);
+          
+          // Create the submission object
+          const submissionData = {
+            personalInfo: {
+              fullName: formData.get('fullName'),
+              email: formData.get('email'),
+              phone: formData.get('phone'),
+              city: formData.get('city'),
+              state: formData.get('state'),
+              ageGroup: formData.get('ageGroup')
+            },
+            issueDetails: {
+              category: formData.get('category') === 'Other' ? formData.get('otherCategory') : formData.get('category'),
+              subject: formData.get('subject'),
+              description: formData.get('description'),
+              incidentDate: formData.get('incidentDate'),
+              location: formData.get('location')
+            },
+            evidence: {
+              supportingLink: formData.get('supportingLink')
+            },
+            privacy: {
+              anonymous: formData.get('anonymous') === 'on',
+              consent: formData.get('consent') === 'on'
+            },
+            submittedAt: new Date().toISOString()
+          };
+
+          // Submit to backend
+          const response = await fetch('http://localhost:5000/api/problems', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(submissionData)
+          });
+
+          if (response.ok) {
+            // Also submit to Web3Forms for email notification
+            const web3FormData = new FormData();
+            web3FormData.append('access_key', '8e975247-eaa1-455a-ae04-3082988e4484');
+            web3FormData.append('subject', 'New Problem Report - We The People of Patna');
+            web3FormData.append('from_name', submissionData.personalInfo.fullName);
+            web3FormData.append('email', submissionData.personalInfo.email || 'noreply@wethepeopleofpatna.com');
+            
+            const emailContent = `
+New Problem Report Submitted:
+
+PERSONAL INFORMATION:
+- Name: ${submissionData.personalInfo.fullName}
+- Email: ${submissionData.personalInfo.email || 'Not provided'}
+- Phone: ${submissionData.personalInfo.phone}
+- City: ${submissionData.personalInfo.city}
+- State: ${submissionData.personalInfo.state}
+- Age Group: ${submissionData.personalInfo.ageGroup || 'Not specified'}
+
+ISSUE DETAILS:
+- Category: ${submissionData.issueDetails.category}
+- Subject: ${submissionData.issueDetails.subject}
+- Description: ${submissionData.issueDetails.description}
+- Date of Incident: ${submissionData.issueDetails.incidentDate || 'Not specified'}
+- Location: ${submissionData.issueDetails.location || 'Not specified'}
+
+EVIDENCE:
+- Supporting Link: ${submissionData.evidence.supportingLink || 'None provided'}
+
+PRIVACY:
+- Anonymous: ${submissionData.privacy.anonymous ? 'Yes' : 'No'}
+- Consent Given: ${submissionData.privacy.consent ? 'Yes' : 'No'}
+
+Submitted at: ${new Date(submissionData.submittedAt).toLocaleString()}
+            `;
+            
+            web3FormData.append('message', emailContent);
+
+            await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: web3FormData
+            });
+
+            alert('✅ Thank you! Your problem report has been submitted successfully. We will review it and take appropriate action.');
+            closeModalFunc();
+          } else {
+            throw new Error('Failed to submit problem report');
+          }
+        } catch (error) {
+          console.error('Error submitting problem report:', error);
+          alert('❌ Sorry, there was an error submitting your report. Please try again or contact us directly.');
+        } finally {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    });
   </script>
 
 </body>
