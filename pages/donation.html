@@ -251,39 +251,57 @@
 
    <!-- 💰 Donation Form & QR -->
 <section id="donate" class="py-20 bg-white">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start px-6">
+  <div class="max-w-5xl mx-auto  gap-10 items-start px-6">
     <!-- Donation Form -->
-    <div>
+    <div class="bg-light p-6 rounded-2xl shadow-md">
       <h2 class="text-3xl font-bold text-primary mb-4">Make a Secure Donation</h2>
       <p class="text-gray-700 mb-6">
         Donate via UPI, Bank Transfer, or fill out this form for record and transparency.
       </p>
-      <form class="space-y-4">
+      <form id="donation-form" class="space-y-4">
         <div>
           <label class="block text-sm font-medium text-gray-700">Full Name</label>
           <input
+            id="donor-name"
             type="text"
             placeholder="Enter your name"
+            required
             class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
           />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Email Address</label>
           <input
+            id="donor-email"
             type="email"
             placeholder="you@example.com"
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+          <input
+            id="donor-phone"
+            type="tel"
+            placeholder="Enter phone number"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
           />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700">Donation Amount (₹)</label>
           <input
+            id="donation-amount"
             type="number"
             placeholder="Enter amount"
+            min="1"
+            step="0.01"
+            required
             class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
           />
         </div>
         <button
+          id="donate-btn"
           type="submit"
           class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-all duration-300"
         >
@@ -293,7 +311,7 @@
     </div>
 
     <!-- QR + Bank Info -->
-    <div class="bg-light p-6 rounded-2xl shadow-md flex flex-col items-center">
+    <!-- <div class="bg-light p-6 rounded-2xl shadow-md flex flex-col items-center">
       <h3 class="text-xl font-bold text-primary mb-4">
         <i class="fa-solid fa-university mr-2"></i> Bank Details
       </h3>
@@ -312,7 +330,7 @@
           class="mx-auto w-60 h-60 rounded-lg shadow-md"
         />
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -470,6 +488,122 @@
   <script src="../assets/js/config.js"></script>
   <script src="../assets/js/api-service.js"></script>
   <script src="../assets/js/blog-handler.js"></script>
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script>
+    // Donation form integration with backend and Razorpay
+    (function() {
+      const form = document.getElementById('donation-form');
+      const btn = document.getElementById('donate-btn');
+
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('donor-name').value.trim();
+        const email = document.getElementById('donor-email').value.trim();
+        const phone = document.getElementById('donor-phone').value.trim();
+        const amount = document.getElementById('donation-amount').value;
+
+        if (!name || !email || !amount || Number(amount) <= 0) {
+          Utils.showNotification(CONFIG.MESSAGES.ERRORS.VALIDATION_FAILED, 'error');
+          return;
+        }
+
+        // Show loading state on button
+        Utils.setLoadingState(btn, true, 'Creating order...');
+
+        try {
+          // Create order on backend
+          const payload = {
+            name,
+            email,
+            phone,
+            amount: Number(amount),
+            currency: 'INR',
+            notes: { source: 'website_donation_page' }
+          };
+
+          const result = await window.apiService.call('/donations/create-order', {
+            method: 'POST',
+            body: JSON.stringify(payload)
+          });
+
+          if (!result.success) {
+            Utils.showNotification(result.error || 'Failed to create order', 'error');
+            Utils.setLoadingState(btn, false);
+            return;
+          }
+
+          const data = result.data || {};
+
+          // Prepare Razorpay options
+          const options = {
+            key: data.key, // provided by server
+            amount: data.amount || Math.round(Number(amount) * 100),
+            currency: data.currency || 'INR',
+            name: 'We The People of Patna',
+            description: 'Donation',
+            order_id: data.orderId,
+            prefill: {
+              name,
+              email,
+              contact: phone
+            },
+            notes: {
+              donationId: data.donationId || ''
+            },
+            handler: async function (response) {
+              // Payment completed in checkout — verify on server
+              Utils.setLoadingState(btn, true, 'Verifying payment...');
+              try {
+                const verifyPayload = {
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                  donationId: data.donationId || ''
+                };
+
+                const verifyRes = await window.apiService.call('/donations/verify', {
+                  method: 'POST',
+                  body: JSON.stringify(verifyPayload)
+                });
+
+                if (verifyRes.success) {
+                  Utils.showNotification('Thank you! Your donation was successful.', 'success');
+                  form.reset();
+                } else {
+                  Utils.showNotification(verifyRes.error || 'Payment verification failed', 'error');
+                }
+              } catch (err) {
+                console.error('Verification error', err);
+                Utils.showNotification('Payment verification failed', 'error');
+              } finally {
+                Utils.setLoadingState(btn, false);
+              }
+            },
+            modal: {
+              ondismiss: function() {
+                Utils.setLoadingState(btn, false);
+              }
+            }
+          };
+
+          // Open Razorpay checkout
+          const rzp = new window.Razorpay(options);
+          rzp.open();
+
+        } catch (err) {
+          console.error('Create order error', err);
+          Utils.showNotification('Failed to create donation order. Please try again later.', 'error');
+        } finally {
+          Utils.setLoadingState(btn, false);
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
