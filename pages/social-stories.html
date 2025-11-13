@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Impact Stories - We The People of Patna | Stories of Change</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Quill Rich Text Editor -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  <!-- Configuration and Utilities -->
+  <script src="../assets/js/config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ["Inter", "sans-serif"] },
+          colors: {
+            primary: "#195a9c",
+            accent: "#ffffff",
+            secondary: "#144A7F",
+            light: "#E6F2FF",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="text-gray-100 overflow-x-hidden font-inter">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white border-b border-light">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="../assets/images/Logo.png" alt="We The People of Patna"
+        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+      <div class="text-2xl font-bold hidden md:block">
+        <span class="text-primary">We The People</span>
+        <span class="text-primary">of Patna</span>
+      </div>
+    </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="../index.html"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
+      <a href="../index.html#about"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
+      <a href="../index.html#vision"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
+        Vision</a>
+      <a href="../index.html#initiatives"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
+      <a href="blog.html"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Blogs</a>
+      <a href="social-stories.html"
+        class="text-primary font-semibold underline decoration-primary">Stories</a>
+        <a href="../pages/donation.html"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Donation</a>
+      <a href="../index.html#contact"
+        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
+        Us</a>
+    </div>
+    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
+    <a href="../index.html"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
+    <a href="../index.html#about"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
+    <a href="../index.html#vision"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
+      Vision</a>
+    <a href="../index.html#initiatives"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
+    <a href="blog.html"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Blogs</a>
+    <a href="social-stories.html"
+      class="block text-primary font-semibold py-2">Stories</a>
+      <a href="../pages/donation.html"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Donation</a>
+    <a href="../index.html#contact"
+      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
+      Us</a>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary pt-32 pb-16">
+    <div class="absolute inset-0 pointer-events-none w-screen h-full">
+      <div class="absolute top-6 left-10 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="w-full max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <div class="space-y-8">
+        <p class="text-white font-semibold text-lg">Impact & Inspiration</p>
+        <h1 class="font-extrabold leading-tight tracking-tight">
+          <span class="text-white block text-4xl lg:text-6xl">Social Impact Stories</span>
+          <span class="text-white block text-2xl lg:text-4xl mt-2">Real Change, Real Lives</span>
+        </h1>
+        <p class="text-white/80 leading-relaxed max-w-3xl mx-auto text-lg">
+          Discover powerful stories of transformation, hope, and progress from our community. Each story represents a life touched, a problem solved, and a step forward in our mission to rebuild Bihar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Story Section -->
+  <section class="py-24 bg-light relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70"></div>
+
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Featured Story</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Story of the Month</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Featured Story Loading Placeholder -->
+      <div id="featuredStoryPlaceholder" class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative h-64 lg:h-auto bg-gray-300"></div>
+          <div class="p-8 lg:p-12 flex flex-col justify-center space-y-4">
+            <div class="h-4 bg-gray-300 rounded w-1/3"></div>
+            <div class="h-8 bg-gray-300 rounded w-3/4"></div>
+            <div class="h-4 bg-gray-300 rounded w-full"></div>
+            <div class="h-4 bg-gray-300 rounded w-5/6"></div>
+            <div class="flex items-center justify-between pt-4">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div class="space-y-2">
+                  <div class="h-4 bg-gray-300 rounded w-20"></div>
+                  <div class="h-3 bg-gray-300 rounded w-16"></div>
+                </div>
+              </div>
+              <div class="h-10 bg-gray-300 rounded-full w-32"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Story Content (hidden initially) -->
+      <article id="featuredStoryContent" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light cursor-pointer hover:shadow-xl transition-shadow duration-300">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative h-64 lg:h-auto">
+            <img id="featuredStoryImage" src="" alt=""
+              class="w-full h-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+            <div class="absolute top-4 left-4">
+              <span id="featuredStoryCategory" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
+            </div>
+            <div class="absolute inset-0 bg-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                <i class="fa-solid fa-arrow-right text-white text-2xl"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-primary/70 text-sm">
+                <i class="fa-solid fa-calendar-days mr-2"></i><span id="featuredStoryDate"></span>
+              </span>
+              <span class="text-primary/70 text-sm" id="featuredStoryLocation"></span>
+            </div>
+            <h3 id="featuredStoryTitle" class="text-3xl font-bold mb-4 text-secondary hover:text-primary transition-colors duration-300"></h3>
+            <p id="featuredStoryExcerpt" class="text-primary leading-relaxed text-lg mb-6 line-clamp-3"></p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img id="featuredStoryAuthorImage" src="" alt=""
+                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+                <div>
+                  <div id="featuredStoryAuthorName" class="text-secondary font-semibold"></div>
+                  <div id="featuredStoryAuthorRole" class="text-primary/70 text-sm"></div>
+                </div>
+              </div>
+              <span class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
+                Read Full Story
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fallback Featured Story (if no stories available) -->
+      <article id="featuredStoryFallback" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative h-64 lg:h-auto">
+            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Impact"
+              class="w-full h-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Impact</span>
+            </div>
+          </div>
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-primary/70 text-sm">
+                <i class="fa-solid fa-calendar-days mr-2"></i>Coming Soon
+              </span>
+            </div>
+            <h3 class="text-3xl font-bold mb-4 text-secondary">
+              Stories of Change Coming Soon
+            </h3>
+            <p class="text-primary leading-relaxed text-lg mb-6">
+              We're collecting powerful stories from our community members about how our movement is creating real change in their lives. Check back soon to read inspiring tales of transformation and hope.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="../assets/images/neta g.jpg" alt="Admin User"
+                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+                <div>
+                  <div class="text-secondary font-semibold">Our Team</div>
+                  <div class="text-primary/70 text-sm">Movement Leaders</div>
+                </div>
+              </div>
+              <a href="../index.html#contact"
+                class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
+                Share Your Story
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    
+    <!-- Fallback timeout script for featured story -->
+    <script>
+      // Hide loading placeholder after 5 seconds if featured story hasn't loaded
+      setTimeout(() => {
+        const placeholder = document.getElementById('featuredStoryPlaceholder');
+        const content = document.getElementById('featuredStoryContent');
+        const fallback = document.getElementById('featuredStoryFallback');
+        
+        if (placeholder && placeholder.style.display !== 'none') {
+          placeholder.style.display = 'none';
+          if (content && content.classList.contains('hidden') && fallback) {
+            fallback.classList.remove('hidden');
+          }
+        }
+      }, 5000);
+    </script>
+  </section>
+
+  <!-- Stories Grid Section -->
+  <section class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Impact Collection</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">All Stories</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="mb-12">
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <div class="relative">
+            <input type="text" placeholder="Search stories..." 
+                   class="story-search w-full md:w-80 px-4 py-3 pl-10 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50">
+            <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-primary/50"></i>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="story-category-filter bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors" data-category="">All</button>
+            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Community">Community</button>
+            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Education">Education</button>
+            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Healthcare">Healthcare</button>
+            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Justice">Justice</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="storiesLoadingSpinner" class="flex justify-center items-center py-12 hidden">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+
+      <!-- Stories Grid Container -->
+      <div class="stories-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Story cards will be dynamically loaded here -->
+
+      </div>
+
+      <!-- No Stories Message -->
+      <div id="noStoriesMessage" class="hidden text-center py-16">
+        <div class="max-w-md mx-auto">
+          <div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-book-open text-primary text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-secondary mb-4">No Stories Found</h3>
+          <p class="text-primary/70 mb-6">We're still collecting stories from our community. Check back soon for inspiring tales of change and impact.</p>
+          <a href="../index.html#contact" class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
+            Share Your Story
+          </a>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-16">
+        <button
+          class="load-more-stories-btn bg-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105 hidden">
+          Load More Stories
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit Your Story Section -->
+  <section class="py-24 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <div class="space-y-8">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+          Have a Story to Share?
+          <span class="bg-white bg-clip-text text-transparent block mt-2">Inspire Others</span>
+        </h2>
+        <p class="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          Your story matters. Whether it's about overcoming challenges, creating change in your community, or being part of our movement, we want to hear from you and share your journey with others.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button id="shareStoryBtn" class="bg-light text-primary px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105">
+            <i class="fa-solid fa-pen mr-2"></i>Share Your Story
+          </button>
+          <a href="https://wa.me/919229551125" target="_blank" class="border border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+            <i class="fa-brands fa-whatsapp mr-2"></i>Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Submission Modal -->
+  <div id="storyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-3xl">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold">Share Your Story</h2>
+          <button id="closeStoryModal" class="text-white hover:text-gray-200 text-2xl">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <p class="text-white/80 mt-2">Help inspire others by sharing your journey of change and impact</p>
+      </div>
+
+      <!-- Modal Content -->
+      <form id="storySubmissionForm" class="p-6 space-y-6">
+        <!-- Personal Information -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-user mr-2"></i>Your Information
+          </h3>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+              <input type="text" name="authorName" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" name="email"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">City *</label>
+              <input type="text" name="city" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Age Group</label>
+              <select name="ageGroup"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+                <option value="">Select Age Group</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-55">46-55</option>
+                <option value="55+">55+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Details -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-book mr-2"></i>Your Story
+          </h3>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Story Title *</label>
+            <input type="text" name="title" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Category *</label>
+              <select name="category" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+                <option value="">Select Category</option>
+                <option value="Community">Community Impact</option>
+                <option value="Education">Education</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Justice">Justice & Rights</option>
+                <option value="Environment">Environment</option>
+                <option value="Youth">Youth Empowerment</option>
+                <option value="Women">Women's Rights</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">When did this happen? *</label>
+              <input type="date" name="date" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+            <input type="text" name="location" required placeholder="Where did this story take place?"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Tell us your story *</label>
+            <div id="storyContentEditor" class="bg-white text-dark rounded-lg border border-gray-300 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all duration-200" style="min-height: 200px;">
+              <div id="quill-story-editor" style="height: 180px;"></div>
+            </div>
+            <input type="hidden" id="description" name="description" required>
+            <p class="text-gray-500 text-sm mt-2">Use the rich text editor to format your story with headings, bold text, lists, and more.</p>
+          </div>
+
+          <!-- Optional Impact and Inspiration sections -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Impact (Optional)</label>
+              <textarea name="impact" rows="3" placeholder="What impact did this story have on you or your community?"
+                  class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Inspiration (Optional)</label>
+              <textarea name="inspiration" rows="3" placeholder="What inspired you to take action or share this story?"
+                  class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Upload Media (Optional)</label>
+            <input type="file" name="media" accept="image/*,video/*" multiple id="mediaUpload"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-semibold hover:file:bg-secondary">
+            <p class="text-sm text-gray-500 mt-1">Add photos or videos that represent your story (max 3 files, 50MB each)</p>
+            <div id="mediaPreview" class="mt-3 grid grid-cols-2 md:grid-cols-3 gap-3 hidden"></div>
+          </div>
+        </div>
+
+        <!-- Privacy & Consent -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-shield-alt mr-2"></i>Privacy Options
+          </h3>
+          
+          <div class="flex items-center space-x-3">
+            <input type="checkbox" name="anonymous" id="anonymous"
+              class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+            <label for="anonymous" class="text-sm font-medium text-gray-700">
+              I wish to remain anonymous (story will be published without personal details)
+            </label>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <input type="checkbox" name="consent" id="consent" required
+              class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-1">
+            <label for="consent" class="text-sm text-gray-700">
+              I give permission to publish my story on the website and use it for awareness purposes. I confirm this story is true and original. *
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-end space-x-4 pt-6 border-t border-gray-200">
+          <button type="button" id="cancelStoryBtn"
+            class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition transform hover:scale-105">
+            <i class="fa-solid fa-paper-plane mr-2"></i>Submit Story
+          </button>
+        </div>
+
+        <!-- Success Message -->
+        <div id="storySubmissionSuccess" class="hidden bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
+          <i class="fa-solid fa-check-circle mr-2"></i>Thank you for sharing your story! It will be reviewed and published soon.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-b from-light to-white py-16 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 text-center space-y-8">
+      <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
+          <img src="../assets/images/neta g.jpg" alt="Vishal Singh"
+            class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
+        </div>
+      </div>
+
+      <div class="flex justify-center space-x-6 mt-6">
+        <a href="https://www.facebook.com/profile.php?id=61580770327109" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-facebook-f text-white"></i>
+        </a>
+        <a href="https://www.instagram.com/wethepeopleofpatna" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-instagram text-white"></i>
+        </a>
+        <a href="https://wa.me/919229551125" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-whatsapp text-white"></i>
+        </a>
+      </div>
+
+      <p class="text-primary/70 text-sm">© 2025 We The People of Patna. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Quill Rich Text Editor for story content
+    let storyQuill;
+    
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Story Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const shareStoryBtn = document.getElementById('shareStoryBtn');
+      const storyModal = document.getElementById('storyModal');
+      const closeStoryModal = document.getElementById('closeStoryModal');
+      const cancelStoryBtn = document.getElementById('cancelStoryBtn');
+      const storySubmissionForm = document.getElementById('storySubmissionForm');
+
+      // Initialize Quill editor when modal opens
+      function initializeStoryEditor() {
+        if (!storyQuill) {
+          storyQuill = new Quill('#quill-story-editor', {
+            theme: 'snow',
+            placeholder: 'Share your journey, challenges overcome, impact created, or how our movement has influenced your life...',
+            modules: {
+              toolbar: [
+                [{ 'header': [1, 2, 3, false] }],
+                ['bold', 'italic', 'underline'],
+                [{ 'color': [] }, { 'background': [] }],
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                [{ 'align': [] }],
+                ['blockquote'],
+                ['clean']
+              ]
+            }
+          });
+
+          // Custom styles for Quill editor to match the theme
+          const quillContainer = document.querySelector('#storyContentEditor .ql-container');
+          if (quillContainer) {
+            quillContainer.style.fontSize = '14px';
+            quillContainer.style.fontFamily = 'Inter, sans-serif';
+          }
+
+          // Update hidden input when content changes
+          storyQuill.on('text-change', function() {
+            const content = storyQuill.root.innerHTML;
+            document.getElementById('description').value = content;
+          });
+
+          // Add character counter
+          addStoryQuillCharacterCounter();
+        }
+        
+        // Initialize media upload handler
+        initializeMediaUpload();
+      }
+
+      // Initialize media upload with validation and preview
+      function initializeMediaUpload() {
+        const mediaUpload = document.getElementById('mediaUpload');
+        const mediaPreview = document.getElementById('mediaPreview');
+        
+        if (mediaUpload) {
+          mediaUpload.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            
+            // Validate file count
+            if (files.length > 3) {
+              if (typeof Utils !== 'undefined' && Utils.showNotification) {
+                Utils.showNotification('Maximum 3 files allowed', 'error', 3000);
+              } else {
+                alert('Maximum 3 files allowed');
+              }
+              e.target.value = '';
+              return;
+            }
+            
+            // Validate each file
+            const validFiles = [];
+            for (const file of files) {
+              // Check file size (50MB limit)
+              if (file.size > 50 * 1024 * 1024) {
+                if (typeof Utils !== 'undefined' && Utils.showNotification) {
+                  Utils.showNotification(`File "${file.name}" is too large. Maximum size is 50MB.`, 'error', 5000);
+                } else {
+                  alert(`File "${file.name}" is too large. Maximum size is 50MB.`);
+                }
+                continue;
+              }
+              
+              // Check file type
+              if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) {
+                if (typeof Utils !== 'undefined' && Utils.showNotification) {
+                  Utils.showNotification(`File "${file.name}" is not a valid image or video.`, 'error', 5000);
+                } else {
+                  alert(`File "${file.name}" is not a valid image or video.`);
+                }
+                continue;
+              }
+              
+              validFiles.push(file);
+            }
+            
+            // Update file input with valid files only
+            if (validFiles.length !== files.length) {
+              const dt = new DataTransfer();
+              validFiles.forEach(file => dt.items.add(file));
+              e.target.files = dt.files;
+            }
+            
+            // Show preview
+            showMediaPreview(validFiles, mediaPreview);
+          });
+        }
+      }
+
+      // Show media preview
+      function showMediaPreview(files, container) {
+        container.innerHTML = '';
+        
+        if (files.length === 0) {
+          container.classList.add('hidden');
+          return;
+        }
+        
+        container.classList.remove('hidden');
+        
+        files.forEach((file, index) => {
+          const previewItem = document.createElement('div');
+          previewItem.className = 'relative bg-gray-100 rounded-lg overflow-hidden';
+          
+          if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.className = 'w-full h-24 object-cover';
+            img.src = URL.createObjectURL(file);
+            previewItem.appendChild(img);
+          } else if (file.type.startsWith('video/')) {
+            const video = document.createElement('video');
+            video.className = 'w-full h-24 object-cover';
+            video.src = URL.createObjectURL(file);
+            video.muted = true;
+            previewItem.appendChild(video);
+            
+            // Add play icon overlay
+            const playIcon = document.createElement('div');
+            playIcon.className = 'absolute inset-0 flex items-center justify-center bg-black bg-opacity-30';
+            playIcon.innerHTML = '<i class="fa-solid fa-play text-white text-xl"></i>';
+            previewItem.appendChild(playIcon);
+          }
+          
+          // Add file name
+          const fileName = document.createElement('div');
+          fileName.className = 'absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs p-1 truncate';
+          fileName.textContent = file.name;
+          previewItem.appendChild(fileName);
+          
+          container.appendChild(previewItem);
+        });
+      }
+
+      // Character counter for Quill editor
+      function addStoryQuillCharacterCounter() {
+        if (!storyQuill) return;
+        
+        const counter = document.createElement('div');
+        counter.className = 'text-gray-500 text-sm mt-1 text-right';
+        counter.id = 'story-quill-counter';
+        document.getElementById('storyContentEditor').parentNode.appendChild(counter);
+
+        function updateStoryQuillCounter() {
+          const text = storyQuill.getText().trim();
+          const length = text.length;
+          counter.textContent = `${length} characters`;
+          
+          if (length < 100) {
+            counter.className = 'text-orange-500 text-sm mt-1 text-right';
+          } else {
+            counter.className = 'text-gray-500 text-sm mt-1 text-right';
+          }
+        }
+
+        storyQuill.on('text-change', updateStoryQuillCounter);
+        updateStoryQuillCounter();
+      }
+
+      // Open modal
+      shareStoryBtn.addEventListener('click', function() {
+        storyModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        
+        // Initialize Quill editor after modal is visible
+        setTimeout(() => {
+          initializeStoryEditor();
+        }, 100);
+      });
+
+      // Close modal functions
+      function closeModalFunc() {
+        storyModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        storySubmissionForm.reset();
+        
+        // Reset Quill editor
+        if (storyQuill) {
+          storyQuill.setContents([]);
+        }
+        
+        // Remove character counter
+        const existingCounter = document.getElementById('story-quill-counter');
+        if (existingCounter) {
+          existingCounter.remove();
+        }
+        
+        // Clear media preview
+        const mediaPreview = document.getElementById('mediaPreview');
+        if (mediaPreview) {
+          // Clean up object URLs to prevent memory leaks
+          const images = mediaPreview.querySelectorAll('img, video');
+          images.forEach(media => {
+            if (media.src.startsWith('blob:')) {
+              URL.revokeObjectURL(media.src);
+            }
+          });
+          mediaPreview.innerHTML = '';
+          mediaPreview.classList.add('hidden');
+        }
+        
+        document.getElementById('storySubmissionSuccess').classList.add('hidden');
+      }
+
+      closeStoryModal.addEventListener('click', closeModalFunc);
+      cancelStoryBtn.addEventListener('click', closeModalFunc);
+
+      // Close modal when clicking outside
+      storyModal.addEventListener('click', function(e) {
+        if (e.target === storyModal) {
+          closeModalFunc();
+        }
+      });
+
+      // Form submission
+      storySubmissionForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Check if CONFIG and Utils are available
+        if (typeof CONFIG === 'undefined') {
+          console.error('CONFIG is not loaded');
+          alert('Configuration not loaded. Please refresh the page and try again.');
+          return;
+        }
+        
+        if (typeof Utils === 'undefined') {
+          console.error('Utils is not loaded');
+          alert('Utilities not loaded. Please refresh the page and try again.');
+          return;
+        }
+        
+        // Update hidden input with Quill content before form validation
+        if (storyQuill) {
+          const content = storyQuill.root.innerHTML;
+          document.getElementById('description').value = content;
+          
+          // Validate content length (strip HTML tags for length check)
+          const contentText = content.replace(/<[^>]*>/g, '').trim();
+          if (contentText.length < 100) {
+            alert('Your story should be at least 100 characters long.');
+            return;
+          }
+        }
+        
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Submitting...';
+        submitBtn.disabled = true;
+
+        try {
+          // Create FormData object for file upload
+          const formData = new FormData(this);
+          
+          // Add contributor name and email for anonymous submission
+          formData.append('contributorName', formData.get('authorName'));
+          formData.append('contributorEmail', formData.get('email'));
+          
+          // Check if anonymous checkbox is checked
+          const isAnonymous = formData.get('anonymous') === 'on';
+          if (isAnonymous) {
+            formData.delete('email'); // Remove email if anonymous
+          }
+
+          // Enhanced validation
+          const requiredFields = ['authorName', 'title', 'category', 'description', 'location', 'date'];
+          const missingFields = requiredFields.filter(field => !formData.get(field) || !formData.get(field).toString().trim());
+          
+          if (missingFields.length > 0) {
+            if (typeof Utils !== 'undefined' && Utils.showNotification) {
+              Utils.showNotification(`Please fill in all required fields: ${missingFields.join(', ')}`, 'error', 5000);
+            } else {
+              alert(`Please fill in all required fields: ${missingFields.join(', ')}`);
+            }
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+          
+          if (!formData.get('consent')) {
+            if (typeof Utils !== 'undefined' && Utils.showNotification) {
+              Utils.showNotification('Please accept the consent to publish your story.', 'error', 5000);
+            } else {
+              alert('Please accept the consent to publish your story.');
+            }
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+          
+          // Validate field lengths and content
+          const title = formData.get('title').toString().trim();
+          const authorName = formData.get('authorName').toString().trim();
+          const email = formData.get('email');
+          
+          if (title.length < 5 || title.length > 200) {
+            if (typeof Utils !== 'undefined' && Utils.showNotification) {
+              Utils.showNotification('Story title must be between 5 and 200 characters.', 'error', 5000);
+            } else {
+              alert('Story title must be between 5 and 200 characters.');
+            }
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+          
+          if (authorName.length < 2 || authorName.length > 100) {
+            if (typeof Utils !== 'undefined' && Utils.showNotification) {
+              Utils.showNotification('Author name must be between 2 and 100 characters.', 'error', 5000);
+            } else {
+              alert('Author name must be between 2 and 100 characters.');
+            }
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+          
+          // Email validation with fallback
+          const emailToValidate = email ? email.toString().trim() : '';
+          const isValidEmail = (typeof Utils !== 'undefined' && Utils.isValidEmail) 
+            ? Utils.isValidEmail(emailToValidate)
+            : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailToValidate);
+            
+          if (email && !isValidEmail) {
+            if (typeof Utils !== 'undefined' && Utils.showNotification) {
+              Utils.showNotification('Please enter a valid email address.', 'error', 5000);
+            } else {
+              alert('Please enter a valid email address.');
+            }
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+          
+          // Sanitize form data
+          formData.set('title', title);
+          formData.set('authorName', authorName);
+          if (email) formData.set('email', email.toString().trim().toLowerCase());
+
+          // Submit to backend API using CONFIG with fallback
+          const baseUrl = (typeof CONFIG !== 'undefined' && CONFIG.API) 
+            ? CONFIG.API.BASE_URL 
+            : 'http://localhost:5000/api';
+          const endpoint = (typeof CONFIG !== 'undefined' && CONFIG.API && CONFIG.API.ENDPOINTS) 
+            ? CONFIG.API.ENDPOINTS.ADMIN_SUBMIT_ANONYMOUS 
+            : '/admin/submit-anonymous';
+          const apiUrl = `${baseUrl}${endpoint}`;
+          
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            body: formData
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({ message: 'Server error' }));
+            throw new Error(errorData.message || `Server error: ${response.status}`);
+          }
+
+          const result = await response.json();
+          
+          if (result.success) {
+            document.getElementById('storySubmissionSuccess').classList.remove('hidden');
+            
+            // Show success notification with fallback
+            const successMessage = (typeof CONFIG !== 'undefined' && CONFIG.MESSAGES && CONFIG.MESSAGES.SUCCESS) 
+              ? CONFIG.MESSAGES.SUCCESS.BLOG_SUBMITTED 
+              : 'Story submitted successfully! It will be reviewed before publication.';
+              
+            if (typeof Utils !== 'undefined' && Utils.showNotification) {
+              Utils.showNotification(successMessage, 'success', 5000);
+            }
+            
+            // Reset form after showing success message
+            setTimeout(() => {
+              closeModalFunc();
+            }, 3000);
+          } else {
+            throw new Error(result.message || 'Failed to submit story');
+          }
+        } catch (error) {
+          console.error('Error submitting story:', error);
+          
+          // Show user-friendly error message
+          let errorMessage = 'Failed to submit your story. Please try again later.';
+          
+          if (!navigator.onLine) {
+            errorMessage = 'No internet connection. Please check your connection and try again.';
+          } else if (error.name === 'TypeError' && error.message.includes('fetch')) {
+            errorMessage = 'Unable to connect to server. Please try again later.';
+          }
+          
+          if (typeof Utils !== 'undefined' && Utils.showNotification) {
+            Utils.showNotification(errorMessage, 'error', 7000);
+          } else {
+            alert(errorMessage);
+          }
+        } finally {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    });
+
+    // Load featured story
+    async function loadFeaturedStory() {
+      try {
+        const response = await fetch(`${CONFIG.API.BASE_URL}/contributions/featured`);
+        
+        if (response.ok) {
+          const result = await response.json();
+          
+          if (result.success && result.data) {
+            displayFeaturedStory(result.data);
+          } else {
+            showFeaturedFallback();
+          }
+        } else {
+          showFeaturedFallback();
+        }
+      } catch (error) {
+        console.error('Error loading featured story:', error);
+        showFeaturedFallback();
+      }
+    }
+
+    // Display featured story
+    function displayFeaturedStory(story) {
+      const placeholder = document.getElementById('featuredStoryPlaceholder');
+      const content = document.getElementById('featuredStoryContent');
+      const fallback = document.getElementById('featuredStoryFallback');
+
+      // Hide placeholder and fallback
+      placeholder.style.display = 'none';
+      fallback.classList.add('hidden');
+
+      // Populate featured story content
+      document.getElementById('featuredStoryImage').src = story.image || CONFIG.DEFAULTS.BLOG_IMAGE;
+      document.getElementById('featuredStoryCategory').textContent = story.category;
+      document.getElementById('featuredStoryDate').textContent = Utils.formatDate(story.date);
+      document.getElementById('featuredStoryLocation').textContent = story.location;
+      document.getElementById('featuredStoryTitle').textContent = story.title;
+      document.getElementById('featuredStoryExcerpt').innerHTML = story.description;
+      
+      // Author info
+      document.getElementById('featuredStoryAuthorImage').src = story.contributor.photo || CONFIG.DEFAULTS.AUTHOR_IMAGE;
+      document.getElementById('featuredStoryAuthorName').textContent = story.contributor.name;
+      document.getElementById('featuredStoryAuthorRole').textContent = story.contributor.role;
+
+      // Add click handler to navigate to story details
+      content.onclick = () => {
+        window.location.href = `story-details.html?id=${story.id}`;
+      };
+
+      // Show content
+      content.classList.remove('hidden');
+    }
+
+    // Show featured fallback
+    function showFeaturedFallback() {
+      const placeholder = document.getElementById('featuredStoryPlaceholder');
+      const content = document.getElementById('featuredStoryContent');
+      const fallback = document.getElementById('featuredStoryFallback');
+
+      placeholder.style.display = 'none';
+      content.classList.add('hidden');
+      fallback.classList.remove('hidden');
+    }
+
+    // Load stories with pagination and filtering
+    let currentPage = 1;
+    let isLoading = false;
+
+    async function loadStories(page = 1, search = '', category = '') {
+      if (isLoading) return;
+      
+      isLoading = true;
+      const loadingSpinner = document.getElementById('storiesLoadingSpinner');
+      const storiesGrid = document.querySelector('.stories-grid-container');
+      const noStoriesMessage = document.getElementById('noStoriesMessage');
+      const loadMoreBtn = document.querySelector('.load-more-stories-btn');
+
+      // Show loading spinner
+      loadingSpinner.classList.remove('hidden');
+
+      try {
+        const params = new URLSearchParams({
+          page: page.toString(),
+          limit: '12',
+          ...(search && { search }),
+          ...(category && { category })
+        });
+
+        const response = await fetch(`${CONFIG.API.BASE_URL}/contributions/cards?${params}`);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        
+        if (result.success && result.data) {
+          const { contributions, pagination } = result.data;
+          
+          if (page === 1) {
+            // Clear existing stories for new search/filter
+            storiesGrid.innerHTML = '';
+          }
+
+          if (contributions.length === 0 && page === 1) {
+            // No stories found
+            noStoriesMessage.classList.remove('hidden');
+            loadMoreBtn.classList.add('hidden');
+          } else {
+            // Display stories
+            noStoriesMessage.classList.add('hidden');
+            displayStories(contributions);
+            
+            // Handle load more button
+            if (pagination.hasNext) {
+              loadMoreBtn.classList.remove('hidden');
+              loadMoreBtn.onclick = () => loadStories(pagination.currentPage + 1, search, category);
+            } else {
+              loadMoreBtn.classList.add('hidden');
+            }
+          }
+
+          currentPage = pagination.currentPage;
+        } else {
+          throw new Error('Invalid response format');
+        }
+      } catch (error) {
+        console.error('Error loading stories:', error);
+        
+        if (page === 1) {
+          storiesGrid.innerHTML = '';
+          noStoriesMessage.classList.remove('hidden');
+        }
+        
+        Utils.showNotification('Failed to load stories. Please try again.', 'error');
+      } finally {
+        isLoading = false;
+        loadingSpinner.classList.add('hidden');
+      }
+    }
+
+    // Format contributor role for display
+    function formatContributorRole(role) {
+      const roleMap = {
+        'Pending_Contributor': 'Community Member',
+        'Verified_Contributor': 'Verified Member',
+        'Community Member': 'Community Member',
+        'Admin': 'Administrator',
+        'Moderator': 'Moderator',
+        'Unknown': 'Community Member'
+      };
+      return roleMap[role] || 'Community Member';
+    }
+
+    // Display stories in grid
+    function displayStories(stories) {
+      const storiesGrid = document.querySelector('.stories-grid-container');
+      
+      stories.forEach(story => {
+        const storyCard = document.createElement('article');
+        storyCard.className = 'bg-white rounded-2xl shadow-lg overflow-hidden border border-primary/10 hover:shadow-xl transition-shadow duration-300 cursor-pointer';
+        storyCard.onclick = () => {
+          window.location.href = `story-details.html?id=${story.id}`;
+        };
+
+        storyCard.innerHTML = `
+          <div class="relative h-48">
+            <img src="${story.image || CONFIG.DEFAULTS.BLOG_IMAGE}" alt="${story.title}"
+              class="w-full h-full object-cover" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">${story.category}</span>
+            </div>
+            <div class="absolute inset-0 bg-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                <i class="fa-solid fa-arrow-right text-white text-xl"></i>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-4 mb-3">
+              <span class="text-primary/70 text-sm">
+                <i class="fa-solid fa-calendar-days mr-1"></i>${Utils.formatDate(story.date)}
+              </span>
+              <span class="text-primary/70 text-sm">${story.location} </span>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-secondary hover:text-primary transition-colors duration-300">${story.title}</h3>
+            <div class="text-black leading-relaxed mb-4">${story.description}</div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <img src="${story.contributor.photo || CONFIG.DEFAULTS.AUTHOR_IMAGE}" alt="${story.contributor.name}"
+                  class="w-10 h-10 rounded-full object-cover border-2 border-primary/30" />
+                <div>
+                  <div class="text-secondary font-semibold text-sm">${story.contributor.name}</div>
+                  <div class="text-primary/70 text-xs">${formatContributorRole(story.contributor.role)}</div>
+                </div>
+              </div>
+              ${story.contributor.verified ? '<i class="fa-solid fa-check-circle text-primary"></i>' : ''}
+            </div>
+          </div>
+        `;
+
+        storiesGrid.appendChild(storyCard);
+      });
+    }
+
+    // Search and filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('.story-search');
+      const categoryFilters = document.querySelectorAll('.story-category-filter');
+
+      // Initialize stories loading
+      loadStories();
+      loadFeaturedStory();
+
+      // Search functionality
+      if (searchInput) {
+        const debouncedSearch = Utils.debounce(function() {
+          loadStories(1, this.value);
+        }, CONFIG.APP.SEARCH_DEBOUNCE_TIME);
+        
+        searchInput.addEventListener('input', debouncedSearch);
+      }
+
+      // Category filter functionality
+      categoryFilters.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active state from all buttons
+          categoryFilters.forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-white');
+            btn.classList.add('bg-white', 'text-primary', 'border-primary');
+          });
+
+          // Add active state to clicked button
+          this.classList.add('bg-primary', 'text-white');
+          this.classList.remove('bg-white', 'text-primary', 'border-primary');
+
+          const category = this.dataset.category;
+          loadStories(1, searchInput?.value || '', category);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

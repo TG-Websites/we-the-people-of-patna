@@ -9,7 +9,15 @@ const CONFIG = {
       BLOG_CATEGORIES: '/blogs/meta/categories',
       BLOG_TAGS: '/blogs/meta/tags',
       UPLOAD: '/upload',
-      SUBMISSIONS: '/submissions'
+      SUBMISSIONS: '/submissions',
+      ADMIN_SUBMIT_ANONYMOUS: '/admin/submit-anonymous',
+      CONTRIBUTIONS: '/admin/web/contributions',
+      CONTRIBUTION_CARDS: '/contributions/cards',
+      CONTRIBUTION_DETAILS: '/contributions/:id/details',
+      CONTRIBUTION_FEATURED: '/contributions/featured',
+      CONTRIBUTION_CATEGORIES: '/contributions/categories',
+      CONTRIBUTION_RELATED: '/contributions/:id/related',
+      HEALTH: '/health'
     }
   },
 
@@ -22,7 +30,7 @@ const CONFIG = {
   },
 
   // Blog Categories with their styling
-  CATEGORIES: {
+  CATEGORIES: { 
     'Reform Victory': {
       class: 'bg-primary',
       color: '#195a9c'
@@ -76,7 +84,8 @@ const CONFIG = {
   // Default images
   DEFAULTS: {
     BLOG_IMAGE: 'https://imgs.search.brave.com/ZyIJRwx6nch-SewSp7ofPTBBj3cIvSrkt8v6i5Rm78Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi92aWV3/LXBhdG5hLXJhaWx3/YXktc3RhdGlvbi1i/aWhhci1pbmRpYS1j/YXBpdGFsLXdpbnRl/ci1kYXktcGFzc2Vu/Z2Vycy13YWl0aW5n/LXRyYWluLTM4ODY2/OTQyMy5qcGc',
-    AUTHOR_IMAGE: 'assets/images/neta g.jpg' // Will be encoded by getImageUrl
+    STORY_IMAGE: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    AUTHOR_IMAGE: 'https://cdn-icons-png.flaticon.com/512/149/149071.png'
   },
 
   // Error messages
