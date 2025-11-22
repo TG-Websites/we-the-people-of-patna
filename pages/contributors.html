@@ -54,8 +54,7 @@
           class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Blogs</a>
         <a href="social-stories.html"
           class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Stories</a>
-        <a href="contributors.html"
-          class="text-primary font-semibold underline decoration-primary">Contributors</a>
+        <a href="contributors.html" class="text-primary font-semibold underline decoration-primary">Contributors</a>
         <a href="donation.html"
           class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Donation</a>
         <a href="../index.html#contact"
@@ -82,8 +81,7 @@
         class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Blogs</a>
       <a href="social-stories.html"
         class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Stories</a>
-      <a href="contributors.html"
-        class="block text-primary font-semibold py-2">Contributors</a>
+      <a href="contributors.html" class="block text-primary font-semibold py-2">Contributors</a>
       <a href="donation.html"
         class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Donation</a>
       <a href="../index.html#contact"
@@ -108,7 +106,8 @@
           </span>
         </h1>
         <p class="text-white/80 leading-relaxed max-w-3xl mx-auto text-lg">
-          Meet the passionate individuals who are driving Bihar's transformation through their stories, ideas, and unwavering commitment to change.
+          Meet the passionate individuals who are driving Bihar's transformation through their stories, ideas, and
+          unwavering commitment to change.
         </p>
       </div>
     </div>
@@ -124,13 +123,15 @@
       <div class="text-center mb-16">
         <p class="text-primary font-semibold uppercase tracking-wide mb-3">Featured Contributor</p>
         <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-          Spotlight on <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Excellence</span>
+          Spotlight on <span
+            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Excellence</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
       </div>
 
       <!-- Featured Contributor Loading Placeholder -->
-      <div id="featuredContributorPlaceholder" class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <div id="featuredContributorPlaceholder"
+        class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="aspect-square bg-gray-300 rounded-l-3xl"></div>
           <div class="p-8 lg:p-12 space-y-4">
@@ -149,32 +150,31 @@
       </div>
 
       <!-- Featured Contributor Content (hidden initially) -->
-      <article id="featuredContributorContent" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light cursor-pointer hover:shadow-xl transition-shadow duration-300">
+      <article id="featuredContributorContent"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light cursor-pointer hover:shadow-xl transition-shadow duration-300">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative aspect-square lg:aspect-auto overflow-hidden">
-            <img id="featuredContributorImage" 
-                 src="" 
-                 alt="Featured Contributor" 
-                 class="w-full h-full object-cover" />
+            <img id="featuredContributorImage" src="" alt="Featured Contributor" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
           </div>
-          
+
           <div class="p-8 lg:p-12 flex flex-col justify-center">
             <div class="space-y-6">
               <div>
-                <p id="featuredContributorRole" class="text-primary font-semibold uppercase tracking-wide text-sm mb-2"></p>
+                <p id="featuredContributorRole" class="text-primary font-semibold uppercase tracking-wide text-sm mb-2">
+                </p>
                 <h3 id="featuredContributorName" class="text-3xl lg:text-4xl font-bold text-secondary mb-4"></h3>
               </div>
-              
+
               <p id="featuredContributorBio" class="text-gray-700 leading-relaxed text-lg"></p>
-              
+
               <div class="flex flex-wrap gap-2" id="featuredContributorTags">
                 <!-- Tags will be populated dynamically -->
               </div>
-              
+
               <div class="pt-4">
-                <button id="viewFeaturedContributorProfile" 
-                        class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                <button id="viewFeaturedContributorProfile"
+                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                   View Profile
                   <i class="fa-solid fa-arrow-right ml-2"></i>
                 </button>
@@ -185,26 +185,29 @@
       </article>
 
       <!-- Fallback Featured Contributor (if no contributors available) -->
-      <article id="featuredContributorFallback" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <article id="featuredContributorFallback"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
-          <div class="relative aspect-square lg:aspect-auto overflow-hidden bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+          <div
+            class="relative aspect-square lg:aspect-auto overflow-hidden bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
             <i class="fa-solid fa-users text-6xl text-white/50"></i>
           </div>
-          
+
           <div class="p-8 lg:p-12 flex flex-col justify-center">
             <div class="space-y-6">
               <div>
                 <p class="text-primary font-semibold uppercase tracking-wide text-sm mb-2">Community Leader</p>
                 <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Be the First Contributor</h3>
               </div>
-              
+
               <p class="text-gray-700 leading-relaxed text-lg">
-                Join our growing community of change-makers. Share your story, contribute to the movement, and help rebuild Bihar together.
+                Join our growing community of change-makers. Share your story, contribute to the movement, and help
+                rebuild Bihar together.
               </p>
-              
+
               <div class="pt-4">
-                <a href="../index.html#contact" 
-                   class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                <a href="../index.html#contact"
+                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                   Join the Movement
                   <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
@@ -218,13 +221,16 @@
 
   <!-- Contributors Grid Section -->
   <section class="py-24 bg-light relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70"></div>
+    <div
+      class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70">
+    </div>
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
       <div class="text-center mb-16">
         <p class="text-primary font-semibold uppercase tracking-wide mb-3">Our Community</p>
         <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-          Meet Our <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Contributors</span>
+          Meet Our <span
+            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Contributors</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
       </div>
@@ -233,10 +239,9 @@
       <div class="mb-12">
         <div class="flex flex-col md:flex-row gap-4 justify-end items-center">
           <div class="relative w-full md:w-96">
-            <input type="text" 
-                   id="contributorSearch"
-                   class="contributor-search w-full px-6 py-3 pl-12 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary text-gray-700 placeholder-gray-500"
-                   placeholder="Search contributors by name or role...">
+            <input type="text" id="contributorSearch"
+              class="contributor-search w-full px-6 py-3 pl-12 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary text-gray-700 placeholder-gray-500"
+              placeholder="Search contributors by name or role...">
             <i class="fa-solid fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
           </div>
         </div>
@@ -249,7 +254,7 @@
 
       <!-- Contributors Grid Container -->
       <div class="contributors-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+
         <!-- Contributor cards will be dynamically loaded here -->
 
       </div>
@@ -260,8 +265,8 @@
           <i class="fa-solid fa-users text-6xl text-gray-300 mb-6"></i>
           <h3 class="text-2xl font-bold text-gray-600 mb-4">No Contributors Found</h3>
           <p class="text-gray-500 mb-6">We couldn't find any contributors matching your search criteria.</p>
-          <button onclick="clearContributorFilters()" 
-                  class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
+          <button onclick="clearContributorFilters()"
+            class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
             Clear Filters
           </button>
         </div>
@@ -296,7 +301,7 @@
     // Load contributors with pagination and filtering
     async function loadContributors(page = 1, search = '', role = '') {
       if (isLoading) return;
-      
+
       isLoading = true;
       const loadingSpinner = document.getElementById('contributorsLoadingSpinner');
       const contributorsGrid = document.querySelector('.contributors-grid-container');
@@ -323,13 +328,13 @@
         });
 
         const response = await fetch(`${CONFIG.API.BASE_URL}/contributors/cards?${params}`);
-        
+
         if (!response.ok) {
           throw new Error('Failed to fetch contributors');
         }
 
         const result = await response.json();
-        
+
         if (page === 1) {
           allContributors = result.contributors || [];
           filteredContributors = [...allContributors];
@@ -345,7 +350,7 @@
           loadMoreBtn.classList.add('hidden');
         } else {
           displayContributors(page === 1 ? filteredContributors : result.contributors || []);
-          
+
           // Show/hide load more button
           if (result.hasMore) {
             loadMoreBtn.classList.remove('hidden');
@@ -415,7 +420,7 @@
 
       allContributors = fallbackContributors;
       filteredContributors = [...allContributors];
-      
+
       const contributorsGrid = document.querySelector('.contributors-grid-container');
       contributorsGrid.innerHTML = '';
       displayContributors(filteredContributors);
@@ -433,7 +438,7 @@
     // Display contributors in grid
     function displayContributors(contributors) {
       const contributorsGrid = document.querySelector('.contributors-grid-container');
-      
+
       contributors.forEach(contributor => {
         const contributorCard = createContributorCard(contributor);
         contributorsGrid.appendChild(contributorCard);
@@ -444,7 +449,7 @@
     function createContributorCard(contributor) {
       const card = document.createElement('article');
       card.className = 'contributor-card bg-accent rounded-2xl shadow-lg overflow-hidden border border-light hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer';
-      
+
       const roleDisplayMap = {
         'activist': 'Community Activist',
         'youth_leader': 'Youth Leader',
@@ -487,42 +492,87 @@
           </button>
         </div>
       `;
-      
+
       return card;
     }
 
     // Load featured contributor
+    // async function loadFeaturedContributor() {
+    //   try {
+    //     if (typeof CONFIG === 'undefined') {
+    //       console.warn('CONFIG not available, using fallback featured contributor');
+    //       setTimeout(() => {
+    //         const fallbackContributor = {
+    //           id: 1,
+    //           name: 'Vishal Singh',
+    //           role: 'Community Leader & Activist',
+    //           photo: '../assets/images/Logo.png',
+    //           bio: 'Vishal Singh is the driving force behind "We The People of Patna." A visionary leader and reformist thinker, he represents a new era of citizen-led change focused on honesty, accountability, and self-governance. His mission is to unite ordinary people in extraordinary action and rebuild Bihar.',
+    //           tags: ['Leadership', 'Reform', 'Community', 'Vision']
+    //         };
+    //         displayFeaturedContributor(fallbackContributor);
+    //       }, 1000);
+    //       return;
+    //     }
+
+    //     const response = await fetch(`${CONFIG.API.BASE_URL}/contributors/featured`);
+
+    //     if (response.ok) {
+    //       const contributor = await response.json();
+    //       displayFeaturedContributor(contributor);
+    //     } else {
+    //       showFeaturedContributorFallback();
+    //     }
+    //   } catch (error) {
+    //     console.error('Error loading featured contributor:', error);
+    //     showFeaturedContributorFallback();
+    //   }
+    // }
+
     async function loadFeaturedContributor() {
+      const placeholder = document.getElementById('featuredContributorPlaceholder');
+      const content = document.getElementById('featuredContributorContent');
+      const fallback = document.getElementById('featuredContributorFallback');
+
       try {
-        if (typeof CONFIG === 'undefined') {
-          console.warn('CONFIG not available, using fallback featured contributor');
-          setTimeout(() => {
-            const fallbackContributor = {
-              id: 1,
-              name: 'Vishal Singh',
-              role: 'Community Leader & Activist',
-              photo: '../assets/images/Logo.png',
-              bio: 'Vishal Singh is the driving force behind "We The People of Patna." A visionary leader and reformist thinker, he represents a new era of citizen-led change focused on honesty, accountability, and self-governance. His mission is to unite ordinary people in extraordinary action and rebuild Bihar.',
-              tags: ['Leadership', 'Reform', 'Community', 'Vision']
-            };
-            displayFeaturedContributor(fallbackContributor);
-          }, 1000);
+        const response = await fetch(`${CONFIG.API.BASE_URL}/contributors/featured`);
+        const contributor = await response.json();
+
+        if (!contributor || !contributor.id) {
+          fallback.classList.remove('hidden');
+          placeholder.style.display = 'none';
           return;
         }
 
-        const response = await fetch(`${CONFIG.API.BASE_URL}/contributors/featured`);
-        
-        if (response.ok) {
-          const contributor = await response.json();
-          displayFeaturedContributor(contributor);
-        } else {
-          showFeaturedContributorFallback();
-        }
+        document.getElementById('featuredContributorImage').src = contributor.photo;
+        document.getElementById('featuredContributorRole').textContent = contributor.role;
+        document.getElementById('featuredContributorName').textContent = contributor.name;
+        document.getElementById('featuredContributorBio').textContent = contributor.bio;
+
+        // Tags
+        const tagsContainer = document.getElementById('featuredContributorTags');
+        tagsContainer.innerHTML = '';
+        (contributor.tags || []).forEach(tag => {
+          const span = document.createElement("span");
+          span.className = "px-3 py-1 bg-primary/10 text-primary text-sm rounded-full";
+          span.textContent = tag;
+          tagsContainer.appendChild(span);
+        });
+
+        document.getElementById('viewFeaturedContributorProfile').onclick = () => {
+          window.location.href = `contributor-profile.html?id=${contributor.id}`;
+        };
+
+        placeholder.style.display = 'none';
+        content.classList.remove('hidden');
+
       } catch (error) {
-        console.error('Error loading featured contributor:', error);
-        showFeaturedContributorFallback();
+        console.log("Featured contributor error:", error);
+        fallback.classList.remove('hidden');
+        placeholder.style.display = 'none';
       }
     }
+
 
     // Display featured contributor
     function displayFeaturedContributor(contributor) {
@@ -539,7 +589,7 @@
       document.getElementById('featuredContributorRole').textContent = contributor.role || 'Community Member';
       document.getElementById('featuredContributorName').textContent = contributor.name;
       document.getElementById('featuredContributorBio').textContent = contributor.bio;
-      
+
       // Tags
       const tagsContainer = document.getElementById('featuredContributorTags');
       tagsContainer.innerHTML = '';
@@ -592,38 +642,90 @@
       currentPage += 1;
       const searchInput = document.querySelector('.contributor-search');
       const activeRoleFilter = document.querySelector('.contributor-role-filter.active');
-      
-      loadContributors(
-        currentPage, 
-        searchInput ? searchInput.value.trim() : '', 
-        activeRoleFilter ? activeRoleFilter.dataset.role : ''
-      );
+
+      // loadContributors(
+      //   currentPage, 
+      //   searchInput ? searchInput.value.trim() : '', 
+      //   activeRoleFilter ? activeRoleFilter.dataset.role : ''
+      // );
+      // Load contributors with pagination and filtering
+      async function loadContributors(page = 1, search = '', role = '') {
+        if (isLoading) return;
+
+        isLoading = true;
+        const loadingSpinner = document.getElementById('contributorsLoadingSpinner');
+        const contributorsGrid = document.querySelector('.contributors-grid-container');
+        const noContributorsMessage = document.getElementById('noContributorsMessage');
+        const loadMoreBtn = document.querySelector('.load-more-contributors-btn');
+
+        loadingSpinner.classList.remove('hidden');
+        loadingSpinner.classList.add('flex');
+
+        try {
+          const response = await fetch(
+            `${CONFIG.API.BASE_URL}/contributors/public?page=${page}&limit=9&search=${search}&role=${role}`
+          );
+
+          const result = await response.json();
+
+          if (!result?.data || result.data.length === 0) {
+            if (page === 1) {
+              noContributorsMessage.classList.remove('hidden');
+              contributorsGrid.innerHTML = '';
+            }
+            loadMoreBtn.classList.add('hidden');
+          } else {
+
+            if (page === 1) {
+              contributorsGrid.innerHTML = '';
+            }
+
+            result.data.forEach(contributor => {
+              contributorsGrid.appendChild(createContributorCard(contributor));
+            });
+
+            if (result.hasMore) {
+              loadMoreBtn.classList.remove('hidden');
+            } else {
+              loadMoreBtn.classList.add('hidden');
+            }
+          }
+
+        } catch (error) {
+          console.error("Error loading contributors:", error);
+        }
+
+        loadingSpinner.classList.add('hidden');
+        loadingSpinner.classList.remove('flex');
+        isLoading = false;
+      }
+
     }
 
     // Clear all filters
     function clearContributorFilters() {
       const searchInput = document.querySelector('.contributor-search');
       const roleFilters = document.querySelectorAll('.contributor-role-filter');
-      
+
       if (searchInput) searchInput.value = '';
-      
+
       roleFilters.forEach(btn => {
         btn.classList.remove('active', 'bg-primary', 'text-white');
         btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-300');
       });
-      
+
       const allFilter = document.querySelector('.contributor-role-filter[data-role=""]');
       if (allFilter) {
         allFilter.classList.add('active', 'bg-primary', 'text-white');
         allFilter.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-300');
       }
-      
+
       currentPage = 1;
       loadContributors();
     }
 
     // Search and filter functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const searchInput = document.querySelector('.contributor-search');
       const roleFilters = document.querySelectorAll('.contributor-role-filter');
 
@@ -656,10 +758,10 @@
             btn.classList.remove('active', 'bg-primary', 'text-white');
             btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-300');
           });
-          
+
           button.classList.add('active', 'bg-primary', 'text-white');
           button.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-300');
-          
+
           // Load filtered contributors
           currentPage = 1;
           const searchValue = searchInput ? searchInput.value.trim() : '';
@@ -672,7 +774,7 @@
         const placeholder = document.getElementById('featuredContributorPlaceholder');
         const content = document.getElementById('featuredContributorContent');
         const fallback = document.getElementById('featuredContributorFallback');
-        
+
         if (placeholder && placeholder.style.display !== 'none') {
           placeholder.style.display = 'none';
           if (content.classList.contains('hidden') && fallback.classList.contains('hidden')) {
