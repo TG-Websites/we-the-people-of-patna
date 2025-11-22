@@ -33,62 +33,114 @@
 <body class="text-gray-100 overflow-x-hidden font-inter">
   <!-- Navbar -->
   <nav class="fixed w-full z-50 bg-white border-b border-light">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <img src="../assets/images/Logo.png" alt="We The People of Patna"
-        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
-      <div class="text-2xl font-bold hidden md:block">
-        <span class="text-primary">We The People</span>
-        <span class="text-primary">of Patna</span>
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="../assets/images/Logo.png" alt="We The People of Patna"
+          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+        <div class="text-2xl font-bold hidden md:block">
+          <span class="text-primary">We The People</span>
+          <span class="text-primary">of Patna</span>
+        </div>
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex items-center space-x-8">
+
+        <!-- HOME -->
+        <a href="../index.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+          Home
+        </a>
+
+        <!-- ABOUT (with submenu) -->
+        <div class="relative group">
+          <a href="../index.html#about"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+            About
+          </a>
+
+          <!-- Submenu -->
+          <div
+            class="absolute left-0 mt-2 w-52 bg-white border border-light rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="../index.html#vision" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">
+              Our Vision
+            </a>
+            <a href="../index.html#initiatives"
+              class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">
+              Initiatives
+            </a>
+            <a href="blog.html" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">
+              Blogs
+            </a>
+          </div>
+        </div>
+
+        <!-- DONATION -->
+        <a href="../pages/donation.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+          Donation
+        </a>
+
+        <!-- CONTRIBUTORS (with submenu) -->
+        <div class="relative group">
+          <a href="./contributors.html"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+            Contributors
+          </a>
+
+          <!-- Submenu -->
+          <div
+            class="absolute left-0 mt-2 w-52 bg-white border border-light rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="./social-stories.html"
+              class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">
+              Contributions
+            </a>
+            <a href="../index.html#contact"
+              class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">
+              Join Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MOBILE MENU BTN -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden space-y-2">
+      <a href="../index.html" class="block text-gray-600 py-2 hover:text-primary transition-colors">Home</a>
+
+      <!-- About with nested links -->
+      <div>
+        <a href="../index.html#about" class="block text-gray-600 py-2 hover:text-primary transition-colors">About</a>
+        <div class="pl-4 space-y-1">
+          <a href="../index.html#vision" class="block text-gray-600 py-1 hover:text-primary">Our Vision</a>
+          <a href="../index.html#initiatives" class="block text-gray-600 py-1 hover:text-primary">Initiatives</a>
+          <a href="blog.html" class="block text-gray-600 py-1 hover:text-primary">Blogs</a>
+        </div>
+      </div>
+
+      <a href="../pages/donation.html"
+        class="block text-gray-600 py-2 hover:text-primary transition-colors">Donation</a>
+
+      <!-- Contributors with nested links -->
+      <div>
+        <a href="./contributors.html"
+          class="block text-gray-600 py-2 hover:text-primary transition-colors">Contributors</a>
+        <div class="pl-4 space-y-1">
+          <a href="./social-stories.html" class="block text-gray-600 py-1 hover:text-primary">Contributions</a>
+          <a href="../index.html#contact" class="block text-gray-600 py-1 hover:text-primary">Join Us</a>
+        </div>
       </div>
     </div>
-    <div class="hidden md:flex space-x-8">
-      <a href="../index.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
-      <a href="../index.html#about"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
-      <a href="../index.html#vision"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
-        Vision</a>
-      <a href="../index.html#initiatives"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
-      <a href="blog.html"
-        class="text-primary font-semibold underline decoration-primary">Blogs</a>
-      <a href="social-stories.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Stories</a>
-        <a href="../pages/donation.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Donation</a>
-      <a href="../index.html#contact"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
-        Us</a>
-    </div>
-    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-      </svg>
-    </button>
-  </div>
-  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
-    <a href="../index.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
-    <a href="../index.html#about"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
-    <a href="../index.html#vision"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
-      Vision</a>
-    <a href="../index.html#initiatives"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
-    <a href="blog.html"
-      class="block text-primary font-semibold py-2">Blogs</a>
-    <a href="social-stories.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Stories</a>
-      <a href="../pages/donation.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Donation</a>
-    <a href="../index.html#contact"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
-      Us</a>
-  </div>
-</nav>
+  </nav>
+
 
   <!-- Hero Section -->
   <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary pt-32 pb-16">
@@ -105,7 +157,8 @@
           <span class="text-white block text-2xl lg:text-4xl mt-2">Stories of Change & Reform</span>
         </h1>
         <p class="text-white/80 leading-relaxed max-w-3xl mx-auto text-lg">
-          Read about our journey, initiatives, and the ongoing fight for transparency, accountability, and citizen empowerment in Bihar.
+          Read about our journey, initiatives, and the ongoing fight for transparency, accountability, and citizen
+          empowerment in Bihar.
         </p>
       </div>
     </div>
@@ -113,7 +166,9 @@
 
   <!-- Featured Blog Section -->
   <section class="py-24 bg-light relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70"></div>
+    <div
+      class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70">
+    </div>
 
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
@@ -125,7 +180,8 @@
       </div>
 
       <!-- Featured Blog Loading Placeholder -->
-      <div id="featuredBlogPlaceholder" class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <div id="featuredBlogPlaceholder"
+        class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative h-64 lg:h-auto bg-gray-300"></div>
           <div class="p-8 lg:p-12 flex flex-col justify-center space-y-4">
@@ -148,13 +204,14 @@
       </div>
 
       <!-- Featured Blog Content (hidden initially) -->
-      <article id="featuredBlogContent" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <article id="featuredBlogContent"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative h-64 lg:h-auto">
-            <img id="featuredBlogImage" src="" alt=""
-              class="w-full h-full object-cover" />
+            <img id="featuredBlogImage" src="" alt="" class="w-full h-full object-cover" />
             <div class="absolute top-4 left-4">
-              <span id="featuredBlogCategory" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
+              <span id="featuredBlogCategory"
+                class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
             </div>
           </div>
           <div class="p-8 lg:p-12 flex flex-col justify-center">
@@ -185,11 +242,13 @@
       </article>
 
       <!-- Fallback Featured Article (if no blogs available) -->
-      <article id="featuredBlogFallback" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <article id="featuredBlogFallback"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative h-64 lg:h-auto">
-            <img src="https://imgs.search.brave.com/ZyIJRwx6nch-SewSp7ofPTBBj3cIvSrkt8v6i5Rm78Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi92aWV3/LXBhdG5hLXJhaWx3/YXktc3RhdGlvbi1i/aWhhci1pbmRpYS1j/YXBpdGFsLXdpbnRl/ci1kYXktcGFzc2Vu/Z2Vycy13YWl0aW5n/LXRyYWluLTM4ODY2/OTQyMy5qcGc" alt="We The People of Patna Movement"
-              class="w-full h-full object-cover" />
+            <img
+              src="https://imgs.search.brave.com/ZyIJRwx6nch-SewSp7ofPTBBj3cIvSrkt8v6i5Rm78Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi92aWV3/LXBhdG5hLXJhaWx3/YXktc3RhdGlvbi1i/aWhhci1pbmRpYS1j/YXBpdGFsLXdpbnRl/ci1kYXktcGFzc2Vu/Z2Vycy13YWl0aW5n/LXRyYWluLTM4ODY2/OTQyMy5qcGc"
+              alt="We The People of Patna Movement" class="w-full h-full object-cover" />
             <div class="absolute top-4 left-4">
               <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Movement</span>
             </div>
@@ -204,7 +263,8 @@
               Join Our Movement for Change
             </h3>
             <p class="text-primary leading-relaxed text-lg mb-6">
-              Welcome to our blog! Here we share stories of reform, citizen empowerment, and the ongoing fight for transparency and accountability in Bihar. Check back soon for our latest articles.
+              Welcome to our blog! Here we share stories of reform, citizen empowerment, and the ongoing fight for
+              transparency and accountability in Bihar. Check back soon for our latest articles.
             </p>
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
@@ -224,7 +284,7 @@
         </div>
       </article>
     </div>
-    
+
     <!-- Fallback timeout script for featured blog -->
     <script>
       // Hide loading placeholder after 5 seconds if featured blog hasn't loaded
@@ -232,7 +292,7 @@
         const placeholder = document.getElementById('featuredBlogPlaceholder');
         const content = document.getElementById('featuredBlogContent');
         const fallback = document.getElementById('featuredBlogFallback');
-        
+
         if (placeholder && placeholder.style.display !== 'none') {
           placeholder.style.display = 'none';
           if (content && content.classList.contains('hidden') && fallback) {
@@ -261,15 +321,23 @@
       <div class="mb-12">
         <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
           <div class="relative">
-            <input type="text" placeholder="Search blogs..." 
-                   class="blog-search w-full md:w-80 px-4 py-3 pl-10 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50">
+            <input type="text" placeholder="Search blogs..."
+              class="blog-search w-full md:w-80 px-4 py-3 pl-10 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50">
             <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-primary/50"></i>
           </div>
           <div class="flex flex-wrap gap-2">
-            <button class="category-filter bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors" data-category="">All</button>
-            <button class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Reform Victory">Reform</button>
-            <button class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Youth Power">Youth</button>
-            <button class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Governance">Governance</button>
+            <button
+              class="category-filter bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors"
+              data-category="">All</button>
+            <button
+              class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Reform Victory">Reform</button>
+            <button
+              class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Youth Power">Youth</button>
+            <button
+              class="category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Governance">Governance</button>
           </div>
         </div>
       </div>
@@ -280,7 +348,7 @@
       </div>
 
       <div class="blog-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+
         <!-- Blog posts will be dynamically loaded here -->
 
       </div>
@@ -295,7 +363,7 @@
     </div>
   </section>
 
-    <!-- Add Blog Form Section -->
+  <!-- Add Blog Form Section -->
   <section class="py-24 bg-white relative overflow-hidden">
     <div class="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
@@ -304,11 +372,13 @@
       <div class="text-center mb-12">
         <p class="text-primary font-semibold uppercase tracking-wide mb-3">Contribute</p>
         <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Post Your Blog Content Here</span>
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Post Your Blog Content
+            Here</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6"></div>
         <p class="text-primary/70 text-lg max-w-2xl mx-auto">
-          Have a story of change, reform, or civic engagement? Share it with our community and inspire others to take action.
+          Have a story of change, reform, or civic engagement? Share it with our community and inspire others to take
+          action.
         </p>
       </div>
 
@@ -392,11 +462,14 @@
               <label for="blogContent" class="block text-secondary font-semibold text-sm uppercase tracking-wide">
                 Blog Content *
               </label>
-              <div id="blogContentEditor" class="bg-white rounded-xl border border-light focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all duration-200" style="min-height: 300px;">
+              <div id="blogContentEditor"
+                class="bg-white rounded-xl border border-light focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all duration-200"
+                style="min-height: 300px;">
                 <div id="quill-editor" style="height: 280px;"></div>
               </div>
               <input type="hidden" id="blogContent" name="blogContent" required>
-              <p class="text-primary/60 text-sm mt-2">Use the rich text editor to format your blog content with headings, bold text, lists, and more.</p>
+              <p class="text-primary/60 text-sm mt-2">Use the rich text editor to format your blog content with
+                headings, bold text, lists, and more.</p>
             </div>
 
             <div class="space-y-2">
@@ -433,7 +506,9 @@
             <input type="checkbox" id="agreeTerms" name="agreeTerms" required
               class="mt-1 w-5 h-5 text-primary bg-white border-light rounded focus:ring-primary focus:ring-2">
             <label for="agreeTerms" class="text-primary/80 text-sm leading-relaxed">
-              I agree that my content may be reviewed before publication and I give permission to "We The People of Patna" to publish this blog post. I confirm that this content is original and does not violate any copyright laws.
+              I agree that my content may be reviewed before publication and I give permission to "We The People of
+              Patna" to publish this blog post. I confirm that this content is original and does not violate any
+              copyright laws.
             </label>
           </div>
 
@@ -464,9 +539,10 @@
           <span class="bg-white bg-clip-text text-transparent">Movement</span>
         </h2>
         <p class="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
-          Get the latest updates on our initiatives, reform victories, and opportunities to participate in rebuilding Bihar. Join thousands who are part of this change.
+          Get the latest updates on our initiatives, reform victories, and opportunities to participate in rebuilding
+          Bihar. Join thousands who are part of this change.
         </p>
-        
+
         <form class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 max-w-md mx-auto">
           <div class="space-y-4">
             <input type="email" placeholder="Enter your email address" required
@@ -489,7 +565,8 @@
 
       <div class="flex justify-center">
         <div class="relative">
-          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30">
+          </div>
           <img src="../assets/images/Logo.png" alt="Vishal Singh"
             class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
         </div>
@@ -519,7 +596,7 @@
   <script>
     // Initialize Quill Rich Text Editor
     let quill;
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Initialize Quill editor
       quill = new Quill('#quill-editor', {
         theme: 'snow',
@@ -529,7 +606,7 @@
             [{ 'header': [1, 2, 3, false] }],
             ['bold', 'italic', 'underline', 'strike'],
             [{ 'color': [] }, { 'background': [] }],
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
             [{ 'align': [] }],
             ['blockquote', 'code-block'],
             ['link', 'image'],
@@ -546,7 +623,7 @@
       }
 
       // Update hidden input when content changes
-      quill.on('text-change', function() {
+      quill.on('text-change', function () {
         const content = quill.root.innerHTML;
         document.getElementById('blogContent').value = content;
       });
@@ -574,22 +651,22 @@
     });
 
     // Newsletter form submission
-    document.querySelector('section:last-of-type form').addEventListener('submit', function(e) {
+    document.querySelector('section:last-of-type form').addEventListener('submit', function (e) {
       e.preventDefault();
       alert('Thank you for subscribing! You will receive updates about our movement.');
       this.reset();
     });
 
     // Blog submission form handling
-    document.getElementById('blogSubmissionForm').addEventListener('submit', function(e) {
+    document.getElementById('blogSubmissionForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       // Update hidden input with Quill content before getting form data
       if (quill) {
         const content = quill.root.innerHTML;
         document.getElementById('blogContent').value = content;
       }
-      
+
       // Get form data
       const formData = new FormData(this);
       const blogData = {
@@ -607,9 +684,9 @@
       };
 
       // Basic validation
-      if (!blogData.authorName || !blogData.authorEmail || !blogData.blogTitle || 
-          !blogData.blogCategory || !blogData.readTime || !blogData.blogSummary || 
-          !blogData.blogContent) {
+      if (!blogData.authorName || !blogData.authorEmail || !blogData.blogTitle ||
+        !blogData.blogCategory || !blogData.readTime || !blogData.blogSummary ||
+        !blogData.blogContent) {
         alert('Please fill in all required fields.');
         return;
       }
@@ -644,20 +721,20 @@
       setTimeout(() => {
         alert('Thank you for your submission! Your blog post has been received and will be reviewed before publication. We will contact you at ' + blogData.authorEmail + ' with updates.');
         this.reset();
-        
+
         // Reset Quill editor
         if (quill) {
           quill.setContents([]);
         }
-        
+
         // Reset button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        
+
         // Scroll to top of form
-        document.getElementById('blogSubmissionForm').scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start' 
+        document.getElementById('blogSubmissionForm').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
       }, 2000);
     });
@@ -692,11 +769,11 @@
     // Add character counters
     addCharacterCounter('blogSummary');
     addCharacterCounter('authorBio');
-    
+
     // Add character counter for Quill editor
     function addQuillCharacterCounter() {
       if (!quill) return;
-      
+
       const counter = document.createElement('div');
       counter.className = 'text-primary/60 text-sm mt-1 text-right';
       counter.id = 'quill-counter';
@@ -706,7 +783,7 @@
         const text = quill.getText().trim();
         const length = text.length;
         counter.textContent = `${length} characters`;
-        
+
         if (length < 200) {
           counter.className = 'text-orange-500 text-sm mt-1 text-right';
         } else {
@@ -717,11 +794,11 @@
       quill.on('text-change', updateQuillCounter);
       updateQuillCounter();
     }
-    
+
     // Initialize Quill counter after editor is ready
     setTimeout(addQuillCharacterCounter, 100);
   </script>
-  
+
   <!-- Configuration and Blog Handler Scripts -->
   <script src="../assets/js/config.js"></script>
   <script src="../assets/js/api-service.js"></script>

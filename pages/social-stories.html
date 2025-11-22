@@ -35,62 +35,118 @@
 <body class="text-gray-100 overflow-x-hidden font-inter">
   <!-- Navbar -->
   <nav class="fixed w-full z-50 bg-white border-b border-light">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <img src="../assets/images/Logo.png" alt="We The People of Patna"
-        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
-      <div class="text-2xl font-bold hidden md:block">
-        <span class="text-primary">We The People</span>
-        <span class="text-primary">of Patna</span>
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <div class="flex items-center space-x-3">
+        <img src="../assets/images/Logo.png" alt="We The People of Patna"
+          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+        <div class="text-2xl font-bold hidden md:block leading-tight">
+          <span class="text-primary">We The People</span><br />
+          <span class="text-primary">of Patna</span>
+        </div>
       </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex space-x-8">
+
+        <!-- Home -->
+        <a href="../index.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+          Home
+        </a>
+
+        <!-- ABOUT (link + submenu) -->
+        <div class="relative group">
+          <a href="../index.html#about"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+            About
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+
+            <a href="../index.html#vision"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Our Vision
+            </a>
+
+            <a href="../index.html#initiatives"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Initiatives
+            </a>
+
+            <a href="blog.html" class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Blogs
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <!-- CONTRIBUTORS (link + submenu) -->
+        <div class="relative group">
+          <a href="contributors.html"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+            Contributors
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+
+            <a href="contributors.html"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              All Contributors
+            </a>
+
+            <a href="social-stories.html"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Contributions
+            </a>
+          </div>
+        </div>
+
+        <!-- DONATION -->
+        <a href="donation.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+          Donation
+        </a>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
     </div>
-    <div class="hidden md:flex space-x-8">
-      <a href="../index.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
-      <a href="../index.html#about"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
-      <a href="../index.html#vision"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
-        Vision</a>
-      <a href="../index.html#initiatives"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
-      <a href="blog.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Blogs</a>
-      <a href="social-stories.html"
-        class="text-primary font-semibold underline decoration-primary">Stories</a>
-        <a href="../pages/donation.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Donation</a>
-      <a href="../index.html#contact"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
-        Us</a>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all hidden">
+
+      <a href="../index.html" class="block text-gray-600 py-2 hover:text-primary">Home</a>
+      <a href="../index.html#about" class="block text-gray-600 py-2 hover:text-primary">About</a>
+
+      <!-- About Submenu -->
+      <div class="ml-4 border-l border-gray-300 pl-4 space-y-1 mb-2">
+        <a href="../index.html#vision" class="block text-gray-500 py-1 hover:text-primary">Our Vision</a>
+        <a href="../index.html#initiatives" class="block text-gray-500 py-1 hover:text-primary">Initiatives</a>
+        <a href="blog.html" class="block text-gray-500 py-1 hover:text-primary">Blogs</a>
+      </div>
+
+
+      <!-- Contributors + submenu -->
+      <a href="contributors.html" class="block text-gray-600 py-2 hover:text-primary">Contributors</a>
+      <div class="ml-4 border-l border-gray-300 pl-4 space-y-1 mb-2">
+        <a href="contributors.html" class="block text-gray-500 py-1 hover:text-primary">All Contributors</a>
+        <a href="social-stories.html" class="block text-gray-500 py-1 hover:text-primary">Contributions</a>
+      </div>
+
+      <a href="donation.html" class="block text-gray-600 py-2 hover:text-primary">Donation</a>
     </div>
-    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-      </svg>
-    </button>
-  </div>
-  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
-    <a href="../index.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
-    <a href="../index.html#about"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
-    <a href="../index.html#vision"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
-      Vision</a>
-    <a href="../index.html#initiatives"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
-    <a href="blog.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Blogs</a>
-    <a href="social-stories.html"
-      class="block text-primary font-semibold py-2">Stories</a>
-      <a href="../pages/donation.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Donation</a>
-    <a href="../index.html#contact"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
-      Us</a>
-  </div>
-</nav>
+  </nav>
+
 
   <!-- Hero Section -->
   <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary pt-32 pb-16">
@@ -107,7 +163,8 @@
           <span class="text-white block text-2xl lg:text-4xl mt-2">Real Change, Real Lives</span>
         </h1>
         <p class="text-white/80 leading-relaxed max-w-3xl mx-auto text-lg">
-          Discover powerful stories of transformation, hope, and progress from our community. Each story represents a life touched, a problem solved, and a step forward in our mission to rebuild Bihar.
+          Discover powerful stories of transformation, hope, and progress from our community. Each story represents a
+          life touched, a problem solved, and a step forward in our mission to rebuild Bihar.
         </p>
       </div>
     </div>
@@ -115,19 +172,23 @@
 
   <!-- Featured Story Section -->
   <section class="py-24 bg-light relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70"></div>
+    <div
+      class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70">
+    </div>
 
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <p class="text-primary font-semibold uppercase tracking-wide mb-3">Featured Story</p>
         <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Story of the Month</span>
+          <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Story of the
+            Month</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
       </div>
 
       <!-- Featured Story Loading Placeholder -->
-      <div id="featuredStoryPlaceholder" class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <div id="featuredStoryPlaceholder"
+        class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative h-64 lg:h-auto bg-gray-300"></div>
           <div class="p-8 lg:p-12 flex flex-col justify-center space-y-4">
@@ -150,15 +211,18 @@
       </div>
 
       <!-- Featured Story Content (hidden initially) -->
-      <article id="featuredStoryContent" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light cursor-pointer hover:shadow-xl transition-shadow duration-300">
+      <article id="featuredStoryContent"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light cursor-pointer hover:shadow-xl transition-shadow duration-300">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative h-64 lg:h-auto">
-            <img id="featuredStoryImage" src="" alt=""
-              class="w-full h-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+            <img id="featuredStoryImage" src="" alt="" class="w-full h-full object-cover"
+              onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
             <div class="absolute top-4 left-4">
-              <span id="featuredStoryCategory" class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
+              <span id="featuredStoryCategory"
+                class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
             </div>
-            <div class="absolute inset-0 bg-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div
+              class="absolute inset-0 bg-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="bg-white/20 backdrop-blur-sm rounded-full p-4">
                 <i class="fa-solid fa-arrow-right text-white text-2xl"></i>
               </div>
@@ -171,18 +235,21 @@
               </span>
               <span class="text-primary/70 text-sm" id="featuredStoryLocation"></span>
             </div>
-            <h3 id="featuredStoryTitle" class="text-3xl font-bold mb-4 text-secondary hover:text-primary transition-colors duration-300"></h3>
+            <h3 id="featuredStoryTitle"
+              class="text-3xl font-bold mb-4 text-secondary hover:text-primary transition-colors duration-300"></h3>
             <p id="featuredStoryExcerpt" class="text-primary leading-relaxed text-lg mb-6 line-clamp-3"></p>
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
                 <img id="featuredStoryAuthorImage" src="" alt=""
-                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30"
+                  onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
                 <div>
                   <div id="featuredStoryAuthorName" class="text-secondary font-semibold"></div>
                   <div id="featuredStoryAuthorRole" class="text-primary/70 text-sm"></div>
                 </div>
               </div>
-              <span class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
+              <span
+                class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
                 Read Full Story
               </span>
             </div>
@@ -191,11 +258,14 @@
       </article>
 
       <!-- Fallback Featured Story (if no stories available) -->
-      <article id="featuredStoryFallback" class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+      <article id="featuredStoryFallback"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
         <div class="grid lg:grid-cols-2 gap-0">
           <div class="relative h-64 lg:h-auto">
-            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Impact"
-              class="w-full h-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+            <img
+              src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Community Impact" class="w-full h-full object-cover"
+              onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
             <div class="absolute top-4 left-4">
               <span class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Impact</span>
             </div>
@@ -210,12 +280,14 @@
               Stories of Change Coming Soon
             </h3>
             <p class="text-primary leading-relaxed text-lg mb-6">
-              We're collecting powerful stories from our community members about how our movement is creating real change in their lives. Check back soon to read inspiring tales of transformation and hope.
+              We're collecting powerful stories from our community members about how our movement is creating real
+              change in their lives. Check back soon to read inspiring tales of transformation and hope.
             </p>
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
                 <img src="../assets/images/neta g.jpg" alt="Admin User"
-                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
+                  class="w-12 h-12 rounded-full object-cover border-2 border-primary/30"
+                  onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149071.png'" />
                 <div>
                   <div class="text-secondary font-semibold">Our Team</div>
                   <div class="text-primary/70 text-sm">Movement Leaders</div>
@@ -230,7 +302,7 @@
         </div>
       </article>
     </div>
-    
+
     <!-- Fallback timeout script for featured story -->
     <script>
       // Hide loading placeholder after 5 seconds if featured story hasn't loaded
@@ -238,7 +310,7 @@
         const placeholder = document.getElementById('featuredStoryPlaceholder');
         const content = document.getElementById('featuredStoryContent');
         const fallback = document.getElementById('featuredStoryFallback');
-        
+
         if (placeholder && placeholder.style.display !== 'none') {
           placeholder.style.display = 'none';
           if (content && content.classList.contains('hidden') && fallback) {
@@ -267,16 +339,26 @@
       <div class="mb-12">
         <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
           <div class="relative">
-            <input type="text" placeholder="Search stories..." 
-                   class="story-search w-full md:w-80 px-4 py-3 pl-10 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50">
+            <input type="text" placeholder="Search stories..."
+              class="story-search w-full md:w-80 px-4 py-3 pl-10 rounded-xl border border-light bg-white focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200 text-secondary placeholder-primary/50">
             <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-primary/50"></i>
           </div>
           <div class="flex flex-wrap gap-2">
-            <button class="story-category-filter bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors" data-category="">All</button>
-            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Community">Community</button>
-            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Education">Education</button>
-            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Healthcare">Healthcare</button>
-            <button class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors" data-category="Justice">Justice</button>
+            <button
+              class="story-category-filter bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary transition-colors"
+              data-category="">All</button>
+            <button
+              class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Community">Community</button>
+            <button
+              class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Education">Education</button>
+            <button
+              class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Healthcare">Healthcare</button>
+            <button
+              class="story-category-filter bg-white text-primary border border-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition-colors"
+              data-category="Justice">Justice</button>
           </div>
         </div>
       </div>
@@ -288,7 +370,7 @@
 
       <!-- Stories Grid Container -->
       <div class="stories-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+
         <!-- Story cards will be dynamically loaded here -->
 
       </div>
@@ -300,8 +382,10 @@
             <i class="fa-solid fa-book-open text-primary text-3xl"></i>
           </div>
           <h3 class="text-2xl font-bold text-secondary mb-4">No Stories Found</h3>
-          <p class="text-primary/70 mb-6">We're still collecting stories from our community. Check back soon for inspiring tales of change and impact.</p>
-          <a href="../index.html#contact" class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
+          <p class="text-primary/70 mb-6">We're still collecting stories from our community. Check back soon for
+            inspiring tales of change and impact.</p>
+          <a href="../index.html#contact"
+            class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-300">
             Share Your Story
           </a>
         </div>
@@ -331,14 +415,17 @@
           <span class="bg-white bg-clip-text text-transparent block mt-2">Inspire Others</span>
         </h2>
         <p class="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
-          Your story matters. Whether it's about overcoming challenges, creating change in your community, or being part of our movement, we want to hear from you and share your journey with others.
+          Your story matters. Whether it's about overcoming challenges, creating change in your community, or being part
+          of our movement, we want to hear from you and share your journey with others.
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button id="shareStoryBtn" class="bg-light text-primary px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105">
+          <button id="shareStoryBtn"
+            class="bg-light text-primary px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105">
             <i class="fa-solid fa-pen mr-2"></i>Share Your Story
           </button>
-          <a href="https://wa.me/919229551125" target="_blank" class="border border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+          <a href="https://wa.me/919229551125" target="_blank"
+            class="border border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
             <i class="fa-brands fa-whatsapp mr-2"></i>Contact Us
           </a>
         </div>
@@ -367,14 +454,14 @@
           <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
             <i class="fa-solid fa-user mr-2"></i>Your Information
           </h3>
-          
+
           <div class="grid md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
               <input type="text" name="authorName" required
                 class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
             </div>
-            
+
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
               <input type="email" name="email"
@@ -388,7 +475,7 @@
               <input type="text" name="city" required
                 class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
             </div>
-            
+
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Age Group</label>
               <select name="ageGroup"
@@ -409,11 +496,11 @@
           <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
             <i class="fa-solid fa-book mr-2"></i>Your Story
           </h3>
-          
+
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Story Title *</label>
             <input type="text" name="title" required
-                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
           </div>
 
           <div class="grid md:grid-cols-2 gap-4">
@@ -432,7 +519,7 @@
                 <option value="Other">Other</option>
               </select>
             </div>
-            
+
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">When did this happen? *</label>
               <input type="date" name="date" required
@@ -443,16 +530,19 @@
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
             <input type="text" name="location" required placeholder="Where did this story take place?"
-                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
           </div>
-          
+
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Tell us your story *</label>
-            <div id="storyContentEditor" class="bg-white text-dark rounded-lg border border-gray-300 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all duration-200" style="min-height: 200px;">
+            <div id="storyContentEditor"
+              class="bg-white text-dark rounded-lg border border-gray-300 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all duration-200"
+              style="min-height: 200px;">
               <div id="quill-story-editor" style="height: 180px;"></div>
             </div>
             <input type="hidden" id="description" name="description" required>
-            <p class="text-gray-500 text-sm mt-2">Use the rich text editor to format your story with headings, bold text, lists, and more.</p>
+            <p class="text-gray-500 text-sm mt-2">Use the rich text editor to format your story with headings, bold
+              text, lists, and more.</p>
           </div>
 
           <!-- Optional Impact and Inspiration sections -->
@@ -460,21 +550,22 @@
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Impact (Optional)</label>
               <textarea name="impact" rows="3" placeholder="What impact did this story have on you or your community?"
-                  class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
             </div>
-            
+
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2">Inspiration (Optional)</label>
               <textarea name="inspiration" rows="3" placeholder="What inspired you to take action or share this story?"
-                  class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
             </div>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Upload Media (Optional)</label>
             <input type="file" name="media" accept="image/*,video/*" multiple id="mediaUpload"
-                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-semibold hover:file:bg-secondary">
-            <p class="text-sm text-gray-500 mt-1">Add photos or videos that represent your story (max 3 files, 50MB each)</p>
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-semibold hover:file:bg-secondary">
+            <p class="text-sm text-gray-500 mt-1">Add photos or videos that represent your story (max 3 files, 50MB
+              each)</p>
             <div id="mediaPreview" class="mt-3 grid grid-cols-2 md:grid-cols-3 gap-3 hidden"></div>
           </div>
         </div>
@@ -484,7 +575,7 @@
           <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
             <i class="fa-solid fa-shield-alt mr-2"></i>Privacy Options
           </h3>
-          
+
           <div class="flex items-center space-x-3">
             <input type="checkbox" name="anonymous" id="anonymous"
               class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
@@ -492,12 +583,13 @@
               I wish to remain anonymous (story will be published without personal details)
             </label>
           </div>
-          
+
           <div class="flex items-start space-x-3">
             <input type="checkbox" name="consent" id="consent" required
               class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-1">
             <label for="consent" class="text-sm text-gray-700">
-              I give permission to publish my story on the website and use it for awareness purposes. I confirm this story is true and original. *
+              I give permission to publish my story on the website and use it for awareness purposes. I confirm this
+              story is true and original. *
             </label>
           </div>
         </div>
@@ -515,8 +607,10 @@
         </div>
 
         <!-- Success Message -->
-        <div id="storySubmissionSuccess" class="hidden bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
-          <i class="fa-solid fa-check-circle mr-2"></i>Thank you for sharing your story! It will be reviewed and published soon.
+        <div id="storySubmissionSuccess"
+          class="hidden bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
+          <i class="fa-solid fa-check-circle mr-2"></i>Thank you for sharing your story! It will be reviewed and
+          published soon.
         </div>
       </form>
     </div>
@@ -530,7 +624,8 @@
 
       <div class="flex justify-center">
         <div class="relative">
-          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30">
+          </div>
           <img src="../assets/images/neta g.jpg" alt="Vishal Singh"
             class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
         </div>
@@ -558,7 +653,7 @@
   <script>
     // Initialize Quill Rich Text Editor for story content
     let storyQuill;
-    
+
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -567,7 +662,7 @@
     });
 
     // Story Modal functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const shareStoryBtn = document.getElementById('shareStoryBtn');
       const storyModal = document.getElementById('storyModal');
       const closeStoryModal = document.getElementById('closeStoryModal');
@@ -585,7 +680,7 @@
                 [{ 'header': [1, 2, 3, false] }],
                 ['bold', 'italic', 'underline'],
                 [{ 'color': [] }, { 'background': [] }],
-                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
                 [{ 'align': [] }],
                 ['blockquote'],
                 ['clean']
@@ -601,7 +696,7 @@
           }
 
           // Update hidden input when content changes
-          storyQuill.on('text-change', function() {
+          storyQuill.on('text-change', function () {
             const content = storyQuill.root.innerHTML;
             document.getElementById('description').value = content;
           });
@@ -609,7 +704,7 @@
           // Add character counter
           addStoryQuillCharacterCounter();
         }
-        
+
         // Initialize media upload handler
         initializeMediaUpload();
       }
@@ -618,11 +713,11 @@
       function initializeMediaUpload() {
         const mediaUpload = document.getElementById('mediaUpload');
         const mediaPreview = document.getElementById('mediaPreview');
-        
+
         if (mediaUpload) {
-          mediaUpload.addEventListener('change', function(e) {
+          mediaUpload.addEventListener('change', function (e) {
             const files = Array.from(e.target.files);
-            
+
             // Validate file count
             if (files.length > 3) {
               if (typeof Utils !== 'undefined' && Utils.showNotification) {
@@ -633,7 +728,7 @@
               e.target.value = '';
               return;
             }
-            
+
             // Validate each file
             const validFiles = [];
             for (const file of files) {
@@ -646,7 +741,7 @@
                 }
                 continue;
               }
-              
+
               // Check file type
               if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) {
                 if (typeof Utils !== 'undefined' && Utils.showNotification) {
@@ -656,17 +751,17 @@
                 }
                 continue;
               }
-              
+
               validFiles.push(file);
             }
-            
+
             // Update file input with valid files only
             if (validFiles.length !== files.length) {
               const dt = new DataTransfer();
               validFiles.forEach(file => dt.items.add(file));
               e.target.files = dt.files;
             }
-            
+
             // Show preview
             showMediaPreview(validFiles, mediaPreview);
           });
@@ -676,18 +771,18 @@
       // Show media preview
       function showMediaPreview(files, container) {
         container.innerHTML = '';
-        
+
         if (files.length === 0) {
           container.classList.add('hidden');
           return;
         }
-        
+
         container.classList.remove('hidden');
-        
+
         files.forEach((file, index) => {
           const previewItem = document.createElement('div');
           previewItem.className = 'relative bg-gray-100 rounded-lg overflow-hidden';
-          
+
           if (file.type.startsWith('image/')) {
             const img = document.createElement('img');
             img.className = 'w-full h-24 object-cover';
@@ -699,20 +794,20 @@
             video.src = URL.createObjectURL(file);
             video.muted = true;
             previewItem.appendChild(video);
-            
+
             // Add play icon overlay
             const playIcon = document.createElement('div');
             playIcon.className = 'absolute inset-0 flex items-center justify-center bg-black bg-opacity-30';
             playIcon.innerHTML = '<i class="fa-solid fa-play text-white text-xl"></i>';
             previewItem.appendChild(playIcon);
           }
-          
+
           // Add file name
           const fileName = document.createElement('div');
           fileName.className = 'absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs p-1 truncate';
           fileName.textContent = file.name;
           previewItem.appendChild(fileName);
-          
+
           container.appendChild(previewItem);
         });
       }
@@ -720,7 +815,7 @@
       // Character counter for Quill editor
       function addStoryQuillCharacterCounter() {
         if (!storyQuill) return;
-        
+
         const counter = document.createElement('div');
         counter.className = 'text-gray-500 text-sm mt-1 text-right';
         counter.id = 'story-quill-counter';
@@ -730,7 +825,7 @@
           const text = storyQuill.getText().trim();
           const length = text.length;
           counter.textContent = `${length} characters`;
-          
+
           if (length < 100) {
             counter.className = 'text-orange-500 text-sm mt-1 text-right';
           } else {
@@ -743,10 +838,10 @@
       }
 
       // Open modal
-      shareStoryBtn.addEventListener('click', function() {
+      shareStoryBtn.addEventListener('click', function () {
         storyModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-        
+
         // Initialize Quill editor after modal is visible
         setTimeout(() => {
           initializeStoryEditor();
@@ -758,18 +853,18 @@
         storyModal.classList.add('hidden');
         document.body.style.overflow = 'auto';
         storySubmissionForm.reset();
-        
+
         // Reset Quill editor
         if (storyQuill) {
           storyQuill.setContents([]);
         }
-        
+
         // Remove character counter
         const existingCounter = document.getElementById('story-quill-counter');
         if (existingCounter) {
           existingCounter.remove();
         }
-        
+
         // Clear media preview
         const mediaPreview = document.getElementById('mediaPreview');
         if (mediaPreview) {
@@ -783,7 +878,7 @@
           mediaPreview.innerHTML = '';
           mediaPreview.classList.add('hidden');
         }
-        
+
         document.getElementById('storySubmissionSuccess').classList.add('hidden');
       }
 
@@ -791,34 +886,34 @@
       cancelStoryBtn.addEventListener('click', closeModalFunc);
 
       // Close modal when clicking outside
-      storyModal.addEventListener('click', function(e) {
+      storyModal.addEventListener('click', function (e) {
         if (e.target === storyModal) {
           closeModalFunc();
         }
       });
 
       // Form submission
-      storySubmissionForm.addEventListener('submit', async function(e) {
+      storySubmissionForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        
+
         // Check if CONFIG and Utils are available
         if (typeof CONFIG === 'undefined') {
           console.error('CONFIG is not loaded');
           alert('Configuration not loaded. Please refresh the page and try again.');
           return;
         }
-        
+
         if (typeof Utils === 'undefined') {
           console.error('Utils is not loaded');
           alert('Utilities not loaded. Please refresh the page and try again.');
           return;
         }
-        
+
         // Update hidden input with Quill content before form validation
         if (storyQuill) {
           const content = storyQuill.root.innerHTML;
           document.getElementById('description').value = content;
-          
+
           // Validate content length (strip HTML tags for length check)
           const contentText = content.replace(/<[^>]*>/g, '').trim();
           if (contentText.length < 100) {
@@ -826,7 +921,7 @@
             return;
           }
         }
-        
+
         const submitBtn = e.target.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Submitting...';
@@ -835,11 +930,11 @@
         try {
           // Create FormData object for file upload
           const formData = new FormData(this);
-          
+
           // Add contributor name and email for anonymous submission
           formData.append('contributorName', formData.get('authorName'));
           formData.append('contributorEmail', formData.get('email'));
-          
+
           // Check if anonymous checkbox is checked
           const isAnonymous = formData.get('anonymous') === 'on';
           if (isAnonymous) {
@@ -849,7 +944,7 @@
           // Enhanced validation
           const requiredFields = ['authorName', 'title', 'category', 'description', 'location', 'date'];
           const missingFields = requiredFields.filter(field => !formData.get(field) || !formData.get(field).toString().trim());
-          
+
           if (missingFields.length > 0) {
             if (typeof Utils !== 'undefined' && Utils.showNotification) {
               Utils.showNotification(`Please fill in all required fields: ${missingFields.join(', ')}`, 'error', 5000);
@@ -860,7 +955,7 @@
             submitBtn.disabled = false;
             return;
           }
-          
+
           if (!formData.get('consent')) {
             if (typeof Utils !== 'undefined' && Utils.showNotification) {
               Utils.showNotification('Please accept the consent to publish your story.', 'error', 5000);
@@ -871,12 +966,12 @@
             submitBtn.disabled = false;
             return;
           }
-          
+
           // Validate field lengths and content
           const title = formData.get('title').toString().trim();
           const authorName = formData.get('authorName').toString().trim();
           const email = formData.get('email');
-          
+
           if (title.length < 5 || title.length > 200) {
             if (typeof Utils !== 'undefined' && Utils.showNotification) {
               Utils.showNotification('Story title must be between 5 and 200 characters.', 'error', 5000);
@@ -887,7 +982,7 @@
             submitBtn.disabled = false;
             return;
           }
-          
+
           if (authorName.length < 2 || authorName.length > 100) {
             if (typeof Utils !== 'undefined' && Utils.showNotification) {
               Utils.showNotification('Author name must be between 2 and 100 characters.', 'error', 5000);
@@ -898,13 +993,13 @@
             submitBtn.disabled = false;
             return;
           }
-          
+
           // Email validation with fallback
           const emailToValidate = email ? email.toString().trim() : '';
-          const isValidEmail = (typeof Utils !== 'undefined' && Utils.isValidEmail) 
+          const isValidEmail = (typeof Utils !== 'undefined' && Utils.isValidEmail)
             ? Utils.isValidEmail(emailToValidate)
             : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailToValidate);
-            
+
           if (email && !isValidEmail) {
             if (typeof Utils !== 'undefined' && Utils.showNotification) {
               Utils.showNotification('Please enter a valid email address.', 'error', 5000);
@@ -915,21 +1010,21 @@
             submitBtn.disabled = false;
             return;
           }
-          
+
           // Sanitize form data
           formData.set('title', title);
           formData.set('authorName', authorName);
           if (email) formData.set('email', email.toString().trim().toLowerCase());
 
           // Submit to backend API using CONFIG with fallback
-          const baseUrl = (typeof CONFIG !== 'undefined' && CONFIG.API) 
-            ? CONFIG.API.BASE_URL 
-            : 'http://localhost:5000/api';
-          const endpoint = (typeof CONFIG !== 'undefined' && CONFIG.API && CONFIG.API.ENDPOINTS) 
-            ? CONFIG.API.ENDPOINTS.ADMIN_SUBMIT_ANONYMOUS 
+          const baseUrl = (typeof CONFIG !== 'undefined' && CONFIG.API)
+            ? CONFIG.API.BASE_URL
+            : 'https://backend.wethepeopleofpatna.in/api';
+          const endpoint = (typeof CONFIG !== 'undefined' && CONFIG.API && CONFIG.API.ENDPOINTS)
+            ? CONFIG.API.ENDPOINTS.ADMIN_SUBMIT_ANONYMOUS
             : '/admin/submit-anonymous';
           const apiUrl = `${baseUrl}${endpoint}`;
-          
+
           const response = await fetch(apiUrl, {
             method: 'POST',
             body: formData
@@ -941,19 +1036,19 @@
           }
 
           const result = await response.json();
-          
+
           if (result.success) {
             document.getElementById('storySubmissionSuccess').classList.remove('hidden');
-            
+
             // Show success notification with fallback
-            const successMessage = (typeof CONFIG !== 'undefined' && CONFIG.MESSAGES && CONFIG.MESSAGES.SUCCESS) 
-              ? CONFIG.MESSAGES.SUCCESS.BLOG_SUBMITTED 
+            const successMessage = (typeof CONFIG !== 'undefined' && CONFIG.MESSAGES && CONFIG.MESSAGES.SUCCESS)
+              ? CONFIG.MESSAGES.SUCCESS.BLOG_SUBMITTED
               : 'Story submitted successfully! It will be reviewed before publication.';
-              
+
             if (typeof Utils !== 'undefined' && Utils.showNotification) {
               Utils.showNotification(successMessage, 'success', 5000);
             }
-            
+
             // Reset form after showing success message
             setTimeout(() => {
               closeModalFunc();
@@ -963,16 +1058,16 @@
           }
         } catch (error) {
           console.error('Error submitting story:', error);
-          
+
           // Show user-friendly error message
           let errorMessage = 'Failed to submit your story. Please try again later.';
-          
+
           if (!navigator.onLine) {
             errorMessage = 'No internet connection. Please check your connection and try again.';
           } else if (error.name === 'TypeError' && error.message.includes('fetch')) {
             errorMessage = 'Unable to connect to server. Please try again later.';
           }
-          
+
           if (typeof Utils !== 'undefined' && Utils.showNotification) {
             Utils.showNotification(errorMessage, 'error', 7000);
           } else {
@@ -989,10 +1084,10 @@
     async function loadFeaturedStory() {
       try {
         const response = await fetch(`${CONFIG.API.BASE_URL}/contributions/featured`);
-        
+
         if (response.ok) {
           const result = await response.json();
-          
+
           if (result.success && result.data) {
             displayFeaturedStory(result.data);
           } else {
@@ -1024,7 +1119,7 @@
       document.getElementById('featuredStoryLocation').textContent = story.location;
       document.getElementById('featuredStoryTitle').textContent = story.title;
       document.getElementById('featuredStoryExcerpt').innerHTML = story.description;
-      
+
       // Author info
       document.getElementById('featuredStoryAuthorImage').src = story.contributor.photo || CONFIG.DEFAULTS.AUTHOR_IMAGE;
       document.getElementById('featuredStoryAuthorName').textContent = story.contributor.name;
@@ -1056,7 +1151,7 @@
 
     async function loadStories(page = 1, search = '', category = '') {
       if (isLoading) return;
-      
+
       isLoading = true;
       const loadingSpinner = document.getElementById('storiesLoadingSpinner');
       const storiesGrid = document.querySelector('.stories-grid-container');
@@ -1075,16 +1170,16 @@
         });
 
         const response = await fetch(`${CONFIG.API.BASE_URL}/contributions/cards?${params}`);
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const result = await response.json();
-        
+
         if (result.success && result.data) {
           const { contributions, pagination } = result.data;
-          
+
           if (page === 1) {
             // Clear existing stories for new search/filter
             storiesGrid.innerHTML = '';
@@ -1098,7 +1193,7 @@
             // Display stories
             noStoriesMessage.classList.add('hidden');
             displayStories(contributions);
-            
+
             // Handle load more button
             if (pagination.hasNext) {
               loadMoreBtn.classList.remove('hidden');
@@ -1114,12 +1209,12 @@
         }
       } catch (error) {
         console.error('Error loading stories:', error);
-        
+
         if (page === 1) {
           storiesGrid.innerHTML = '';
           noStoriesMessage.classList.remove('hidden');
         }
-        
+
         Utils.showNotification('Failed to load stories. Please try again.', 'error');
       } finally {
         isLoading = false;
@@ -1143,7 +1238,7 @@
     // Display stories in grid
     function displayStories(stories) {
       const storiesGrid = document.querySelector('.stories-grid-container');
-      
+
       stories.forEach(story => {
         const storyCard = document.createElement('article');
         storyCard.className = 'bg-white rounded-2xl shadow-lg overflow-hidden border border-primary/10 hover:shadow-xl transition-shadow duration-300 cursor-pointer';
@@ -1192,7 +1287,7 @@
     }
 
     // Search and filter functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const searchInput = document.querySelector('.story-search');
       const categoryFilters = document.querySelectorAll('.story-category-filter');
 
@@ -1202,16 +1297,16 @@
 
       // Search functionality
       if (searchInput) {
-        const debouncedSearch = Utils.debounce(function() {
+        const debouncedSearch = Utils.debounce(function () {
           loadStories(1, this.value);
         }, CONFIG.APP.SEARCH_DEBOUNCE_TIME);
-        
+
         searchInput.addEventListener('input', debouncedSearch);
       }
 
       // Category filter functionality
       categoryFilters.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
           // Remove active state from all buttons
           categoryFilters.forEach(btn => {
             btn.classList.remove('bg-primary', 'text-white');

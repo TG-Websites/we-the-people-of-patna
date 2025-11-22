@@ -29,64 +29,102 @@
 <body class="text-gray-100 overflow-x-hidden font-inter">
   <!-- Navbar -->
   <nav class="fixed w-full z-50 bg-white border-b border-light">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <img src="assets/images/Logo.png" alt="We The People of Patna"
-        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
-      <div class="text-2xl font-bold hidden md:block">
-        <span class="text-primary">We The People</span>
-        <span class="text-primary">of Patna</span>
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <div class="flex items-center space-x-3">
+        <img src="assets/images/Logo.png" alt="We The People of Patna"
+          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+        <div class="text-2xl font-bold hidden md:block">
+          <span class="text-primary">We The People</span>
+          <span class="text-primary">of Patna</span>
+        </div>
       </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex items-center space-x-8">
+
+        <a href="#home"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transiton-colors duration-200">Home</a>
+
+        <!-- ABOUT (CLICKABLE + SUBMENU) -->
+        <div class="relative group">
+          <a href="#about"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+            About
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-48 bg-white border border-light rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
+            <a href="#vision" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Our
+              Vision</a>
+            <a href="#initiatives"
+              class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Initiatives</a>
+            <a href="pages/blog.html"
+              class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Blogs</a>
+          </div>
+        </div>
+
+        <a href="pages/donation.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+          Donation
+        </a>
+
+        <!-- CONTRIBUTORS (CLICKABLE + SUBMENU) -->
+        <div class="relative group">
+          <a href="pages/contributors.html"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors duration-200">
+            Contributors
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-48 bg-white border border-light rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
+            <a href="pages/social-stories.html"
+              class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Contributions</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary">Join Us</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MOBILE BUTTON -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+
     </div>
-    <div class="hidden md:flex space-x-8">
-      <a href="#home"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
-      <a href="#about"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
-      <a href="#vision"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our
-        Vision</a>
-      <a href="#initiatives"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
-      <a href="pages/blog.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Blogs</a>
-      <a href="pages/social-stories.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Stories</a>
-        <a href="./pages/donation.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Donation</a>
-        <a href="./pages/contributors.html"
-          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200 ">Contributors</a>
-        <a href="#contact"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join
-        Us</a>
+
+    <!-- MOBILE MENU (simple, no JS interactive dropdowns needed) -->
+    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow hidden transition-all duration-300 space-y-2">
+
+      <a href="#home" class="block text-gray-600 py-2 hover:text-primary">Home</a>
+
+      <!-- About + simple nested list -->
+      <div>
+        <a href="#about" class="block text-gray-600 py-2 hover:text-primary">About</a>
+        <div class="pl-4 space-y-1">
+          <a href="#vision" class="block text-gray-600 py-1 hover:text-primary">Our Vision</a>
+          <a href="#initiatives" class="block text-gray-600 py-1 hover:text-primary">Initiatives</a>
+          <a href="pages/blog.html" class="block text-gray-600 py-1 hover:text-primary">Blogs</a>
+        </div>
+      </div>
+
+      <a href="pages/donation.html" class="block text-gray-600 py-2 hover:text-primary">Donation</a>
+
+      <!-- Contributors + nested items -->
+      <div>
+        <a href="pages/contributors.html" class="block text-gray-600 py-2 hover:text-primary">Contributors</a>
+        <div class="pl-4 space-y-1">
+          <a href="pages/social-stories.html" class="block text-gray-600 py-1 hover:text-primary">Contributions</a>
+          <a href="#contact" class="block text-gray-600 py-1 hover:text-primary">Join Us</a>
+        </div>
+      </div>
+
     </div>
-    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-      </svg>
-    </button>
-  </div>
-  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
-    <a href="#home"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
-    <a href="#about"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
-    <a href="#vision"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our
-      Vision</a>
-    <a href="#initiatives"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
-    <a href="pages/blog.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Blogs</a>
-    <a href="pages/social-stories.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Stories</a>
-       <a href="pages/donation.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Donation</a>
-    <a href="#contact"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join
-      Us</a>
-  </div>
-</nav>
+  </nav>
+
 
 
 
@@ -102,796 +140,832 @@
 
 
   <!-- Hero Section with centered content below fixed header -->
-<!-- Hero Section -->
-<section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary
+  <!-- Hero Section -->
+  <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary
   lg:h-[calc(100vh-40px)] h-auto pt-32 sm:pt-36 pb-16 sm:pb-24">
 
-  <!-- Background Glows -->
-  <div class="absolute inset-0 pointer-events-none w-screen h-full">
-    <div class="absolute top-0 left-0 w-20 h-20 sm:top-6 sm:left-10 sm:w-48 sm:h-48 bg-primary/30 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-24 h-24 sm:bottom-10 sm:right-10 sm:w-72 sm:h-72 bg-secondary/20 rounded-full blur-3xl"></div>
-    <div class="absolute inset-0 w-screen h-full bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
-  </div>
+    <!-- Background Glows -->
+    <div class="absolute inset-0 pointer-events-none w-screen h-full">
+      <div
+        class="absolute top-0 left-0 w-20 h-20 sm:top-6 sm:left-10 sm:w-48 sm:h-48 bg-primary/30 rounded-full blur-3xl">
+      </div>
+      <div
+        class="absolute bottom-0 right-0 w-24 h-24 sm:bottom-10 sm:right-10 sm:w-72 sm:h-72 bg-secondary/20 rounded-full blur-3xl">
+      </div>
+      <div class="absolute inset-0 w-screen h-full bg-gradient-to-br from-primary/10 via-transparent to-secondary/10">
+      </div>
+    </div>
 
-  <!-- Content Wrapper -->
-  <div class="w-full max-w-6xl mx-auto px-6 sm:px-6 h-full flex flex-col lg:flex-row items-center lg:items-center">
+    <!-- Content Wrapper -->
+    <div class="w-full max-w-6xl mx-auto px-6 sm:px-6 h-full flex flex-col lg:flex-row items-center lg:items-center">
 
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-20 items-center w-full">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-20 items-center w-full">
 
-      <!-- Left Content (Text) -->
-      <div class="space-y-8 text-center lg:text-left max-w-lg order-2 lg:order-1">
-        <div class="space-y-4">
-          <p class="text-white font-semibold text-lg">Unity • Self-Governance • Change</p>
-          <h1 class="font-extrabold leading-tight tracking-tight mt-6">
-            <span class="text-white block text-2xl sm:text-4xl lg:text-5xl">
-              A Common Man’s call
-            </span>
-            <span class="text-white block text-3xl sm:text-5xl lg:text-6xl">
-              to Reclaim Peaceful Patna
-            </span>
-          </h1>
-          <p class="text-white/80 leading-relaxed max-w-full text-base sm:text-xl">
-            <em class="font-semibold text-accent">“Common Man Uprising”</em> is a response of ordinary citizens against corruption, injustice, and decades of apathy. This movement awakens conscience, demands accountability, and rebuilds Bihar through unity, self-governance, and hope.
+        <!-- Left Content (Text) -->
+        <div class="space-y-8 text-center lg:text-left max-w-lg order-2 lg:order-1">
+          <div class="space-y-4">
+            <p class="text-white font-semibold text-lg">Unity • Self-Governance • Change</p>
+            <h1 class="font-extrabold leading-tight tracking-tight mt-6">
+              <span class="text-white block text-2xl sm:text-4xl lg:text-5xl">
+                A Common Man’s call
+              </span>
+              <span class="text-white block text-3xl sm:text-5xl lg:text-6xl">
+                to Reclaim Peaceful Patna
+              </span>
+            </h1>
+            <p class="text-white/80 leading-relaxed max-w-full text-base sm:text-xl">
+              <em class="font-semibold text-accent">“Common Man Uprising”</em> is a response of ordinary citizens
+              against corruption, injustice, and decades of apathy. This movement awakens conscience, demands
+              accountability, and rebuilds Bihar through unity, self-governance, and hope.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#about"
+              class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
+              Learn More
+            </a>
+            <a href="#contact"
+              class="border border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-white/20 hover:text-white transition-all duration-300">
+              Join the Movement
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Content (Image + Arc Text) -->
+        <div class="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0 w-full lg:w-auto">
+          <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-2xl opacity-20">
+            </div>
+            <img src="assets/images/generated-image (9).png" alt="Rebuild Bihar"
+              class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white/30">
+          </div>
+          <!-- Floating Circles -->
+          <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-white/20 rounded-full opacity-50 floating">
+          </div>
+          <div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-white/10 rounded-full opacity-40 floating"
+            style="animation-delay: -2s"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- 🌍 About Section -->
+  <section id="about" class="py-24 bg-light relative overflow-hidden">
+    <!-- Decorative Gradient Circle -->
+    <div
+      class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70 -z-10">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <!-- Section Heading -->
+      <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+        About the Movement
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+        The <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Common Man
+          Uprising</span>
+      </h2>
+
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+
+      <!-- 3 Info Cards -->
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-accent rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-light p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
+              <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-secondary">Grassroots Revolution</h3>
+          </div>
+          <p class="text-primary leading-relaxed">
+            <span class="font-semibold text-primary">“We The People of Patna”</span> isn’t a slogan — it’s a civic
+            awakening.
+            Together, citizens rise to rebuild Bihar from the ground up, starting with our own city.
           </p>
         </div>
 
-        <!-- Buttons -->
-        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-          <a href="#about"
-             class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
-            Learn More
-          </a>
-          <a href="#contact"
-             class="border border-white text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-white/20 hover:text-white transition-all duration-300">
-            Join the Movement
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Content (Image + Arc Text) -->
-      <div class="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0 w-full lg:w-auto">
-        <div class="relative z-10 w-56 h-56 sm:w-80 sm:h-80 mx-auto">
-          <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-2xl opacity-20"></div>
-          <img src="assets/images/generated-image (9).png" alt="Rebuild Bihar" class="relative z-10 w-full h-full rounded-full object-cover border-4 border-white/30">
-        </div>
-        <!-- Floating Circles -->
-        <div class="absolute -top-2 -right-2 w-12 h-12 sm:w-20 sm:h-20 bg-white/20 rounded-full opacity-50 floating"></div>
-        <div class="absolute -bottom-4 -left-4 w-16 h-16 sm:w-32 sm:h-32 bg-white/10 rounded-full opacity-40 floating" style="animation-delay: -2s"></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
- <!-- 🌍 About Section -->
-<section id="about" class="py-24 bg-light relative overflow-hidden">
-  <!-- Decorative Gradient Circle -->
-  <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70 -z-10"></div>
-
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <!-- Section Heading -->
-    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
-      About the Movement
-    </p>
-
-    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-      The <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Common Man Uprising</span>
-    </h2>
-
-    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
-
-    <!-- 3 Info Cards -->
-    <div class="grid md:grid-cols-3 gap-8 text-left">
-      
-      <!-- Card 1 -->
-      <div class="bg-accent rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-light p-8">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
-            <i class="fa-solid fa-hand-fist"></i>
+        <!-- Card 2 -->
+        <div
+          class="bg-accent rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-light p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-secondary">Equality & Transparency</h3>
           </div>
-          <h3 class="text-xl font-semibold text-secondary">Grassroots Revolution</h3>
+          <p class="text-primary leading-relaxed">
+            The movement challenges corruption and complacency — demanding systems that ensure
+            <span class="text-primary font-medium">fairness, dignity, and transparency</span> for every citizen.
+          </p>
         </div>
-        <p class="text-primary leading-relaxed">
-          <span class="font-semibold text-primary">“We The People of Patna”</span> isn’t a slogan — it’s a civic awakening.
-          Together, citizens rise to rebuild Bihar from the ground up, starting with our own city.
-        </p>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="bg-accent rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-light p-8">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
-            <i class="fa-solid fa-scale-balanced"></i>
+        <!-- Card 3 -->
+        <div
+          class="bg-accent rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-light p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-secondary">Rebuilding Patna</h3>
           </div>
-          <h3 class="text-xl font-semibold text-secondary">Equality & Transparency</h3>
+          <p class="text-primary leading-relaxed">
+            Patna becomes the symbol of a new Bihar — where civic pride, smart governance,
+            and citizen-led participation drive real transformation.
+          </p>
         </div>
-        <p class="text-primary leading-relaxed">
-          The movement challenges corruption and complacency — demanding systems that ensure
-          <span class="text-primary font-medium">fairness, dignity, and transparency</span> for every citizen.
-        </p>
+
       </div>
 
-      <!-- Card 3 -->
-      <div class="bg-accent rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-light p-8">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-light text-primary text-2xl">
-            <i class="fa-solid fa-city"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-secondary">Rebuilding Patna</h3>
-        </div>
-        <p class="text-primary leading-relaxed">
-          Patna becomes the symbol of a new Bihar — where civic pride, smart governance,
-          and citizen-led participation drive real transformation.
+      <!-- Closing Statement -->
+      <div class="max-w-3xl mx-auto mt-16 text-primary text-lg leading-relaxed">
+        <p>
+          Our journey begins with unity, grows with responsibility, and succeeds through collective action.
+          This is not a political movement — it’s a <span class="text-primary font-semibold">people’s revolution</span>.
         </p>
       </div>
-
     </div>
-
-    <!-- Closing Statement -->
-    <div class="max-w-3xl mx-auto mt-16 text-primary text-lg leading-relaxed">
-      <p>
-        Our journey begins with unity, grows with responsibility, and succeeds through collective action.
-        This is not a political movement — it’s a <span class="text-primary font-semibold">people’s revolution</span>.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- 🌟 The Face of the Initiative -->
-<section id="leader" class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
-  <!-- Decorative Background Elements -->
-  <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
-
-  <!-- Centered Content -->
-  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-    <p class="text-3xl md:text-4xl text-primary font-semibold uppercase tracking-wide mb-3">
-      The Face of the Campaign
-    </p>
-
-    <p class="text-gray-700 leading-relaxed text-lg mb-6">
-      <span class="font-semibold text-primary">Vishal Singh</span> is the driving force behind 
-      <em>“We The People of Patna.”</em> 
-      A visionary leader and reformist thinker, he represents a new era of citizen-led change focused on honesty, 
-      accountability, and self-governance.
-    </p>
-
-    <p class="text-gray-700 leading-relaxed text-lg mb-6">
-      His mission is simple — to unite ordinary people in extraordinary action and rebuild Bihar on the principles 
-      of equality, justice, and collective responsibility.
-    </p>
-
-    <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <a href="#contact" 
-         class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
-        Connect with Vishal
-      </a>
-      <a href="https://wa.me/919229551125" target="_blank" 
-         class="border border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300">
-        Message on WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- 🌟 Vision Section -->
-<section id="vision" class="py-24 bg-gradient-to-b from-primary via-secondary to-primary relative overflow-hidden">
-  <!-- Decorative Elements -->
-  <div class="absolute inset-0">
-    <div class="absolute top-10 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
-  </div>
-
-  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
-    <!-- Section Subtitle -->
-    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
-      Our Vision
-    </p>
-
-    <!-- Section Heading -->
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-accent leading-tight">
-      Rebuilding Bihar
-      <span class="bg-white bg-clip-text text-transparent">
-        Through People's Power
-      </span>
-    </h2>
-
-    <div class="w-24 h-1 bg-white mx-auto mb-14 rounded-full"></div>
-
-    <!-- Vision Cards -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
-
-      <!-- Card 1 -->
-      <div class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
-        <div class="text-primary text-4xl mb-4">
-          <i class="fa-solid fa-scale-balanced"></i>
-        </div>
-        <h3 class="text-2xl font-semibold mb-3 text-primary">Abolish Challan Exploitation</h3>
-        <p class="text-primary leading-relaxed">
-          Reforming the challan system of Patna Traffic Police to end misuse and restore fairness — 
-          our first pilot towards a citizen-accountable governance model.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
-        <div class="text-primary text-4xl mb-4">
-          <i class="fa-solid fa-indian-rupee-sign"></i>
-        </div>
-        <h3 class="text-2xl font-semibold mb-3 text-primary">One Nation, One Tax</h3>
-        <p class="text-primary leading-relaxed">
-          Introducing a 1% Banking Transaction Tax to replace multiple taxes — 
-          ensuring simplicity, transparency, and equitable growth.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
-        <div class="text-primary text-4xl mb-4">
-          <i class="fa-solid fa-city"></i>
-        </div>
-        <h3 class="text-2xl font-semibold mb-3 text-primary">Strengthen Local Governance</h3>
-        <p class="text-primary leading-relaxed">
-          Empowering municipalities, taxpayers, and citizens to make Patna a model of participatory democracy.
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
-        <div class="text-primary text-4xl mb-4">
-          <i class="fa-solid fa-bullhorn"></i>
-        </div>
-        <h3 class="text-2xl font-semibold mb-3 text-primary">Citizen Awareness Drives</h3>
-        <p class="text-primary leading-relaxed">
-          Mass awareness campaigns encouraging civic participation, accountability, 
-          and responsible citizenship across Bihar.
-        </p>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
-        <div class="text-primary text-4xl mb-4">
-          <i class="fa-solid fa-people-group"></i>
-        </div>
-        <h3 class="text-2xl font-semibold mb-3 text-primary">Grassroots Empowerment</h3>
-        <p class="text-primary leading-relaxed">
-          Mobilizing youth, women, and community groups to lead reforms 
-          at neighborhood and ward levels for sustainable change.
-        </p>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
-        <div class="text-primary text-4xl mb-4">
-          <i class="fa-solid fa-handshake-angle"></i>
-        </div>
-        <h3 class="text-2xl font-semibold mb-3 text-primary">Justice Through Unity</h3>
-        <p class="text-primary leading-relaxed">
-          Empowering people to collectively question authority and demand 
-          humane, fair, and transparent governance.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- Initiatives Section -->
-<section id="initiatives" class="py-24 bg-light relative overflow-hidden">
-  <!-- Decorative Floating Circles -->
-  <div class="absolute top-10 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
-
-  <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-    <!-- Section Header -->
-    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
-      Our Ongoing Work
-    </p>
-    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-      <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Initiatives & Campaigns</span>
-    </h2>
-    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
-
-    <!-- Initiatives Cards -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-      
-      <!-- Card 1 -->
-      <div class="bg-accent border border-light rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-accent text-2xl">
-            <i class="fa-solid fa-road"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-secondary">Patna Traffic Reform</h3>
-        </div>
-        <p class="text-primary leading-relaxed">
-          Citizen-led petition and dialogue with authorities to replace punitive challan practices with transparent, community-centered enforcement.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-accent border border-light rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-accent text-2xl">
-            <i class="fa-solid fa-city"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-secondary">Urban Self-Governance Pilot</h3>
-        </div>
-        <p class="text-primary leading-relaxed">
-          Testing decentralized decision-making through ward-level committees involving local taxpayers and citizens.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-accent border border-light rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-accent text-2xl">
-            <i class="fa-solid fa-user-group"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-secondary">Youth for Bihar</h3>
-        </div>
-        <p class="text-primary leading-relaxed">
-          Mobilizing students and young professionals to participate in civic audits, data collection, and advocacy for better public service delivery.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- 📝 Recent Blogs Section -->
-<section id="blogs" class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
-  <!-- Decorative Background Elements -->
-  <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
-
-  <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
-    <!-- Section Header -->
-    <p class="text-primary font-semibold uppercase tracking-wide mb-3">
-      Stay Informed
-    </p>
-    <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-      <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Recent Blogs & Updates</span>
-    </h2>
-    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
-
-    <!-- Loading Spinner for Blogs -->
-    <div id="recentBlogsLoading" class="flex justify-center items-center py-12">
-      <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-    </div>
-
-    <!-- Blog Cards -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-      <!-- Recent blogs will be dynamically loaded here -->
-    </div>
-    
-    <!-- Fallback timeout script -->
-    <script>
-      // Hide loading spinner after 10 seconds if blogs haven't loaded
-      setTimeout(() => {
-        const loadingSpinner = document.getElementById('recentBlogsLoading');
-        const blogContainer = document.querySelector('#blogs .grid');
-        
-        if (loadingSpinner && loadingSpinner.style.display !== 'none') {
-          loadingSpinner.style.display = 'none';
-          if (blogContainer && blogContainer.innerHTML.trim() === '') {
-            blogContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">Unable to load recent blogs. Please check if the backend server is running.</p>';
-          }
-        }
-      }, 10000);
-    </script>
-
-    <!-- View All Blogs Button -->
-    <div class="mt-12">
-    <a href="pages/blog.html"
-         class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3">
-        View All Blogs
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- 🌟 Contact / Join Section -->
-<section id="contact" class="py-24 bg-gradient-to-b from-primary via-secondary to-primary relative overflow-hidden">
-  <!-- Decorative Elements -->
-  <div class="absolute inset-0">
-    <div class="absolute top-10 left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
-  </div>
-
-  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
-    <!-- Section Subtitle -->
-    <p class="text-white font-semibold uppercase tracking-wide mb-3">Join the Movement</p>
-
-    <!-- Section Heading -->
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
-      Together We Can
-      <span class="bg-white bg-clip-text text-transparent">
-        Rebuild Bihar
-      </span>
-    </h2>
-
-    <!-- Underline -->
-    <div class="w-24 h-1 bg-white mx-auto mb-12 rounded-full"></div>
-
-    <!-- Description -->
-    <p class="text-white/80 max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
-      Change begins when we, the citizens, act together. Join hands with us — share ideas, volunteer for campaigns, and help make Patna a model of people-powered reform.
-    </p>
-
-  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-
-  <!-- Required Web3Forms Hidden Fields -->
-  <input type="hidden" name="access_key" value="edc9d2e9-4bdb-4fbb-b9c0-8868e294ca5c">
-  <input type="hidden" name="subject" value="New Enquiry from Website - WeThePeopleOfPatna">
-  <input type="checkbox" name="botcheck" style="display:none;">
-
-  <!-- Form Card -->
-  <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:px-12 shadow-lg max-w-2xl mx-auto space-y-6">
-    <div class="grid md:grid-cols-2 gap-6">
-      <input type="text" name="name" placeholder="Full Name" required
-        class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition" />
-      <input type="email" name="email" placeholder="Email Address" required
-        class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition" />
-    </div>
-
-    <textarea name="message" placeholder="Your Message or Interest Area..." rows="6" required
-      class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
-
-    <button type="submit"
-      class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
-      Submit
-    </button>
-
-    <!-- Success Message -->
-    <p id="result" class="text-green-400 text-center hidden">✅ Thank you! Your message has been sent.</p>
-  </div>
-</form>
-
-<!-- Web3Forms AJAX Script -->
-<script>
-  const form = document.getElementById('contactForm');
-  const result = document.getElementById('result');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      result.classList.remove('hidden');
-      result.textContent = "✅ Thank you! Your message has been sent.";
-      form.reset();
-    } else {
-      result.classList.remove('hidden');
-      result.textContent = "❌ Oops! Something went wrong. Please try again.";
-    }
-  });
-</script>
-
-  </div>
-</section>
-
-
-<!-- 🌟 Footer -->
-<footer class="section-dark border-t border-primary/30 py-16 bg-gradient-to-b from-light to-white relative overflow-hidden">
-  <div class="max-w-6xl mx-auto px-6 text-center space-y-8">
-
-    <!-- Decorative Background Circles -->
-    <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+  <!-- 🌟 The Face of the Initiative -->
+  <section id="leader" class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
 
-    <!-- Vishal Singh Image -->
-    <div class="flex justify-center">
-      <div class="relative">
-        <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
-        <img src="assets/images/neta g.jpg" alt="Vishal Singh"
-             class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
+    <!-- Centered Content -->
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <p class="text-3xl md:text-4xl text-primary font-semibold uppercase tracking-wide mb-3">
+        The Face of the Campaign
+      </p>
+
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        <span class="font-semibold text-primary">Vishal Singh</span> is the driving force behind
+        <em>“We The People of Patna.”</em>
+        A visionary leader and reformist thinker, he represents a new era of citizen-led change focused on honesty,
+        accountability, and self-governance.
+      </p>
+
+      <p class="text-gray-700 leading-relaxed text-lg mb-6">
+        His mission is simple — to unite ordinary people in extraordinary action and rebuild Bihar on the principles
+        of equality, justice, and collective responsibility.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 mt-6">
+        <a href="#contact"
+          class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
+          Connect with Vishal
+        </a>
+        <a href="https://wa.me/919229551125" target="_blank"
+          class="border border-primary text-primary px-6 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300">
+          Message on WhatsApp
+        </a>
       </div>
     </div>
+  </section>
 
-    <!-- Social Media Icons -->
-    <div class="flex justify-center space-x-6 mt-6">
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/profile.php?id=61580770327109" target="_blank"
-        class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-        <i class="fa-brands fa-facebook-f text-white"></i>
-      </a>
 
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/wethepeopleofpatna" target="_blank"
-        class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-        <i class="fa-brands fa-instagram text-white"></i>
-      </a>
 
-      <!-- WhatsApp -->
-      <a href="https://wa.me/919229551125" target="_blank"
-        class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
-        <i class="fa-brands fa-whatsapp text-white"></i>
-      </a>
+  <!-- 🌟 Vision Section -->
+  <section id="vision" class="py-24 bg-gradient-to-b from-primary via-secondary to-primary relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
     </div>
 
-    <!-- Footer Text -->
-    <p class="text-primary/70 text-sm">© 2025 We The People of Patna. All Rights Reserved.</p>
+    <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <!-- Section Subtitle -->
+      <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+        Our Vision
+      </p>
+
+      <!-- Section Heading -->
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-accent leading-tight">
+        Rebuilding Bihar
+        <span class="bg-white bg-clip-text text-transparent">
+          Through People's Power
+        </span>
+      </h2>
+
+      <div class="w-24 h-1 bg-white mx-auto mb-14 rounded-full"></div>
+
+      <!-- Vision Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
+
+        <!-- Card 1 -->
+        <div
+          class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
+          <div class="text-primary text-4xl mb-4">
+            <i class="fa-solid fa-scale-balanced"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-primary">Abolish Challan Exploitation</h3>
+          <p class="text-primary leading-relaxed">
+            Reforming the challan system of Patna Traffic Police to end misuse and restore fairness —
+            our first pilot towards a citizen-accountable governance model.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
+          <div class="text-primary text-4xl mb-4">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-primary">One Nation, One Tax</h3>
+          <p class="text-primary leading-relaxed">
+            Introducing a 1% Banking Transaction Tax to replace multiple taxes —
+            ensuring simplicity, transparency, and equitable growth.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
+          <div class="text-primary text-4xl mb-4">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-primary">Strengthen Local Governance</h3>
+          <p class="text-primary leading-relaxed">
+            Empowering municipalities, taxpayers, and citizens to make Patna a model of participatory democracy.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
+          <div class="text-primary text-4xl mb-4">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-primary">Citizen Awareness Drives</h3>
+          <p class="text-primary leading-relaxed">
+            Mass awareness campaigns encouraging civic participation, accountability,
+            and responsible citizenship across Bihar.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
+          <div class="text-primary text-4xl mb-4">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-primary">Grassroots Empowerment</h3>
+          <p class="text-primary leading-relaxed">
+            Mobilizing youth, women, and community groups to lead reforms
+            at neighborhood and ward levels for sustainable change.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="bg-light rounded-3xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-primary/40">
+          <div class="text-primary text-4xl mb-4">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-primary">Justice Through Unity</h3>
+          <p class="text-primary leading-relaxed">
+            Empowering people to collectively question authority and demand
+            humane, fair, and transparent governance.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Initiatives Section -->
+  <section id="initiatives" class="py-24 bg-light relative overflow-hidden">
+    <!-- Decorative Floating Circles -->
+    <div class="absolute top-10 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <!-- Section Header -->
+      <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+        Our Ongoing Work
+      </p>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Initiatives &
+          Campaigns</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+
+      <!-- Initiatives Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+
+        <!-- Card 1 -->
+        <div class="bg-accent border border-light rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-accent text-2xl">
+              <i class="fa-solid fa-road"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-secondary">Patna Traffic Reform</h3>
+          </div>
+          <p class="text-primary leading-relaxed">
+            Citizen-led petition and dialogue with authorities to replace punitive challan practices with transparent,
+            community-centered enforcement.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-accent border border-light rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-accent text-2xl">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-secondary">Urban Self-Governance Pilot</h3>
+          </div>
+          <p class="text-primary leading-relaxed">
+            Testing decentralized decision-making through ward-level committees involving local taxpayers and citizens.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-accent border border-light rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary text-accent text-2xl">
+              <i class="fa-solid fa-user-group"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-secondary">Youth for Bihar</h3>
+          </div>
+          <p class="text-primary leading-relaxed">
+            Mobilizing students and young professionals to participate in civic audits, data collection, and advocacy
+            for better public service delivery.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 📝 Recent Blogs Section -->
+  <section id="blogs" class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <!-- Section Header -->
+      <p class="text-primary font-semibold uppercase tracking-wide mb-3">
+        Stay Informed
+      </p>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Recent Blogs &
+          Updates</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+
+      <!-- Loading Spinner for Blogs -->
+      <div id="recentBlogsLoading" class="flex justify-center items-center py-12">
+        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+
+      <!-- Blog Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+        <!-- Recent blogs will be dynamically loaded here -->
+      </div>
+
+      <!-- Fallback timeout script -->
+      <script>
+        // Hide loading spinner after 10 seconds if blogs haven't loaded
+        setTimeout(() => {
+          const loadingSpinner = document.getElementById('recentBlogsLoading');
+          const blogContainer = document.querySelector('#blogs .grid');
+
+          if (loadingSpinner && loadingSpinner.style.display !== 'none') {
+            loadingSpinner.style.display = 'none';
+            if (blogContainer && blogContainer.innerHTML.trim() === '') {
+              blogContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">Unable to load recent blogs. Please check if the backend server is running.</p>';
+            }
+          }
+        }, 10000);
+      </script>
+
+      <!-- View All Blogs Button -->
+      <div class="mt-12">
+        <a href="pages/blog.html"
+          class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3">
+          View All Blogs
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- 🌟 Contact / Join Section -->
+  <section id="contact" class="py-24 bg-gradient-to-b from-primary via-secondary to-primary relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <!-- Section Subtitle -->
+      <p class="text-white font-semibold uppercase tracking-wide mb-3">Join the Movement</p>
+
+      <!-- Section Heading -->
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white leading-tight">
+        Together We Can
+        <span class="bg-white bg-clip-text text-transparent">
+          Rebuild Bihar
+        </span>
+      </h2>
+
+      <!-- Underline -->
+      <div class="w-24 h-1 bg-white mx-auto mb-12 rounded-full"></div>
+
+      <!-- Description -->
+      <p class="text-white/80 max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
+        Change begins when we, the citizens, act together. Join hands with us — share ideas, volunteer for campaigns,
+        and help make Patna a model of people-powered reform.
+      </p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+        <!-- Required Web3Forms Hidden Fields -->
+        <input type="hidden" name="access_key" value="edc9d2e9-4bdb-4fbb-b9c0-8868e294ca5c">
+        <input type="hidden" name="subject" value="New Enquiry from Website - WeThePeopleOfPatna">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
+        <!-- Form Card -->
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:px-12 shadow-lg max-w-2xl mx-auto space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" name="name" placeholder="Full Name" required
+              class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition" />
+            <input type="email" name="email" placeholder="Email Address" required
+              class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+
+          <textarea name="message" placeholder="Your Message or Interest Area..." rows="6" required
+            class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+
+          <button type="submit"
+            class="bg-light text-primary px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 transform hover:scale-105">
+            Submit
+          </button>
+
+          <!-- Success Message -->
+          <p id="result" class="text-green-400 text-center hidden">✅ Thank you! Your message has been sent.</p>
+        </div>
+      </form>
+
+      <!-- Web3Forms AJAX Script -->
+      <script>
+        const form = document.getElementById('contactForm');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            result.classList.remove('hidden');
+            result.textContent = "✅ Thank you! Your message has been sent.";
+            form.reset();
+          } else {
+            result.classList.remove('hidden');
+            result.textContent = "❌ Oops! Something went wrong. Please try again.";
+          }
+        });
+      </script>
+
+    </div>
+  </section>
+
+
+  <!-- 🌟 Footer -->
+  <footer
+    class="section-dark border-t border-primary/30 py-16 bg-gradient-to-b from-light to-white relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 text-center space-y-8">
+
+      <!-- Decorative Background Circles -->
+      <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+      <!-- Vishal Singh Image -->
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30">
+          </div>
+          <img src="assets/images/neta g.jpg" alt="Vishal Singh"
+            class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
+        </div>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="flex justify-center space-x-6 mt-6">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61580770327109" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-facebook-f text-white"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/wethepeopleofpatna" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-instagram text-white"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919229551125" target="_blank"
+          class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center hover:scale-110 transition-transform">
+          <i class="fa-brands fa-whatsapp text-white"></i>
+        </a>
+      </div>
+
+      <!-- Footer Text -->
+      <p class="text-primary/70 text-sm">© 2025 We The People of Patna. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- Floating Buttons -->
+  <div class="floating-buttons fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <!-- Problem Report Button -->
+    <button id="problemReportBtn"
+      class="floating-btn bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full p-5 shadow-lg flex items-center justify-center group">
+      <i class="fa-solid fa-exclamation-triangle text-2xl"></i>
+      <span
+        class="absolute right-full mr-3 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+        Report Problem
+      </span>
+    </button>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919229551125" target="_blank"
+      class="floating-btn bg-gradient-to-r from-primary to-secondary text-white rounded-full p-5 shadow-lg flex items-center justify-center group">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      <span
+        class="absolute right-full mr-3 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+        WhatsApp
+      </span>
+    </a>
   </div>
-</footer>
 
 
-<!-- Floating Buttons -->
-<div class="floating-buttons fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-  <!-- Problem Report Button -->
-  <button id="problemReportBtn"
-    class="floating-btn bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full p-5 shadow-lg flex items-center justify-center group">
-    <i class="fa-solid fa-exclamation-triangle text-2xl"></i>
-    <span class="absolute right-full mr-3 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-      Report Problem
-    </span>
-  </button>
-  
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/919229551125" target="_blank"
-    class="floating-btn bg-gradient-to-r from-primary to-secondary text-white rounded-full p-5 shadow-lg flex items-center justify-center group">
-    <i class="fa-brands fa-whatsapp text-2xl"></i>
-    <span class="absolute right-full mr-3 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-      WhatsApp
-    </span>
-  </a>
-</div>
-
-
-<!-- Problem Report Modal -->
-<div id="problemModal" class="problem-modal fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-  <div class="problem-modal-content bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-    <!-- Modal Header -->
-    <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
-      <div class="flex justify-between items-center">
-        <h2 class="text-2xl font-bold">Report a Problem</h2>
-        <button id="closeModal" class="text-white hover:text-gray-200 text-2xl">
-          <i class="fa-solid fa-times"></i>
-        </button>
+  <!-- Problem Report Modal -->
+  <div id="problemModal"
+    class="problem-modal fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="problem-modal-content bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-t-2xl">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-bold">Report a Problem</h2>
+          <button id="closeModal" class="text-white hover:text-gray-200 text-2xl">
+            <i class="fa-solid fa-times"></i>
+          </button>
+        </div>
+        <p class="text-white/80 mt-2">Help us make Bihar better by reporting issues in your community</p>
       </div>
-      <p class="text-white/80 mt-2">Help us make Bihar better by reporting issues in your community</p>
+
+      <!-- Modal Content -->
+      <form action="https://api.web3forms.com/submit" method="POST" id="problemForm" class="p-6 space-y-8">
+        <!-- Required Web3Forms Hidden Fields -->
+        <input type="hidden" name="access_key" value="8e975247-eaa1-455a-ae04-3082988e4484">
+        <input type="hidden" name="subject" value="New Problem from Website - WeThePeopleOfPatna">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
+
+        <!-- Section 1: Personal Information -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-user mr-2"></i>Personal Information
+          </h3>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+              <input type="text" name="fullName" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" name="email"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+              <input type="tel" name="phone" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">City / District *</label>
+              <input type="text" name="city" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">State / Region *</label>
+              <select name="state" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+                <option value="">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <!-- <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option> -->
+                <option value="Chandigarh">Chandigarh</option>
+                <!-- <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option> -->
+                <option value="Delhi">Delhi</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Ladakh">Ladakh</option>
+                <!-- <option value="Lakshadweep">Lakshadweep</option> -->
+                <!-- <option value="Puducherry">Puducherry</option> -->
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Age Group</label>
+              <select name="ageGroup"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+                <option value="">Select Age Group</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-55">46-55</option>
+                <option value="56-65">56-65</option>
+                <option value="65+">65+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Issue Details -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-exclamation-circle mr-2"></i>Issue Details
+          </h3>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Category of Problem *</label>
+              <select name="category" required
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+                <option value="">Select Category</option>
+                <option value="Corruption / Misconduct">Corruption / Misconduct</option>
+                <option value="Public Services">Public Services (Water, Electricity, Roads, etc.)</option>
+                <option value="Law & Order / Police">Law & Order / Police</option>
+                <option value="Health / Hospitals">Health / Hospitals</option>
+                <option value="Education">Education</option>
+                <option value="Environment / Cleanliness">Environment / Cleanliness</option>
+                <option value="Employment / Labor Rights">Employment / Labor Rights</option>
+                <option value="Women / Child Safety">Women / Child Safety</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Date of Incident</label>
+              <input type="date" name="incidentDate"
+                class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            </div>
+          </div>
+
+          <div id="otherCategoryDiv" class="hidden">
+            <label class="block text-sm font-medium text-gray-700 mb-2">Please specify other category</label>
+            <input type="text" name="otherCategory"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Subject / Title of Complaint *</label>
+            <input type="text" name="subject" required
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Detailed Description of the Issue *</label>
+            <textarea name="description" required rows="5"
+              class="w-full px-4 py-3 border text-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Location of Incident</label>
+            <input type="text" name="location"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+        </div>
+
+        <!-- Section 3: Evidence / Attachments -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-paperclip mr-2"></i>Evidence / Attachments
+          </h3>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Upload Documents or Photos</label>
+            <input type="file" name="attachments" multiple accept="image/*,.pdf,.doc,.docx"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+            <p class="text-sm text-gray-500 mt-1">Supported formats: Images, PDF, DOC, DOCX (Max 5MB each)</p>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Link to Supporting Information</label>
+            <input type="url" name="supportingLink"
+              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
+          </div>
+        </div>
+
+        <!-- Section 4: Privacy & Consent -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
+            <i class="fa-solid fa-shield-alt mr-2"></i>Privacy & Consent
+          </h3>
+
+          <div class="flex items-center space-x-3">
+            <input type="checkbox" name="anonymous" id="anonymous"
+              class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+            <label for="anonymous" class="text-sm font-medium text-gray-700">
+              I wish to remain anonymous
+            </label>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <input type="checkbox" name="consent" id="consent" required
+              class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-1">
+            <label for="consent" class="text-sm text-gray-700">
+              I agree that my information may be used to address this issue and for awareness purposes in accordance
+              with the privacy policy. *
+            </label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-end space-x-4 pt-6 border-t border-gray-200">
+          <button type="button" id="cancelBtn"
+            class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+            Cancel
+          </button>
+          <button type="submit"
+            class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition transform hover:scale-105">
+            <i class="fa-solid fa-paper-plane mr-2"></i>Submit Complaint
+          </button>
+        </div>
+        <!-- Success Message -->
+        <p id="result" class="text-green-400 text-center hidden">✅ Thank you! Your message has been sent.</p>
+      </form>
     </div>
-
-    <!-- Modal Content -->
-    <form action="https://api.web3forms.com/submit" method="POST" id="problemForm" class="p-6 space-y-8">
-      <!-- Required Web3Forms Hidden Fields -->
-  <input type="hidden" name="access_key" value="8e975247-eaa1-455a-ae04-3082988e4484">
-  <input type="hidden" name="subject" value="New Problem from Website - WeThePeopleOfPatna">
-  <input type="checkbox" name="botcheck" style="display:none;">
-
-      
-      <!-- Section 1: Personal Information -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
-          <i class="fa-solid fa-user mr-2"></i>Personal Information
-        </h3>
-        
-        <div class="grid md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-            <input type="text" name="fullName" required
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-            <input type="email" name="email"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-            <input type="tel" name="phone" required
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">City / District *</label>
-            <input type="text" name="city" required
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">State / Region *</label>
-            <select name="state" required
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-              <option value="">Select State</option>
-              <option value="Andhra Pradesh">Andhra Pradesh</option>
-              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-              <option value="Assam">Assam</option>
-              <option value="Bihar">Bihar</option>
-              <option value="Chhattisgarh">Chhattisgarh</option>
-              <option value="Goa">Goa</option>
-              <option value="Gujarat">Gujarat</option>
-              <option value="Haryana">Haryana</option>
-              <option value="Himachal Pradesh">Himachal Pradesh</option>
-              <option value="Jharkhand">Jharkhand</option>
-              <option value="Karnataka">Karnataka</option>
-              <option value="Kerala">Kerala</option>
-              <option value="Madhya Pradesh">Madhya Pradesh</option>
-              <option value="Maharashtra">Maharashtra</option>
-              <option value="Manipur">Manipur</option>
-              <option value="Meghalaya">Meghalaya</option>
-              <option value="Mizoram">Mizoram</option>
-              <option value="Nagaland">Nagaland</option>
-              <option value="Odisha">Odisha</option>
-              <option value="Punjab">Punjab</option>
-              <option value="Rajasthan">Rajasthan</option>
-              <option value="Sikkim">Sikkim</option>
-              <option value="Tamil Nadu">Tamil Nadu</option>
-              <option value="Telangana">Telangana</option>
-              <option value="Tripura">Tripura</option>
-              <option value="Uttar Pradesh">Uttar Pradesh</option>
-              <option value="Uttarakhand">Uttarakhand</option>
-              <option value="West Bengal">West Bengal</option>
-              <!-- <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option> -->
-              <option value="Chandigarh">Chandigarh</option>
-              <!-- <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option> -->
-              <option value="Delhi">Delhi</option>
-              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-              <option value="Ladakh">Ladakh</option>
-              <!-- <option value="Lakshadweep">Lakshadweep</option> -->
-              <!-- <option value="Puducherry">Puducherry</option> -->
-            </select>
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Age Group</label>
-            <select name="ageGroup"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-              <option value="">Select Age Group</option>
-              <option value="18-25">18-25</option>
-              <option value="26-35">26-35</option>
-              <option value="36-45">36-45</option>
-              <option value="46-55">46-55</option>
-              <option value="56-65">56-65</option>
-              <option value="65+">65+</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 2: Issue Details -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
-          <i class="fa-solid fa-exclamation-circle mr-2"></i>Issue Details
-        </h3>
-        
-        <div class="grid md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Category of Problem *</label>
-            <select name="category" required
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-              <option value="">Select Category</option>
-              <option value="Corruption / Misconduct">Corruption / Misconduct</option>
-              <option value="Public Services">Public Services (Water, Electricity, Roads, etc.)</option>
-              <option value="Law & Order / Police">Law & Order / Police</option>
-              <option value="Health / Hospitals">Health / Hospitals</option>
-              <option value="Education">Education</option>
-              <option value="Environment / Cleanliness">Environment / Cleanliness</option>
-              <option value="Employment / Labor Rights">Employment / Labor Rights</option>
-              <option value="Women / Child Safety">Women / Child Safety</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">Date of Incident</label>
-            <input type="date" name="incidentDate"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-          </div>
-        </div>
-        
-        <div id="otherCategoryDiv" class="hidden">
-          <label class="block text-sm font-medium text-gray-700 mb-2">Please specify other category</label>
-          <input type="text" name="otherCategory"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-        </div>
-        
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Subject / Title of Complaint *</label>
-          <input type="text" name="subject" required
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-        </div>
-        
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Detailed Description of the Issue *</label>
-          <textarea name="description" required rows="5"
-            class="w-full px-4 py-3 border text-gray-700 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
-        </div>
-        
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Location of Incident</label>
-          <input type="text" name="location"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-        </div>
-      </div>
-
-      <!-- Section 3: Evidence / Attachments -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
-          <i class="fa-solid fa-paperclip mr-2"></i>Evidence / Attachments
-        </h3>
-        
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Upload Documents or Photos</label>
-          <input type="file" name="attachments" multiple accept="image/*,.pdf,.doc,.docx"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-          <p class="text-sm text-gray-500 mt-1">Supported formats: Images, PDF, DOC, DOCX (Max 5MB each)</p>
-        </div>
-        
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">Link to Supporting Information</label>
-          <input type="url" name="supportingLink"
-              class="w-full px-4 py-3 text-gray-700 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition">
-        </div>
-      </div>
-
-      <!-- Section 4: Privacy & Consent -->
-      <div class="space-y-6">
-        <h3 class="text-xl font-semibold text-primary border-b border-primary/20 pb-2">
-          <i class="fa-solid fa-shield-alt mr-2"></i>Privacy & Consent
-        </h3>
-        
-        <div class="flex items-center space-x-3">
-          <input type="checkbox" name="anonymous" id="anonymous"
-            class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
-          <label for="anonymous" class="text-sm font-medium text-gray-700">
-            I wish to remain anonymous
-          </label>
-        </div>
-        
-        <div class="flex items-start space-x-3">
-          <input type="checkbox" name="consent" id="consent" required
-            class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-1">
-          <label for="consent" class="text-sm text-gray-700">
-            I agree that my information may be used to address this issue and for awareness purposes in accordance with the privacy policy. *
-          </label>
-        </div>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="flex justify-end space-x-4 pt-6 border-t border-gray-200">
-        <button type="button" id="cancelBtn"
-          class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
-          Cancel
-        </button>
-        <button type="submit"
-          class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-lg hover:shadow-lg transition transform hover:scale-105">
-          <i class="fa-solid fa-paper-plane mr-2"></i>Submit Complaint
-        </button>
-      </div>
-      <!-- Success Message -->
-    <p id="result" class="text-green-400 text-center hidden">✅ Thank you! Your message has been sent.</p>
-    </form>
   </div>
-</div>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
   <script src="assets/js/app.js"></script>
@@ -912,7 +986,7 @@
     }
 
     // Problem Modal Functionality
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const problemReportBtn = document.getElementById('problemReportBtn');
       const problemModal = document.getElementById('problemModal');
       const closeModal = document.getElementById('closeModal');
@@ -922,7 +996,7 @@
       const otherCategoryDiv = document.getElementById('otherCategoryDiv');
 
       // Open modal
-      problemReportBtn.addEventListener('click', function() {
+      problemReportBtn.addEventListener('click', function () {
         problemModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
       });
@@ -939,14 +1013,14 @@
       cancelBtn.addEventListener('click', closeModalFunc);
 
       // Close modal when clicking outside
-      problemModal.addEventListener('click', function(e) {
+      problemModal.addEventListener('click', function (e) {
         if (e.target === problemModal) {
           closeModalFunc();
         }
       });
 
       // Show/hide other category field
-      categorySelect.addEventListener('change', function() {
+      categorySelect.addEventListener('change', function () {
         if (this.value === 'Other') {
           otherCategoryDiv.classList.remove('hidden');
           document.querySelector('input[name="otherCategory"]').required = true;
@@ -957,9 +1031,9 @@
       });
 
       // Form submission
-      problemForm.addEventListener('submit', async function(e) {
+      problemForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-        
+
         const submitBtn = e.target.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Submitting...';
@@ -967,7 +1041,7 @@
 
         try {
           const formData = new FormData(problemForm);
-          
+
           // Create the submission object
           const submissionData = {
             personalInfo: {
@@ -1011,7 +1085,7 @@
             web3FormData.append('subject', 'New Problem Report - We The People of Patna');
             web3FormData.append('from_name', submissionData.personalInfo.fullName);
             web3FormData.append('email', submissionData.personalInfo.email || 'noreply@wethepeopleofpatna.com');
-            
+
             const emailContent = `
 New Problem Report Submitted:
 
@@ -1039,7 +1113,7 @@ PRIVACY:
 
 Submitted at: ${new Date(submissionData.submittedAt).toLocaleString()}
             `;
-            
+
             web3FormData.append('message', emailContent);
 
             await fetch('https://api.web3forms.com/submit', {
