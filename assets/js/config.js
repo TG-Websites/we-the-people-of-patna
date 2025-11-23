@@ -30,7 +30,7 @@ const CONFIG = {
   },
 
   // Blog Categories with their styling
-  CATEGORIES: { 
+  CATEGORIES: {
     'Reform Victory': {
       class: 'bg-primary',
       color: '#195a9c'
@@ -109,10 +109,10 @@ const Utils = {
   // Format date to readable string
   formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   },
 
@@ -170,7 +170,7 @@ const Utils = {
     const notification = document.createElement('div');
     notification.id = 'notification';
     notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm transform transition-all duration-300 translate-x-full`;
-    
+
     // Set styling based on type
     switch (type) {
       case 'success':
@@ -249,12 +249,12 @@ const Utils = {
   // Properly encode image URLs
   getImageUrl(imagePath) {
     if (!imagePath) return '';
-    
+
     // If it's already a full URL (http/https), return as-is
     if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
       return imagePath;
     }
-    
+
     // For local paths, split and encode only the filename part
     const parts = imagePath.split('/');
     const filename = parts.pop();

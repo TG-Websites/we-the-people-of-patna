@@ -32,292 +32,289 @@
 
 <body class="text-gray-100 overflow-x-hidden font-inter">
   <!-- Navbar -->
-<nav class="fixed w-full z-50 bg-white border-b border-light">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo + Title -->
-    <div class="flex items-center space-x-3">
-      <img src="../assets/images/Logo.png" alt="We The People of Patna"
-        class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
-      <div class="text-2xl font-bold hidden md:block leading-tight">
-        <span class="text-primary">We The People</span><br />
-        <span class="text-primary">of Patna</span>
-      </div>
-    </div>
+  <nav class="fixed w-full z-50 bg-white border-b border-light">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-8">
-      <a href="../index.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Home</a>
-
-      <a href="../index.html#about"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">About</a>
-
-      <a href="../index.html#vision"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Our Vision</a>
-
-      <a href="../index.html#initiatives"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Initiatives</a>
-
-      <!-- 🩵 Donation Link -->
-     
-      <a href="blog.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Blogs</a>
-
-      <a href="social-stories.html"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Stories</a>
-
-         <a href="donation.html"
-        class="text-primary font-semibold underline decoration-primary">Donation</a>
-
-
-      <a href="../index.html#contact"
-        class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors duration-200">Join Us</a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all duration-300 hidden">
-    <a href="../index.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Home</a>
-
-    <a href="../index.html#about"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">About</a>
-
-    <a href="../index.html#vision"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Our Vision</a>
-
-    <a href="../index.html#initiatives"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Initiatives</a>
-
-   
-
-    <a href="blog.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Blogs</a>
-
-    <a href="social-stories.html"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Stories</a>
-
-       <!-- 🩵 Donation (Mobile) -->
-    <a href="donation.html"
-      class="block text-primary font-semibold py-2">Donation</a>
-
-    <a href="../index.html#contact"
-      class="block text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline hover:decoration-primary transition-colors py-2">Join Us</a>
-  </div>
-</nav>
-
-   <!-- 🌟 Hero Section -->
-<section
-  class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary 
-  h-[90vh] flex items-center justify-center text-center text-accent px-6 pt-28"
->
-  <!-- Background Image -->
-  <img
-    src="./../assets/images/donation-hero.png"
-    alt="Donate for Patna Hero"
-    class="absolute inset-0 w-full h-full object-cover opacity-20"
-  />
-
-  <!-- Overlay (optional soft gradient for readability) -->
-  <div class="absolute inset-0 bg-primary/20"></div>
-
-  <!-- Content -->
-  <div class="relative z-10 max-w-3xl">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-      Support Patna — Every Donation Matters
-    </h1>
-    <p class="text-lg opacity-90 mb-6">
-      Your contribution helps fund emergency aid, legal assistance, and
-      professional support for the people of Patna.
-    </p>
-    <a
-      href="#donate"
-      class="bg-accent text-primary px-8 py-3 rounded-full font-semibold hover:bg-white/90 transition"
-      >Donate Now</a
-    >
-  </div>
-</section>
-
-
-<!-- 💬 About / Story Section -->
-<section class="relative py-24 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
-  <!-- Decorative Background Circles -->
-  <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-70"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-70"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 md:px-10">
-    <div class="grid md:grid-cols-2 gap-12 items-start">
-      
-      <!-- Left Content -->
-      <div class="text-left space-y-6">
-        <h2 class="text-4xl font-bold text-primary">
-          Why Your Help Matters
-        </h2>
-        <p class="text-gray-700 leading-relaxed text-lg">
-          Every contribution, no matter how small, becomes a lifeline for those in need. Your compassion helps
-          families in Patna access <span class="font-semibold text-primary">emergency medical aid</span> and 
-          <span class="font-semibold text-secondary">legal support</span> when they have nowhere else to turn.
-        </p>
-        <p class="text-gray-700 leading-relaxed text-lg">
-          Through your continued generosity, we provide not only immediate assistance but also 
-          <span class="font-semibold text-primary">long-term rehabilitation</span> and 
-          <span class="font-semibold text-secondary">professional guidance</span> for those rebuilding their lives. 
-          Together, we’re not just offering help — we’re restoring hope and dignity.
-        </p>
-      </div>
-
-      <!-- Right Image -->
-      <div class="flex justify-center md:justify-end">
-        <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 blur-xl rounded-full opacity-60"></div>
-          <img
-            src="./../assets/images/donation-about.png"
-            alt="Helping Hands Illustration"
-            class="relative z-10 w-80 md:w-[28rem] h-auto shadow-md rounded-2xl transition-transform duration-500 hover:scale-105"
-          />
+      <!-- LOGO -->
+      <div class="flex items-center space-x-3">
+        <img src="../assets/images/Logo.png" alt="We The People of Patna"
+          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+        <div class="text-2xl font-bold hidden md:block leading-tight">
+          <span class="text-primary">We The People</span><br />
+          <span class="text-primary">of Patna</span>
         </div>
       </div>
 
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex space-x-8">
+
+        <!-- Home -->
+        <a href="../index.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+          Home
+        </a>
+
+        <!-- ABOUT (link + submenu) -->
+        <div class="relative group">
+          <a href="../index.html#about"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+            About
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+
+            <a href="../index.html#vision"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Our Vision
+            </a>
+
+            <a href="../index.html#initiatives"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Initiatives
+            </a>
+
+            <a href="blog.html" class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Blogs
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <!-- CONTRIBUTORS (link + submenu) -->
+        <div class="relative group">
+          <a href="contributors.html"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+            Contributors
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+
+            <a href="contributors.html"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              All Contributors
+            </a>
+
+            <a href="social-stories.html"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Contributions
+            </a>
+          </div>
+        </div>
+
+        <!-- DONATION -->
+        <a href="donation.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+          Donation
+        </a>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
     </div>
-  </div>
-</section>
 
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all hidden">
 
+      <a href="../index.html" class="block text-gray-600 py-2 hover:text-primary">Home</a>
+      <a href="../index.html#about" class="block text-gray-600 py-2 hover:text-primary">About</a>
 
-<!-- 📊 Fund Allocation Section -->
-<section class="py-20 bg-light relative overflow-hidden">
-  <!-- Decorative Elements -->
-  <div class="absolute top-0 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-
-  <div class="relative max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center text-primary mb-12">
-      Fund Allocation
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-10">
-      <!-- Card 1 -->
-      <div
-        class="bg-white shadow-lg rounded-2xl p-8 text-center border-t-4 border-primary hover:-translate-y-2 transition-all duration-300 hover:shadow-xl"
-      >
-        <div class="flex justify-center mb-5">
-          <i class="fa-solid fa-kit-medical text-primary text-5xl"></i>
-        </div>
-        <h3 class="text-2xl font-semibold text-dark mb-3">
-          50% Emergency Funds
-        </h3>
-        <p class="text-gray-600 leading-relaxed">
-          Used for urgent <strong>medical aid</strong>, shelter, and food
-          relief for Patna residents during emergencies.
-        </p>
+      <!-- About Submenu -->
+      <div class="ml-4 border-l border-gray-300 pl-4 space-y-1 mb-2">
+        <a href="../index.html#vision" class="block text-gray-500 py-1 hover:text-primary">Our Vision</a>
+        <a href="../index.html#initiatives" class="block text-gray-500 py-1 hover:text-primary">Initiatives</a>
+        <a href="blog.html" class="block text-gray-500 py-1 hover:text-primary">Blogs</a>
       </div>
 
-      <!-- Card 2 -->
-      <div
-        class="bg-white shadow-lg rounded-2xl p-8 text-center border-t-4 border-secondary hover:-translate-y-2 transition-all duration-300 hover:shadow-xl"
-      >
-        <div class="flex justify-center mb-5">
-          <i class="fa-solid fa-scale-balanced text-secondary text-5xl"></i>
-        </div>
-        <h3 class="text-2xl font-semibold text-dark mb-3">
-          40% Legal Matters
-        </h3>
-        <p class="text-gray-600 leading-relaxed">
-          Provides <strong>legal support</strong> and documentation for
-          vulnerable communities and underprivileged citizens.
-        </p>
+
+      <!-- Contributors + submenu -->
+      <a href="contributors.html" class="block text-gray-600 py-2 hover:text-primary">Contributors</a>
+      <div class="ml-4 border-l border-gray-300 pl-4 space-y-1 mb-2">
+        <a href="contributors.html" class="block text-gray-500 py-1 hover:text-primary">All Contributors</a>
+        <a href="social-stories.html" class="block text-gray-500 py-1 hover:text-primary">Contributions</a>
       </div>
 
-      <!-- Card 3 -->
-      <div
-        class="bg-white shadow-lg rounded-2xl p-8 text-center border-t-4 border-secondary hover:-translate-y-2 transition-all duration-300 hover:shadow-xl"
-      >
-        <div class="flex justify-center mb-5">
-          <i class="fa-solid fa-briefcase text-secondary text-5xl"></i>
-        </div>
-        <h3 class="text-2xl font-semibold text-dark mb-3">
-          10% Professional Fees
-        </h3>
-        <p class="text-gray-600 leading-relaxed">
-          Ensures <strong>transparent management</strong>, auditing, and
-          awareness programs for maximum impact.
-        </p>
-      </div>
+      <a href="donation.html" class="block text-gray-600 py-2 hover:text-primary">Donation</a>
     </div>
-  </div>
-</section>
+  </nav>
 
 
-   <!-- 💰 Donation Form & QR -->
-<section id="donate" class="py-20 bg-white">
-  <div class="max-w-5xl mx-auto  gap-10 items-start px-6">
-    <!-- Donation Form -->
-    <div class="bg-light p-6 rounded-2xl shadow-md">
-      <h2 class="text-3xl font-bold text-primary mb-4">Make a Secure Donation</h2>
-      <p class="text-gray-700 mb-6">
-        Donate via UPI, Bank Transfer, or fill out this form for record and transparency.
+  <!-- 🌟 Hero Section -->
+  <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary 
+  h-[90vh] flex items-center justify-center text-center text-accent px-6 pt-28">
+    <!-- Background Image -->
+    <img src="./../assets/images/donation-hero.png" alt="Donate for Patna Hero"
+      class="absolute inset-0 w-full h-full object-cover opacity-20" />
+
+    <!-- Overlay (optional soft gradient for readability) -->
+    <div class="absolute inset-0 bg-primary/20"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        Support Patna — Every Donation Matters
+      </h1>
+      <p class="text-lg opacity-90 mb-6">
+        Your contribution helps fund emergency aid, legal assistance, and
+        professional support for the people of Patna.
       </p>
-      <form id="donation-form" class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium text-gray-700">Full Name</label>
-          <input
-            id="donor-name"
-            type="text"
-            placeholder="Enter your name"
-            required
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
-          />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-700">Email Address</label>
-          <input
-            id="donor-email"
-            type="email"
-            placeholder="you@example.com"
-            required
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
-          />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-700">Phone Number</label>
-          <input
-            id="donor-phone"
-            type="tel"
-            placeholder="Enter phone number"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
-          />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-700">Donation Amount (₹)</label>
-          <input
-            id="donation-amount"
-            type="number"
-            placeholder="Enter amount"
-            min="1"
-            step="0.01"
-            required
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition"
-          />
-        </div>
-        <button
-          id="donate-btn"
-          type="submit"
-          class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-all duration-300"
-        >
-          <i class="fa-solid fa-hand-holding-heart mr-2"></i> Donate Now
-        </button>
-      </form>
+      <a href="#donate"
+        class="bg-accent text-primary px-8 py-3 rounded-full font-semibold hover:bg-white/90 transition">Donate Now</a>
     </div>
+  </section>
 
-    <!-- QR + Bank Info -->
-    <!-- <div class="bg-light p-6 rounded-2xl shadow-md flex flex-col items-center">
+
+  <!-- 💬 About / Story Section -->
+  <section class="relative py-24 bg-gradient-to-b from-white to-blue-50 overflow-hidden">
+    <!-- Decorative Background Circles -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-70"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-70"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 md:px-10">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left Content -->
+        <div class="text-left space-y-6">
+          <h2 class="text-4xl font-bold text-primary">
+            Why Your Help Matters
+          </h2>
+          <p class="text-gray-700 leading-relaxed text-lg">
+            Every contribution, no matter how small, becomes a lifeline for those in need. Your compassion helps
+            families in Patna access <span class="font-semibold text-primary">emergency medical aid</span> and
+            <span class="font-semibold text-secondary">legal support</span> when they have nowhere else to turn.
+          </p>
+          <p class="text-gray-700 leading-relaxed text-lg">
+            Through your continued generosity, we provide not only immediate assistance but also
+            <span class="font-semibold text-primary">long-term rehabilitation</span> and
+            <span class="font-semibold text-secondary">professional guidance</span> for those rebuilding their lives.
+            Together, we’re not just offering help — we’re restoring hope and dignity.
+          </p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="flex justify-center md:justify-end">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 blur-xl rounded-full opacity-60">
+            </div>
+            <img src="./../assets/images/donation-about.png" alt="Helping Hands Illustration"
+              class="relative z-10 w-80 md:w-[28rem] h-auto shadow-md rounded-2xl transition-transform duration-500 hover:scale-105" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 📊 Fund Allocation Section -->
+  <section class="py-20 bg-light relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-primary mb-12">
+        Fund Allocation
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 text-center border-t-4 border-primary hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+          <div class="flex justify-center mb-5">
+            <i class="fa-solid fa-kit-medical text-primary text-5xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-dark mb-3">
+            50% Emergency Funds
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Used for urgent <strong>medical aid</strong>, shelter, and food
+            relief for Patna residents during emergencies.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 text-center border-t-4 border-secondary hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+          <div class="flex justify-center mb-5">
+            <i class="fa-solid fa-scale-balanced text-secondary text-5xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-dark mb-3">
+            40% Legal Matters
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Provides <strong>legal support</strong> and documentation for
+            vulnerable communities and underprivileged citizens.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white shadow-lg rounded-2xl p-8 text-center border-t-4 border-secondary hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
+          <div class="flex justify-center mb-5">
+            <i class="fa-solid fa-briefcase text-secondary text-5xl"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-dark mb-3">
+            10% Professional Fees
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Ensures <strong>transparent management</strong>, auditing, and
+            awareness programs for maximum impact.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 💰 Donation Form & QR -->
+  <section id="donate" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto  gap-10 items-start px-6">
+      <!-- Donation Form -->
+      <div class="bg-light p-6 rounded-2xl shadow-md">
+        <h2 class="text-3xl font-bold text-primary mb-4">Make a Secure Donation</h2>
+        <p class="text-gray-700 mb-6">
+          Donate via UPI, Bank Transfer, or fill out this form for record and transparency.
+        </p>
+        <form id="donation-form" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input id="donor-name" type="text" placeholder="Enter your name" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input id="donor-email" type="email" placeholder="you@example.com" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input id="donor-phone" type="tel" placeholder="Enter phone number"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Donation Amount (₹)</label>
+            <input id="donation-amount" type="number" placeholder="Enter amount" min="1" step="0.01" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-900 focus:ring-2 focus:ring-primary focus:outline-none transition" />
+          </div>
+          <button id="donate-btn" type="submit"
+            class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-all duration-300">
+            <i class="fa-solid fa-hand-holding-heart mr-2"></i> Donate Now
+          </button>
+        </form>
+      </div>
+
+      <!-- QR + Bank Info -->
+      <!-- <div class="bg-light p-6 rounded-2xl shadow-md flex flex-col items-center">
       <h3 class="text-xl font-bold text-primary mb-4">
         <i class="fa-solid fa-university mr-2"></i> Bank Details
       </h3>
@@ -337,79 +334,81 @@
         />
       </div>
     </div> -->
-  </div>
-</section>
-
-<!-- 🧾 Transparency & FAQ -->
-<section class="py-20 bg-light">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-primary mb-6">
-      <i class="fa-solid fa-eye mr-2"></i> Transparency
-    </h2>
-    <p class="text-gray-800 mb-12">
-      100% of funds received are utilized according to the allocation chart.
-      Monthly audits, community updates, and open communication ensure full transparency.
-    </p>
-
-    <!-- FAQ -->
-    <div class="text-left space-y-4">
-      <h3 class="text-xl font-semibold text-primary mb-4">
-        <i class="fa-solid fa-circle-question mr-2"></i> Frequently Asked Questions
-      </h3>
-
-      <details class="mb-3 bg-white rounded-lg p-4 shadow transition-all duration-300">
-        <summary class="font-semibold cursor-pointer text-gray-900">
-           How can I verify my donation?
-        </summary>
-        <p class="mt-2 text-gray-700">
-          You’ll receive an acknowledgment email within 24 hours of your donation. All transactions are recorded securely.
-        </p>
-      </details>
-
-      <details class="mb-3 bg-white rounded-lg p-4 shadow transition-all duration-300">
-        <summary class="font-semibold cursor-pointer text-gray-900">
-           Is my donation tax-deductible?
-        </summary>
-        <p class="mt-2 text-gray-700">
-          We’re currently in the process of registering for tax benefits. Updates will be shared soon.
-        </p>
-      </details>
-
-      <details class="mb-3 bg-white rounded-lg p-4 shadow transition-all duration-300">
-        <summary class="font-semibold cursor-pointer text-gray-900">
-           Can I donate offline?
-        </summary>
-        <p class="mt-2 text-gray-700">
-          Yes. You can donate directly to the bank account listed above or contact us for assistance.
-        </p>
-      </details>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ❤️ Final CTA -->
-<section class="bg-primary text-white text-center py-16 flex flex-col items-center">
-  <h2 class="text-3xl font-bold mb-4">
-    <i class="fa-solid fa-hands-holding-child mr-2"></i> Together, We Can Make a Difference
-  </h2>
-  <p class="max-w-2xl text-white/90 mb-6">
-    Your generosity brings hope and change. Join us in supporting Patna’s people through your valuable contributions.
-  </p>
-  <a href="#donate"
-     class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
-    <i class="fa-solid fa-hand-holding-heart mr-2"></i> Donate Now
-  </a>
-</section>
+  <!-- 🧾 Transparency & FAQ -->
+  <section class="py-20 bg-light">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-primary mb-6">
+        <i class="fa-solid fa-eye mr-2"></i> Transparency
+      </h2>
+      <p class="text-gray-800 mb-12">
+        100% of funds received are utilized according to the allocation chart.
+        Monthly audits, community updates, and open communication ensure full transparency.
+      </p>
+
+      <!-- FAQ -->
+      <div class="text-left space-y-4">
+        <h3 class="text-xl font-semibold text-primary mb-4">
+          <i class="fa-solid fa-circle-question mr-2"></i> Frequently Asked Questions
+        </h3>
+
+        <details class="mb-3 bg-white rounded-lg p-4 shadow transition-all duration-300">
+          <summary class="font-semibold cursor-pointer text-gray-900">
+            How can I verify my donation?
+          </summary>
+          <p class="mt-2 text-gray-700">
+            You’ll receive an acknowledgment email within 24 hours of your donation. All transactions are recorded
+            securely.
+          </p>
+        </details>
+
+        <details class="mb-3 bg-white rounded-lg p-4 shadow transition-all duration-300">
+          <summary class="font-semibold cursor-pointer text-gray-900">
+            Is my donation tax-deductible?
+          </summary>
+          <p class="mt-2 text-gray-700">
+            We’re currently in the process of registering for tax benefits. Updates will be shared soon.
+          </p>
+        </details>
+
+        <details class="mb-3 bg-white rounded-lg p-4 shadow transition-all duration-300">
+          <summary class="font-semibold cursor-pointer text-gray-900">
+            Can I donate offline?
+          </summary>
+          <p class="mt-2 text-gray-700">
+            Yes. You can donate directly to the bank account listed above or contact us for assistance.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ❤️ Final CTA -->
+  <section class="bg-primary text-white text-center py-16 flex flex-col items-center">
+    <h2 class="text-3xl font-bold mb-4">
+      <i class="fa-solid fa-hands-holding-child mr-2"></i> Together, We Can Make a Difference
+    </h2>
+    <p class="max-w-2xl text-white/90 mb-6">
+      Your generosity brings hope and change. Join us in supporting Patna’s people through your valuable contributions.
+    </p>
+    <a href="#donate"
+      class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
+      <i class="fa-solid fa-hand-holding-heart mr-2"></i> Donate Now
+    </a>
+  </section>
 
 
-<!-- 🟢 Floating Donate Button -->
-<!-- <a href="#donate" class="fixed bottom-5 right-5 bg-primary text-white px-5 py-3 rounded-full shadow-lg hover:bg-secondary transition-all duration-300">
+  <!-- 🟢 Floating Donate Button -->
+  <!-- <a href="#donate" class="fixed bottom-5 right-5 bg-primary text-white px-5 py-3 rounded-full shadow-lg hover:bg-secondary transition-all duration-300">
   <i class="fa-solid fa-heart mr-1"></i> Donate
 </a> -->
 
 
-<!-- Footer -->
-  <footer class="section-dark border-t border-primary/30 py-16 bg-gradient-to-b from-light to-white relative overflow-hidden">
+  <!-- Footer -->
+  <footer
+    class="section-dark border-t border-primary/30 py-16 bg-gradient-to-b from-light to-white relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-6 text-center space-y-8">
       <!-- Decorative Background Circles -->
       <div class="absolute top-0 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
@@ -418,9 +417,10 @@
       <!-- Vishal Singh Image -->
       <div class="flex justify-center">
         <div class="relative">
-          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30"></div>
+          <div class="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30">
+          </div>
           <img src="../assets/images/neta g.jpg" alt="Vishal Singh"
-               class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
+            class="relative z-10 w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-primary shadow-xl hover:scale-105 transition-transform duration-300" />
         </div>
       </div>
 
@@ -451,7 +451,8 @@
   </footer>
 
   <!-- Scroll Button -->
-  <button id="scrollToggleBtn" class="fixed bottom-6 right-6 bg-gradient-to-r from-primary to-secondary text-white p-3 rounded-full shadow-lg hover:opacity-90 transition-all z-30">
+  <button id="scrollToggleBtn"
+    class="fixed bottom-6 right-6 bg-gradient-to-r from-primary to-secondary text-white p-3 rounded-full shadow-lg hover:opacity-90 transition-all z-30">
     <i id="scrollIcon" class="fas fa-arrow-down"></i>
   </button>
 
@@ -499,7 +500,7 @@
 
   <script>
     // Donation form integration with backend and Razorpay
-    (function() {
+    (function () {
       const form = document.getElementById('donation-form');
       const btn = document.getElementById('donate-btn');
 
@@ -591,7 +592,7 @@
               }
             },
             modal: {
-              ondismiss: function() {
+              ondismiss: function () {
                 Utils.setLoadingState(btn, false);
               }
             }
@@ -615,5 +616,6 @@
 </html>
 
 
-  </body>
+</body>
+
 </html>

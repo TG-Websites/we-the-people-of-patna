@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributors - We The People of Patna | Voices of Change</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Configuration and Utilities -->
+  <script src="../assets/js/config.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#195A9C',
+            secondary: '#144A7F',
+            accent: '#E6F2FF',
+            light: '#F8FAFC',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="text-gray-100 overflow-x-hidden font-inter">
+  <!-- Navbar -->
+  <nav class="fixed w-full z-50 bg-white border-b border-light">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <div class="flex items-center space-x-3">
+        <img src="../assets/images/Logo.png" alt="We The People of Patna"
+          class="w-12 h-12 rounded-full object-cover border-2 border-primary" />
+        <div class="text-2xl font-bold hidden md:block leading-tight">
+          <span class="text-primary">We The People</span><br />
+          <span class="text-primary">of Patna</span>
+        </div>
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex space-x-8">
+
+        <!-- Home -->
+        <a href="../index.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+          Home
+        </a>
+
+        <!-- ABOUT (link + submenu) -->
+        <div class="relative group">
+          <a href="../index.html#about"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+            About
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+
+            <a href="../index.html#vision"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Our Vision
+            </a>
+
+            <a href="../index.html#initiatives"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Initiatives
+            </a>
+
+            <a href="blog.html" class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Blogs
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <!-- CONTRIBUTORS (link + submenu) -->
+        <div class="relative group">
+          <a href="contributors.html"
+            class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+            Contributors
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-44 bg-white shadow-lg rounded-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+
+            <a href="contributors.html"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              All Contributors
+            </a>
+
+            <a href="social-stories.html"
+              class="block px-4 py-2 text-gray-600 hover:bg-primary/10 hover:text-primary transition">
+              Contributions
+            </a>
+          </div>
+        </div>
+
+        <!-- DONATION -->
+        <a href="donation.html"
+          class="text-gray-600 underline-offset-4 decoration-primary hover:text-primary hover:underline transition-colors">
+          Donation
+        </a>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="menu-btn" class="md:hidden block focus:outline-none text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden bg-white px-6 py-4 shadow transition-all hidden">
+
+      <a href="../index.html" class="block text-gray-600 py-2 hover:text-primary">Home</a>
+      <a href="../index.html#about" class="block text-gray-600 py-2 hover:text-primary">About</a>
+
+      <!-- About Submenu -->
+      <div class="ml-4 border-l border-gray-300 pl-4 space-y-1 mb-2">
+        <a href="../index.html#vision" class="block text-gray-500 py-1 hover:text-primary">Our Vision</a>
+        <a href="../index.html#initiatives" class="block text-gray-500 py-1 hover:text-primary">Initiatives</a>
+        <a href="blog.html" class="block text-gray-500 py-1 hover:text-primary">Blogs</a>
+      </div>
+
+
+      <!-- Contributors + submenu -->
+      <a href="contributors.html" class="block text-gray-600 py-2 hover:text-primary">Contributors</a>
+      <div class="ml-4 border-l border-gray-300 pl-4 space-y-1 mb-2">
+        <a href="contributors.html" class="block text-gray-500 py-1 hover:text-primary">All Contributors</a>
+        <a href="social-stories.html" class="block text-gray-500 py-1 hover:text-primary">Contributions</a>
+      </div>
+
+      <a href="donation.html" class="block text-gray-600 py-2 hover:text-primary">Donation</a>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="relative w-screen overflow-hidden bg-gradient-to-b from-primary via-secondary to-primary pt-32 pb-16">
+    <div class="absolute inset-0 pointer-events-none w-screen h-full">
+      <div class="absolute top-6 left-10 w-48 h-48 bg-primary/30 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="w-full max-w-6xl mx-auto px-6 relative z-10 text-center">
+      <div class="space-y-8">
+        <p class="text-white font-semibold text-lg">Meet Our Team</p>
+        <h1 class="font-extrabold leading-tight tracking-tight">
+          <span class="text-5xl md:text-6xl lg:text-7xl text-white">
+            Voices of <span class="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">Change</span>
+          </span>
+        </h1>
+        <p class="text-white/80 leading-relaxed max-w-3xl mx-auto text-lg">
+          Meet the passionate individuals who are driving Bihar's transformation through their stories, ideas, and
+          unwavering commitment to change.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contributors Grid Section -->
+  <section class="py-24 bg-light relative overflow-hidden">
+    <div
+      class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full blur-3xl opacity-70">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Our Community</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          Meet Our <span
+            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Contributors</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="mb-12">
+        <div class="flex flex-col md:flex-row gap-4 justify-end items-center">
+          <div class="relative w-full md:w-96">
+            <input type="text" id="contributorSearch"
+              class="contributor-search w-full px-6 py-3 pl-12 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary text-gray-700 placeholder-gray-500"
+              placeholder="Search contributors by name or role...">
+            <i class="fa-solid fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="contributorsLoadingSpinner" class="justify-center items-center py-12 hidden">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+
+      <!-- Contributors Grid Container -->
+      <div class="contributors-grid-container grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Contributor cards will be dynamically loaded here -->
+
+      </div>
+
+      <!-- No Contributors Message -->
+      <div id="noContributorsMessage" class="hidden text-center py-16">
+        <div class="max-w-md mx-auto">
+          <i class="fa-solid fa-users text-6xl text-gray-300 mb-6"></i>
+          <h3 class="text-2xl font-bold text-gray-600 mb-4">No Contributors Found</h3>
+          <p class="text-gray-500 mb-6">We couldn't find any contributors matching your search criteria.</p>
+          <button onclick="clearContributorFilters()"
+            class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-secondary transition-colors duration-200">
+            Clear Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-16">
+        <button
+          class="load-more-contributors-btn px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hidden"
+          onclick="loadMoreContributors()">
+          <i class="fa-solid fa-plus mr-2"></i>
+          Load More Contributors
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Contributor Section -->
+  <section class="py-24 bg-gradient-to-b from-white via-light to-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Featured Contributor</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
+          Spotlight on <span
+            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Excellence</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Featured Contributor Loading Placeholder -->
+      <div id="featuredContributorPlaceholder"
+        class="animate-pulse bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="aspect-square bg-gray-300 rounded-l-3xl"></div>
+          <div class="p-8 lg:p-12 space-y-4">
+            <div class="h-6 bg-gray-300 rounded w-32"></div>
+            <div class="h-8 bg-gray-300 rounded w-3/4"></div>
+            <div class="space-y-2">
+              <div class="h-4 bg-gray-300 rounded"></div>
+              <div class="h-4 bg-gray-300 rounded w-5/6"></div>
+              <div class="h-4 bg-gray-300 rounded w-4/6"></div>
+            </div>
+            <div class="pt-4">
+              <div class="h-10 bg-gray-300 rounded w-40"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Contributor Content (hidden initially) -->
+      <article id="featuredContributorContent"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light cursor-pointer hover:shadow-xl transition-shadow duration-300">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div class="relative aspect-square lg:aspect-auto overflow-hidden">
+            <img id="featuredContributorImage" src="" alt="Featured Contributor" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+          </div>
+
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <div class="space-y-6">
+              <div>
+                <p id="featuredContributorRole" class="text-primary font-semibold uppercase tracking-wide text-sm mb-2">
+                </p>
+                <h3 id="featuredContributorName" class="text-3xl lg:text-4xl font-bold text-secondary mb-4"></h3>
+              </div>
+
+              <p id="featuredContributorBio" class="text-gray-700 leading-relaxed text-lg"></p>
+
+              <div class="flex flex-wrap gap-2" id="featuredContributorTags">
+                <!-- Tags will be populated dynamically -->
+              </div>
+
+              <div class="pt-4">
+                <button id="viewFeaturedContributorProfile"
+                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                  View Profile
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Fallback Featured Contributor (if no contributors available) -->
+      <article id="featuredContributorFallback"
+        class="hidden bg-accent rounded-3xl shadow-lg overflow-hidden border border-light">
+        <div class="grid lg:grid-cols-2 gap-0">
+          <div
+            class="relative aspect-square lg:aspect-auto overflow-hidden bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+            <i class="fa-solid fa-users text-6xl text-white/50"></i>
+          </div>
+
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <div class="space-y-6">
+              <div>
+                <p class="text-primary font-semibold uppercase tracking-wide text-sm mb-2">Community Leader</p>
+                <h3 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">Be the First Contributor</h3>
+              </div>
+
+              <p class="text-gray-700 leading-relaxed text-lg">
+                Join our growing community of change-makers. Share your story, contribute to the movement, and help
+                rebuild Bihar together.
+              </p>
+
+              <div class="pt-4">
+                <a href="../index.html#contact"
+                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                  Join the Movement
+                  <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contributors data and pagination
+    let currentPage = 1;
+    let isLoading = false;
+    let allContributors = [];
+    let filteredContributors = [];
+
+    // Load contributors with pagination and filtering
+    async function loadContributors(page = 1, search = '', role = '') {
+      if (isLoading) return;
+
+      isLoading = true;
+      const loadingSpinner = document.getElementById('contributorsLoadingSpinner');
+      const contributorsGrid = document.querySelector('.contributors-grid-container');
+      const noContributorsMessage = document.getElementById('noContributorsMessage');
+      const loadMoreBtn = document.querySelector('.load-more-contributors-btn');
+
+      // Show loading spinner
+      loadingSpinner.classList.remove('hidden');
+      loadingSpinner.classList.add('flex');
+
+      try {
+        // Check if CONFIG and Utils are available
+        if (typeof CONFIG === 'undefined') {
+          console.warn('CONFIG not available, using fallback data');
+          await loadFallbackContributors();
+          return;
+        }
+
+        const params = new URLSearchParams({
+          page: page,
+          limit: 9,
+          ...(search && { search }),
+          ...(role && { role })
+        });
+
+        const response = await fetch(`${CONFIG.API.BASE_URL}/contributors/public?${params}`);
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch contributors');
+        }
+
+        const result = await response.json();
+
+        if (page === 1) {
+          console.log("page=1", result)
+          allContributors = result.data || [];
+          filteredContributors = [...allContributors];
+          contributorsGrid.innerHTML = '';
+          noContributorsMessage.classList.add('hidden');
+        } else {
+          allContributors = [...allContributors, ...(result.data || [])];
+          filteredContributors = [...allContributors];
+        }
+
+        console.log(filteredContributors)
+        if (filteredContributors.length === 0 && page === 1) {
+          noContributorsMessage.classList.remove('hidden');
+          loadMoreBtn.classList.add('hidden');
+        } else {
+          console.log("352")
+          displayContributors(page === 1 ? filteredContributors : result.data || []);
+
+          // Show/hide load more button
+          if (result.hasMore) {
+            loadMoreBtn.classList.remove('hidden');
+          } else {
+            loadMoreBtn.classList.add('hidden');
+          }
+        }
+
+        // Update statistics
+        updateContributorStats(result.data);
+
+      } catch (error) {
+        console.error('Error loading contributors:', error);
+        if (page === 1) {
+          await loadFallbackContributors();
+        }
+      } finally {
+        loadingSpinner.classList.add('hidden');
+        loadingSpinner.classList.remove('flex');
+        isLoading = false;
+      }
+    }
+
+    // Load fallback contributors data
+    async function loadFallbackContributors() {
+      const fallbackContributors = [
+        {
+          id: 1,
+          name: 'Vishal Singh',
+          role: 'activist',
+          displayRole: 'Community Activist',
+          photo: '../assets/images/Logo.png',
+          bio: 'Leading the charge for Bihar\'s transformation through grassroots activism and community engagement.',
+          location: 'Patna, Bihar',
+          joinedDate: '2024-01-15',
+          contributionsCount: 25,
+          storiesCount: 12,
+          tags: ['Leadership', 'Reform', 'Community']
+        },
+        {
+          id: 2,
+          name: 'Priya Kumari',
+          role: 'youth_leader',
+          displayRole: 'Youth Leader',
+          photo: CONFIG?.DEFAULTS?.AUTHOR_IMAGE || 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+          bio: 'Empowering young voices in Bihar to participate in democratic processes and social change.',
+          location: 'Muzaffarpur, Bihar',
+          joinedDate: '2024-02-20',
+          contributionsCount: 18,
+          storiesCount: 8,
+          tags: ['Youth', 'Education', 'Empowerment']
+        },
+        {
+          id: 3,
+          name: 'Rajesh Kumar',
+          role: 'volunteer',
+          displayRole: 'Community Volunteer',
+          photo: CONFIG?.DEFAULTS?.AUTHOR_IMAGE || 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+          bio: 'Dedicated volunteer working on environmental conservation and sustainable development in rural Bihar.',
+          location: 'Gaya, Bihar',
+          joinedDate: '2024-03-10',
+          contributionsCount: 15,
+          storiesCount: 6,
+          tags: ['Environment', 'Sustainability', 'Rural Development']
+        }
+      ];
+
+      allContributors = fallbackContributors;
+      filteredContributors = [...allContributors];
+
+      const contributorsGrid = document.querySelector('.contributors-grid-container');
+      contributorsGrid.innerHTML = '';
+      displayContributors(filteredContributors);
+
+      // Update stats with fallback data
+      document.getElementById('totalContributors').textContent = '50+';
+      document.getElementById('activeStories').textContent = '120+';
+      document.getElementById('communityImpact').textContent = '5000+';
+      document.getElementById('citiesReached').textContent = '25+';
+
+      // Show featured contributor
+      displayFeaturedContributor(fallbackContributors[0]);
+    }
+
+    // Display contributors in grid
+    function displayContributors(contributors) {
+      const contributorsGrid = document.querySelector('.contributors-grid-container');
+      console.log(" mai yaha hu")
+      contributors.forEach(contributor => {
+        const contributorCard = createContributorCard(contributor);
+        contributorsGrid.appendChild(contributorCard);
+      });
+    }
+
+    // Create contributor card element
+    function createContributorCard(contributor) {
+      console.log(contributor)
+      const card = document.createElement('article');
+      card.className = 'contributor-card bg-accent rounded-2xl shadow-lg overflow-hidden border border-light hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer';
+
+      const roleDisplayMap = {
+        'activist': 'Community Activist',
+        'youth_leader': 'Youth Leader',
+        'volunteer': 'Community Volunteer',
+        'supporter': 'Community Supporter'
+      };
+
+      card.innerHTML = `
+        <div class="relative">
+          <img src="${contributor.photo_url || CONFIG?.DEFAULTS?.AUTHOR_IMAGE || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}" 
+               alt="${contributor.name}" 
+               class="w-full h-48 object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
+        </div>
+        
+        <div class="p-6">
+          <div class="mb-4">
+            <h3 class="text-xl font-bold text-secondary mb-2">${contributor.name}</h3>
+            ${contributor.area ? `<p class="text-gray-500 text-sm flex items-center"><i class="fa-solid fa-map-marker-alt mr-1"></i>${contributor.area}</p>` : ''}
+          </div>
+          
+          <p class="text-gray-700 text-sm leading-relaxed mb-4 line-clamp-3">
+            ${contributor.bio || 'Passionate contributor working towards Bihar\'s transformation.'}
+          </p>
+          
+          <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+            <span><i class="fa-solid fa-calendar mr-1"></i>Joined ${Utils?.formatDate ? Utils.formatDate(contributor.created_at) : new Date(contributor.created_at).toLocaleDateString()}</span>
+          </div>
+          
+          <div class=" text-center text-sm mb-4">
+            <div>
+              <div class="font-bold text-primary">${contributor.contributionsCount || 0}</div>
+              <div class="text-gray-500">Contributions</div>
+            </div>
+          </div>
+          
+          <button onclick="viewContributorProfile('${contributor.slug}')" 
+                  class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
+            View Profile
+          </button>
+        </div>
+      `;
+
+      return card;
+    }
+
+    // Load featured contributor
+    // async function loadFeaturedContributor() {
+    //   try {
+    //     if (typeof CONFIG === 'undefined') {
+    //       console.warn('CONFIG not available, using fallback featured contributor');
+    //       setTimeout(() => {
+    //         const fallbackContributor = {
+    //           id: 1,
+    //           name: 'Vishal Singh',
+    //           role: 'Community Leader & Activist',
+    //           photo: '../assets/images/Logo.png',
+    //           bio: 'Vishal Singh is the driving force behind "We The People of Patna." A visionary leader and reformist thinker, he represents a new era of citizen-led change focused on honesty, accountability, and self-governance. His mission is to unite ordinary people in extraordinary action and rebuild Bihar.',
+    //           tags: ['Leadership', 'Reform', 'Community', 'Vision']
+    //         };
+    //         displayFeaturedContributor(fallbackContributor);
+    //       }, 1000);
+    //       return;
+    //     }
+
+    //     const response = await fetch(`${CONFIG.API.BASE_URL}/contributors/featured`);
+
+    //     if (response.ok) {
+    //       const contributor = await response.json();
+    //       displayFeaturedContributor(contributor);
+    //     } else {
+    //       showFeaturedContributorFallback();
+    //     }
+    //   } catch (error) {
+    //     console.error('Error loading featured contributor:', error);
+    //     showFeaturedContributorFallback();
+    //   }
+    // }
+
+
+    // Display featured contributor
+    function displayFeaturedContributor(contributor) {
+      const placeholder = document.getElementById('featuredContributorPlaceholder');
+      const content = document.getElementById('featuredContributorContent');
+      const fallback = document.getElementById('featuredContributorFallback');
+
+      // Hide placeholder and fallback
+      placeholder.style.display = 'none';
+      fallback.classList.add('hidden');
+
+      // Populate featured contributor content
+      document.getElementById('featuredContributorImage').src = contributor.photo || CONFIG?.DEFAULTS?.AUTHOR_IMAGE || '../assets/images/Logo.png';
+      document.getElementById('featuredContributorRole').textContent = contributor.role || 'Community Member';
+      document.getElementById('featuredContributorName').textContent = contributor.name;
+      document.getElementById('featuredContributorBio').textContent = contributor.bio;
+
+      // Tags
+      const tagsContainer = document.getElementById('featuredContributorTags');
+      tagsContainer.innerHTML = '';
+      if (contributor.tags && contributor.tags.length > 0) {
+        contributor.tags.forEach(tag => {
+          const tagElement = document.createElement('span');
+          tagElement.className = 'px-3 py-1 bg-primary/10 text-primary text-sm rounded-full';
+          tagElement.textContent = tag;
+          tagsContainer.appendChild(tagElement);
+        });
+      }
+
+      // Profile button
+      document.getElementById('viewFeaturedContributorProfile').onclick = () => {
+        console.log(contributor)
+        viewContributorProfile(contributor._id);
+      };
+
+      // Show content
+      content.classList.remove('hidden');
+    }
+
+    // Show featured contributor fallback
+    function showFeaturedContributorFallback() {
+      const placeholder = document.getElementById('featuredContributorPlaceholder');
+      const content = document.getElementById('featuredContributorContent');
+      const fallback = document.getElementById('featuredContributorFallback');
+
+      placeholder.style.display = 'none';
+      content.classList.add('hidden');
+      fallback.classList.remove('hidden');
+    }
+
+    // Update contributor statistics
+    function updateContributorStats(data) {
+      if (data && data.stats) {
+        document.getElementById('totalContributors').textContent = data.stats.totalContributors || '0';
+        document.getElementById('activeStories').textContent = data.stats.activeStories || '0';
+        document.getElementById('communityImpact').textContent = data.stats.communityImpact || '0';
+        document.getElementById('citiesReached').textContent = data.stats.citiesReached || '0';
+      }
+    }
+
+    // View contributor profile
+    function viewContributorProfile(contributorSlug) {
+      console.log(contributorSlug)
+      window.location.href = `contributor-profile.html?slug=${contributorSlug}`;
+    }
+
+    // Load more contributors
+    function loadMoreContributors() {
+      currentPage += 1;
+      const searchInput = document.querySelector('.contributor-search');
+      const activeRoleFilter = document.querySelector('.contributor-role-filter.active');
+
+      // loadContributors(
+      //   currentPage, 
+      //   searchInput ? searchInput.value.trim() : '', 
+      //   activeRoleFilter ? activeRoleFilter.dataset.role : ''
+      // );
+      // Load contributors with pagination and filtering
+      async function loadContributors(page = 1, search = '', role = '') {
+        if (isLoading) return;
+
+        isLoading = true;
+        const loadingSpinner = document.getElementById('contributorsLoadingSpinner');
+        const contributorsGrid = document.querySelector('.contributors-grid-container');
+        const noContributorsMessage = document.getElementById('noContributorsMessage');
+        const loadMoreBtn = document.querySelector('.load-more-contributors-btn');
+
+        loadingSpinner.classList.remove('hidden');
+        loadingSpinner.classList.add('flex');
+
+        try {
+          const response = await fetch(
+            `${CONFIG.API.BASE_URL}/contributors/public?page=${page}&limit=9&search=${search}&role=${role}`
+          );
+
+          const result = await response.json();
+          if (!result?.data || result.data.length === 0) {
+            if (page === 1) {
+              noContributorsMessage.classList.remove('hidden');
+              contributorsGrid.innerHTML = '';
+            }
+            loadMoreBtn.classList.add('hidden');
+          } else {
+
+            if (page === 1) {
+              contributorsGrid.innerHTML = '';
+            }
+
+            result.data.forEach(contributor => {
+              contributorsGrid.appendChild(createContributorCard(contributor));
+            });
+
+            if (result.hasMore) {
+              loadMoreBtn.classList.remove('hidden');
+            } else {
+              loadMoreBtn.classList.add('hidden');
+            }
+          }
+
+        } catch (error) {
+          console.error("Error loading contributors:", error);
+        }
+
+        loadingSpinner.classList.add('hidden');
+        loadingSpinner.classList.remove('flex');
+        isLoading = false;
+      }
+
+    }
+
+    // Clear all filters
+    function clearContributorFilters() {
+      const searchInput = document.querySelector('.contributor-search');
+      const roleFilters = document.querySelectorAll('.contributor-role-filter');
+
+      if (searchInput) searchInput.value = '';
+
+      roleFilters.forEach(btn => {
+        btn.classList.remove('active', 'bg-primary', 'text-white');
+        btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-300');
+      });
+
+      const allFilter = document.querySelector('.contributor-role-filter[data-role=""]');
+      if (allFilter) {
+        allFilter.classList.add('active', 'bg-primary', 'text-white');
+        allFilter.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-300');
+      }
+
+      currentPage = 1;
+      loadContributors();
+    }
+
+    // Search and filter functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const searchInput = document.querySelector('.contributor-search');
+      const roleFilters = document.querySelectorAll('.contributor-role-filter');
+
+      // Initialize contributors loading
+      loadContributors();
+      // loadFeaturedContributor();
+
+      // Search functionality
+      if (searchInput) {
+        const debouncedSearch = Utils?.debounce ? Utils.debounce((value) => {
+          currentPage = 1;
+          const activeRoleFilter = document.querySelector('.contributor-role-filter.active');
+          loadContributors(1, value, activeRoleFilter ? activeRoleFilter.dataset.role : '');
+        }, 500) : ((value) => {
+          currentPage = 1;
+          const activeRoleFilter = document.querySelector('.contributor-role-filter.active');
+          loadContributors(1, value, activeRoleFilter ? activeRoleFilter.dataset.role : '');
+        });
+
+        searchInput.addEventListener('input', (e) => {
+          debouncedSearch(e.target.value.trim());
+        });
+      }
+
+      // Role filter functionality
+      roleFilters.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active state
+          roleFilters.forEach(btn => {
+            btn.classList.remove('active', 'bg-primary', 'text-white');
+            btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-300');
+          });
+
+          button.classList.add('active', 'bg-primary', 'text-white');
+          button.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-300');
+
+          // Load filtered contributors
+          currentPage = 1;
+          const searchValue = searchInput ? searchInput.value.trim() : '';
+          loadContributors(1, searchValue, button.dataset.role);
+        });
+      });
+
+      // Fallback timeout for featured contributor
+      setTimeout(() => {
+        const placeholder = document.getElementById('featuredContributorPlaceholder');
+        const content = document.getElementById('featuredContributorContent');
+        const fallback = document.getElementById('featuredContributorFallback');
+
+        if (placeholder && placeholder.style.display !== 'none') {
+          placeholder.style.display = 'none';
+          if (content.classList.contains('hidden') && fallback.classList.contains('hidden')) {
+            showFeaturedContributorFallback();
+          }
+        }
+      }, 5000);
+    });
+  </script>
+
+</body>
+
+</html>
