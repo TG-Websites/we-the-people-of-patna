@@ -339,6 +339,10 @@
 
 
   <script>
+
+    // Fallback image URL (global)
+    const FALLBACK_IMAGE_URL = 'https://media.istockphoto.com/id/600676830/photo/3d-people.jpg?s=612x612&w=0&k=20&c=y9hxARvvSaAxoj8cg7sgtHwi920Xbr64p3i6rS6lvD4=';
+
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -433,13 +437,13 @@
 
     // Load fallback contributors data
     async function loadFallbackContributors() {
-      const fallbackContributors = [
+  const fallbackContributors = [
         {
           id: 1,
           name: 'Vishal Singh',
           role: 'activist',
           displayRole: 'Community Activist',
-          photo: '../assets/images/Logo.png',
+          photo: FALLBACK_IMAGE_URL,
           bio: 'Leading the charge for Bihar\'s transformation through grassroots activism and community engagement.',
           location: 'Patna, Bihar',
           joinedDate: '2024-01-15',
@@ -452,7 +456,7 @@
           name: 'Priya Kumari',
           role: 'youth_leader',
           displayRole: 'Youth Leader',
-          photo: CONFIG?.DEFAULTS?.AUTHOR_IMAGE || 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+          photo: FALLBACK_IMAGE_URL,
           bio: 'Empowering young voices in Bihar to participate in democratic processes and social change.',
           location: 'Muzaffarpur, Bihar',
           joinedDate: '2024-02-20',
@@ -465,7 +469,7 @@
           name: 'Rajesh Kumar',
           role: 'volunteer',
           displayRole: 'Community Volunteer',
-          photo: CONFIG?.DEFAULTS?.AUTHOR_IMAGE || 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+          photo: FALLBACK_IMAGE_URL,
           bio: 'Dedicated volunteer working on environmental conservation and sustainable development in rural Bihar.',
           location: 'Gaya, Bihar',
           joinedDate: '2024-03-10',
@@ -517,9 +521,9 @@
 
       card.innerHTML = `
         <div class="relative">
-          <img src="${contributor.photo_url || CONFIG?.DEFAULTS?.AUTHOR_IMAGE || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}" 
+          <img src="${contributor.photo_url || contributor.photo || FALLBACK_IMAGE_URL}" 
                alt="${contributor.name}" 
-               class="w-full h-48 object-cover" />
+               class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='${FALLBACK_IMAGE_URL}';" />
           <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
         
@@ -543,7 +547,7 @@
               <div class="text-gray-500">Contributions</div>
             </div>
           </div>
-          
+  
           <button onclick="viewContributorProfile('${contributor.slug}')" 
                   class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
             View Profile
@@ -599,7 +603,7 @@
       fallback.classList.add('hidden');
 
       // Populate featured contributor content
-      document.getElementById('featuredContributorImage').src = contributor.photo || CONFIG?.DEFAULTS?.AUTHOR_IMAGE || '../assets/images/Logo.png';
+  document.getElementById('featuredContributorImage').src = contributor.photo || contributor.photo_url || FALLBACK_IMAGE_URL;
       document.getElementById('featuredContributorRole').textContent = contributor.role || 'Community Member';
       document.getElementById('featuredContributorName').textContent = contributor.name;
       document.getElementById('featuredContributorBio').textContent = contributor.bio;
@@ -796,7 +800,7 @@
             showFeaturedContributorFallback();
           }
         }
-      }, 5000);
+      }, 1000);
     });
   </script>
 
