@@ -402,7 +402,7 @@
   </section>
 
   <!-- Submit Your Story Section -->
-  <section class="py-24 bg-primary relative overflow-hidden">
+  <section id="join-us" class="py-24 bg-primary relative overflow-hidden">
     <div class="absolute inset-0">
       <div class="absolute top-10 left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
       <div class="absolute bottom-10 right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
@@ -837,8 +837,8 @@
         updateStoryQuillCounter();
       }
 
-      // Open modal
-      shareStoryBtn.addEventListener('click', function () {
+      // Function to open the modal
+      function openStoryModal() {
         storyModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
 
@@ -846,7 +846,23 @@
         setTimeout(() => {
           initializeStoryEditor();
         }, 100);
-      });
+      }
+
+      // Open modal on button click
+      shareStoryBtn.addEventListener('click', openStoryModal);
+
+      // Check if URL has #join-us hash and open modal automatically
+      if (window.location.hash === '#join-us') {
+        // Wait for page to fully load before opening modal
+        setTimeout(() => {
+          openStoryModal();
+          // Scroll to the join-us section smoothly
+          const joinSection = document.getElementById('join-us');
+          if (joinSection) {
+            joinSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 500);
+      }
 
       // Close modal functions
       function closeModalFunc() {
