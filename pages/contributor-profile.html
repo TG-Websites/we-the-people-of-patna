@@ -272,7 +272,7 @@
       <div class="text-center mb-16">
         <p class="text-primary font-semibold uppercase tracking-wide mb-3">Contributions</p>
         <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4 leading-tight">
-          Stories by <span id="contributorNameInStories"
+          Contributions by <span id="contributorNameInStories"
             class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">This Contributor</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
@@ -462,7 +462,14 @@
       content.classList.remove("hidden");
 
       // Stories + Related Profiles
-      loadContributorStories(contributor.slug);
+      // If the API returned contributions inside the contributor object, render them directly.
+      if (Array.isArray(contributor.contributions) && contributor.contributions.length > 0) {
+        renderContributionsFromProfile(contributor);
+      } else {
+        // fallback to fetching contributions from the contributions endpoint
+        loadContributorStories(contributor.slug);
+      }
+
       loadRelatedContributors(contributor.slug);
     }
 
@@ -559,8 +566,8 @@
         </div>
       </div>
       <div class="p-6">
-        <h3 class="text-xl font-bold text-secondary mb-2">${story.title}</h3>
-        <p class="text-gray-700 text-sm">${story.description}</p>
+  <h3 class="text-xl font-bold text-secondary mb-2">${story.title}</h3>
+  <p class="text-gray-700 text-sm">${truncateWords(stripHtml(story.description), 20)}</p>
         <div class="flex justify-between text-sm text-gray-500 mt-4">
           <span><i class="fa-solid fa-calendar mr-1"></i>${formatDate(story.date)}</span>
         </div>
@@ -640,6 +647,77 @@
 
         grid.appendChild(card);
       });
+    }
+
+
+    // -----------------------------
+    // Render contributions provided inside contributor object
+    // -----------------------------
+    function renderContributionsFromProfile(contributor) {
+      const grid = document.querySelector('.contributor-stories-grid');
+      const noMsg = document.getElementById('noStoriesMessage');
+      const loadMoreBtn = document.querySelector('.load-more-stories-btn');
+
+      grid.innerHTML = '';
+      noMsg.classList.add('hidden');
+      loadMoreBtn.classList.add('hidden');
+
+      const contributions = contributor.contributions || [];
+
+      if (contributions.length === 0) {
+        noMsg.classList.remove('hidden');
+        return;
+      }
+
+      contributions.forEach(c => {
+        // map contribution shape to the shape expected by createStoryCard
+        const mapped = {
+          id: c._id,
+          image: (Array.isArray(c.media) && c.media[0] && c.media[0].url) || CONFIG.DEFAULTS.BLOG_IMAGE || '',
+          title: c.title || 'Untitled',
+          category: c.category || 'General',
+          description: (c.description) ? stripHtml(c.description) : '',
+          date: c.date || c.createdAt,
+          location: c.location || '',
+          // contributor info for story card
+          contributor: {
+            name: c.isAnonymous ? 'Anonymous' : (contributor.name || 'Contributor'),
+            photo: c.isAnonymous ? (CONFIG.DEFAULTS.AUTHOR_IMAGE || '') : (contributor.photo_url || CONFIG.DEFAULTS.AUTHOR_IMAGE || ''),
+            role: contributor.category || contributor.role || '',
+            verified: contributor.verified || false
+          }
+        };
+
+        const card = createStoryCard(mapped);
+        // make the card clickable to story details using contribution id
+        card.addEventListener('click', () => {
+          window.location.href = `story-details.html?id=${mapped.id}`;
+        });
+
+        grid.appendChild(card);
+      });
+
+      // if there are more than 6 contributions, show the load more button (simple heuristic)
+      if (contributions.length > 6) {
+        loadMoreBtn.classList.remove('hidden');
+      }
+    }
+
+    // small helper: strip basic HTML tags for short preview (we keep original description in the card create if needed)
+    function stripHtml(html) {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html || '';
+      return tmp.textContent || tmp.innerText || '';
+    }
+
+    // -----------------------------
+    // Utility: truncate words for previews
+    // -----------------------------
+    function truncateWords(text, limit = 100) {
+      if (!text) return '';
+      const words = String(text).trim().split(/\s+/);
+      if (words.length <= limit) return words.join(' ');
+      return words.slice(0, limit).join(' ') + '...';
     }
 
 
