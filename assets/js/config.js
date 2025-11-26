@@ -2,7 +2,7 @@
 const CONFIG = {
   // API Configuration
   API: {
-    BASE_URL: 'http://localhost:5002/api',
+    BASE_URL: 'https://backend.wethepeopleofpatna.in/api',
     ENDPOINTS: {
       BLOGS: '/blogs',
       BLOG_BY_ID: '/blogs/:id',
